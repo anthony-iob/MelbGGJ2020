@@ -98,22 +98,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             runSpeedOnStart = m_RunSpeed;
             walkSpeedOnStart = m_WalkSpeed;
-
-            currentScene = SceneManager.GetActiveScene();
-            if (currentScene.name != "Chapter2")
-            {
-                lightsOn = false;
-                inBypass = false;
-                inColorPuzzle = false;
-                enabled = false;
-            }
-            else
-            {
-                lightsOn = true;
-                inBypass = false;
-                inColorPuzzle = false;
-                enabled = true;
-            }
         }
 
 
@@ -156,22 +140,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-            if (source.clip.name == "Footstep01")
-            {
-                source.panStereo = -0.36f;
-                source.spatialBlend = 0;
-            }
-            if (source.clip.name == "Footstep02")
-            {
-                source.panStereo = 0.36f;
-                source.spatialBlend = 0;
-            }
-            if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
-            {
-                source.panStereo = 0;
-                source.spatialBlend = 1.0f;
-            }
-
+            // if(source != null) {
+            //     if (source.clip.name == "Footstep01")
+            //     {
+            //         source.panStereo = -0.36f;
+            //         source.spatialBlend = 0;
+            //     }
+            //     if (source.clip.name == "Footstep02")
+            //     {
+            //         source.panStereo = 0.36f;
+            //         source.spatialBlend = 0;
+            //     }
+            //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
+            //     {
+            //         source.panStereo = 0;
+            //         source.spatialBlend = 1.0f;
+            //     }
+            // }
             //CROUCHING =========================================================
             if (Input.GetKeyDown(KeyCode.LeftControl))
             //&& m_IsWalking == true)
@@ -192,7 +177,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_JumpEarly > 0 && m_JumpAllowed)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    PlayJumpSound();
+                    // PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
@@ -225,9 +210,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
-            m_NextStep = m_StepCycle + .5f;
+            if(m_AudioSource != null) {
+                m_AudioSource.clip = m_LandSound;
+                m_AudioSource.Play();
+                m_NextStep = m_StepCycle + .5f;
+            }
         }
 
 
@@ -240,17 +227,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		private void FixedUpdate()
         {
-            inBypass = false;
-            inColorPuzzle = false;
-            if (!nearFlare)
-            {
-                UpdatePlayerSpeed(lightsOn);
-            }
-            else
-            {
-                UpdatePlayerSpeed(true);
-            }
-
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
@@ -273,11 +249,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
-        }
+        // private void PlayJumpSound()
+        // {
+        //     if(m_AudioSource != null) {
+        //         m_AudioSource.clip = m_JumpSound;
+        //         m_AudioSource.Play();
+        //     }
+        // }
 
 
         private void ProgressStepCycle(float speed)
@@ -457,26 +435,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.8f, hit.point, ForceMode.Impulse);
-        }
-
-        private void UpdatePlayerSpeed(bool lightingState)
-        {
-            m_RunSpeed = lightingState ? runSpeedOnStart : runSpeedInDarkness;
-            m_WalkSpeed = lightingState ? walkSpeedOnStart : walkSpeedInDarkness;
-            m_JumpAllowed = lightingState ? true : false;
-        }
-
-        void OnTriggerStay(Collider other)
-        {
-            if (other.gameObject.tag == "Bypass")
-            {
-                inBypass = true;
-            }
-            if (other.gameObject.tag == "ColorPuzzle")
-            {
-                inBypass = true;
-                inColorPuzzle = true;
-            }
         }
     }
 }
