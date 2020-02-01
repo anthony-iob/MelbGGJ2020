@@ -316,6 +316,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af47637d79d514a2faf7328fd62dff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &721597672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6488266179136781745, guid: 9f9d15f4acb0943828a1de59553ddeb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 936075325940618426}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &770276132
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +695,22 @@ PrefabInstance:
     - target: {fileID: 936075326101429393, guid: 9f9d15f4acb0943828a1de59553ddeb9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 936075326101429407, guid: 9f9d15f4acb0943828a1de59553ddeb9,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 3483967524938864252, guid: 83f4e8918e83b460ca76516b00ab0a3f,
+        type: 3}
+    - target: {fileID: 936075326101429407, guid: 9f9d15f4acb0943828a1de59553ddeb9,
+        type: 3}
+      propertyPath: projectilePosition
+      value: 
+      objectReference: {fileID: 721597672}
+    - target: {fileID: 1639504095984131524, guid: 9f9d15f4acb0943828a1de59553ddeb9,
+        type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

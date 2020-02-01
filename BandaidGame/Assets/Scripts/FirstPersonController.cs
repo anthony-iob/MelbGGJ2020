@@ -107,6 +107,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Cursor.lockState = CursorLockMode.Locked;
         }
 
+        public GameObject projectile;
+        public GameObject projectilePosition;
 
         // Update is called once per frame
         private void Update()
@@ -442,15 +444,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
         private void Shoot() {
-            RaycastHit hit;
-            if (Physics.SphereCast(transform.position, 0.1f, transform.forward, out hit, 5)) {
-                if(hit.collider.tag == "bandaidable") {
-                    Bandaidable bandaidable = hit.collider.gameObject.GetComponent<Bandaidable>();
-                    if(bandaidable) {
-                        bandaidable.Repair();
-                    }
-                }
-            }
+            GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
         }       
     }
 }
