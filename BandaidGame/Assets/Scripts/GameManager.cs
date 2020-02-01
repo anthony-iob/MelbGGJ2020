@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
-    public int currentBloodLevel;
-    public int MAX_BLOOD_LEVEL;
+    public float currentBloodLevel;
+    public float MAX_BLOOD_LEVEL;
     public float timeElapsed;
     public UnityEvent gameOver;
     bool isGameOver = false;
@@ -44,5 +44,9 @@ public class GameManager : Singleton<GameManager>
 
     public int GetElapsedMinutes() {
         return (int)Mathf.Round(timeElapsed / 60);
+    }
+
+    public float GetFloodPercentage() {
+        return currentBloodLevel / MAX_BLOOD_LEVEL;
     }
 }

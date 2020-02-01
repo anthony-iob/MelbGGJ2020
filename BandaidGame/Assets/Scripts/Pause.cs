@@ -18,6 +18,10 @@ public class Pause : Singleton<MonoBehaviour>
         Time.timeScale = 1;
         paused = false;
     }
+    
+    public void InvokeResume() {
+        resumeGame.Invoke();
+    }
 
     void Update() {
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) ) {

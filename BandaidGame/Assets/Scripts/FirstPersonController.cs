@@ -88,7 +88,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             characterControllerHeightOnStart = m_CharacterController.height; //Crouching
             source = GetComponent<AudioSource>();
             m_AudioSource.clip = m_LandSound;
-            Time.timeScale = 1; //Something is causing the timescale to go to 0 on game start, not sure where it is
 
             cameraPivot.speed = 0;
 

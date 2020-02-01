@@ -5,10 +5,32 @@ using TMPro;
 
 public class HUDManager : MonoBehaviour
 {
-    public TextMeshProUGUI score;
-    // Update is called once per frame
+    public TextMeshProUGUI timer, percentage;
+
     void Update()
     {
-        score.text = "Time Survived: "  + GameManager.instance.GetElapsedMinutes().ToString() + "m" + GameManager.instance.GetElapsedSeconds() + "s";
+        UpdateTimer();
+        UpdatePercentage();
+    }
+
+    void UpdatePercentage()
+    {
+        percentage.text = (100 * GameManager.instance.GetFloodPercentage()).ToString("0.0") + "%";
+    }
+
+    void UpdateTimer()
+    {
+        int mins = GameManager.instance.GetElapsedMinutes();
+        int secs = GameManager.instance.GetElapsedSeconds();
+        string text = "";
+
+        if (mins > 0)
+        {
+            text += mins + "m";
+        }
+
+        text += GameManager.instance.GetElapsedSeconds() + "s";
+
+        timer.text = text;
     }
 }
