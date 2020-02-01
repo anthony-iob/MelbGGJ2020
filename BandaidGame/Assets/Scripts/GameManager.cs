@@ -45,4 +45,8 @@ public class GameManager : Singleton<GameManager>
     public int GetElapsedMinutes() {
         return (int)Mathf.Round(timeElapsed / 60);
     }
+    
+    public float GetFloodPercentage() {
+        return currentBloodLevel / MAX_BLOOD_LEVEL;
+    }
 }
