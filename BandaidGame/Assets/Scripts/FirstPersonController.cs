@@ -61,16 +61,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private float runSpeedOnStart;
         private float walkSpeedOnStart;
-        public float runSpeedInDarkness;
-        public float walkSpeedInDarkness;
-        public bool lightsOn;
-        public bool inBypass;
-        public bool inColorPuzzle;
-
-        public bool nearFlare;
-
-        private Scene currentScene;
-
+        
         // Use this for initialization
         private void Start()
         {
