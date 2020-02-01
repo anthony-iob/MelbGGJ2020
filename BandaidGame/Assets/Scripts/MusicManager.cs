@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource loop3;
     public AudioSource loop4;
     public AudioSource loop5;
+    public AudioSource loop6;
     public AudioSource endLoop;
 
 
@@ -18,6 +19,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip loop3Track;
     public AudioClip loop4Track;
     public AudioClip loop5Track;
+    public AudioClip loop6Track;
     public AudioClip endLoopTrack;
     public AudioClip gameEndState;
     public AudioClip gameOver;
@@ -61,6 +63,7 @@ public class MusicManager : MonoBehaviour
         loop3.volume = 0.0f;
         loop4.volume = 0.0f;
         loop5.volume = 0.0f;
+        loop6.volume = 0.0f;
         endLoop.volume = 0.0f;
 
 
@@ -68,7 +71,7 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire3"))
         {
             //gameState health state system? 
             trackNumber += 1;
@@ -115,7 +118,6 @@ public class MusicManager : MonoBehaviour
 
    IEnumerator MusicLoop1()
     {
-       // loop1.volume = 1.0f;
 
         while (loop1.volume > 0)
         {
@@ -123,6 +125,11 @@ public class MusicManager : MonoBehaviour
             loop1.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop2.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             yield return null;
+        }
+
+        if (loop1.volume == 0)
+        {
+            currentTime = 0;
         }
 
     }
@@ -137,41 +144,65 @@ public class MusicManager : MonoBehaviour
             loop3.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             yield return null;
         }
+
+        if (loop2.volume == 0)
+        {
+            currentTime = 0;
+        }
     }
 
 
     IEnumerator MusicLoop3()
     {
  
-        while (loop2.volume > 0)
+        while (loop3.volume > 0)
         {
             currentTime += Time.deltaTime;
-            loop2.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
-            loop3.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            loop3.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+            loop4.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             yield return null;
+        }
+
+        if (loop3.volume == 0)
+        {
+            currentTime = 0;
         }
     }
 
     IEnumerator MusicLoop4()
     {
-        currentTime += Time.deltaTime;
-        loop3.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
-        loop4.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
-        yield return null;
+        while (loop4.volume > 0)
+        {
+            currentTime += Time.deltaTime;
+            loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+            loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            yield return null;
+        }
+        if (loop4.volume == 0)
+        {
+            currentTime = 0;
+        }
+
     }
 
     IEnumerator MusicLoop5()
     {
-        currentTime += Time.deltaTime;
-        loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
-        loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
-        yield return null;
+        while (loop5.volume > 0)
+        {
+            currentTime += Time.deltaTime;
+            loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+            loop6.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            yield return null;
+        }
+
+
+
     }
 
     IEnumerator MusicLoop6()
     {
         currentTime += Time.deltaTime;
-        loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+        loop6.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
         endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
         yield return null;
     }
