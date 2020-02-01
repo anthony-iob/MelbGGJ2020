@@ -29,6 +29,8 @@ public class MusicManager : MonoBehaviour
 
     // private GameManager _gameManager;
 
+
+
     /* This script involves creating audiosource children on a MusicManager gameobject, then dragging in the relevant tracks into the audioClip slots on the MusicManager script. 
      * When the functions are called it should fade between the current and next queued track in your list.
      * 
