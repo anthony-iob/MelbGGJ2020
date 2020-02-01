@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class Wander : MonoBehaviour
+public class WanderBehaviour : MonoBehaviour
 {
     public float speed = 5;
     public float directionChangeInterval = 1;
