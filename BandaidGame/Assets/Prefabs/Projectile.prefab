@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   travelSpeed: 2000
+  hit:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &7263379954987415967
 PrefabInstance:
   m_ObjectHideFlags: 0
