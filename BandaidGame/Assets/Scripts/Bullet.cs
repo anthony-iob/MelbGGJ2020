@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     // public new Rigidbody rigidbody;
     public int travelSpeed;
-
+    public UnityEvent hit;
     private float lifetime = 5;
 
     // Start is called before the first frame update
@@ -37,6 +37,12 @@ public class Bullet : MonoBehaviour
             this.gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
-        
     }
+
+    public void Hit()
+    {
+        //placeholder for generic bullet collission audio/behaviour/animations
+    }
+
+
 }
