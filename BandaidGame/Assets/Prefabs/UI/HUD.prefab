@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 902035515}
   - component: {fileID: 902035517}
   - component: {fileID: 902035516}
+  - component: {fileID: 260145686}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -109,6 +110,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &260145686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902035514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.29411766}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1067061686
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -30}
+  m_AnchoredPosition: {x: -0.000030517578, y: -5.1000366}
   m_SizeDelta: {x: 75, y: 330}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &962619090884906044
@@ -157,6 +173,7 @@ GameObject:
   - component: {fileID: 4767443398048635308}
   - component: {fileID: 2429132815796272843}
   - component: {fileID: 937452123187507848}
+  - component: {fileID: 1338601628}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -220,6 +237,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1338601628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962619090884906044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.29411766}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1812803108484552422
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +300,7 @@ GameObject:
   - component: {fileID: 7343390086337411549}
   - component: {fileID: 5950196999839920772}
   - component: {fileID: 8499442533183017025}
+  - component: {fileID: 749038031}
   m_Layer: 0
   m_Name: GreyBar
   m_TagString: Untagged
@@ -330,6 +363,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &749038031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4818560916763650968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.27450982}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5208433200652713340
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +500,7 @@ GameObject:
   - component: {fileID: 6073411286715873627}
   - component: {fileID: 6073411286715873626}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60a410b6838f14106bd44dc921ad5e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 6073411286715873626}
+  timer: {fileID: 6073411286715873626}
   percentage: {fileID: 4974098354354829844}
 --- !u!1 &7088493459638197385
 GameObject:
@@ -722,7 +770,7 @@ GameObject:
   - component: {fileID: 3236149861699670631}
   - component: {fileID: 6888382902231142833}
   m_Layer: 5
-  m_Name: TimeSurvived
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1031,7 +1079,7 @@ GameObject:
   - component: {fileID: 4779116448760633385}
   - component: {fileID: 4578925591175972205}
   m_Layer: 5
-  m_Name: Labels
+  m_Name: TimeSurvived
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
