@@ -516,21 +516,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2734722281454670906, guid: 2d785d8fd3b8ae647a4dc1ac5ecc95d1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2171
-      objectReference: {fileID: 0}
-    - target: {fileID: 2734722281454670906, guid: 2d785d8fd3b8ae647a4dc1ac5ecc95d1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2171
-      objectReference: {fileID: 0}
-    - target: {fileID: 2734722281454670906, guid: 2d785d8fd3b8ae647a4dc1ac5ecc95d1,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2171
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d785d8fd3b8ae647a4dc1ac5ecc95d1, type: 3}
 --- !u!1 &422996018
@@ -1321,7 +1306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711193364}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1366,7 +1351,7 @@ GameObject:
   - component: {fileID: 467850241025339380}
   - component: {fileID: 5902419002119027630}
   - component: {fileID: 596620195126311725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NoGo Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1492,7 @@ GameObject:
   - component: {fileID: 2682341734780009095}
   - component: {fileID: 4068224577489135061}
   - component: {fileID: 4320272439989515521}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: StorageArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1738,7 +1723,7 @@ GameObject:
   - component: {fileID: 9132466076556598574}
   - component: {fileID: 7036852727109742398}
   - component: {fileID: 7614669429395733413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CornerLab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1837,7 +1822,7 @@ GameObject:
   - component: {fileID: 966400353184585072}
   - component: {fileID: 7942737929111142753}
   - component: {fileID: 9198531897567386371}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Starting Lobby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
