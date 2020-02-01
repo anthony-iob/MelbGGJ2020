@@ -17,7 +17,7 @@ public class NPCManager : Singleton<NPCManager>
         int totalBloodLevel = 0;
         foreach (GameObject npc in maxNPCs)
         {
-            var woundManager = npc.GetComponent<WoundManager>();
+            var woundManager = npc.GetComponentInChildren<WoundManager>();
             totalBloodLevel += woundManager.GetBleedValue();
         }
         return totalBloodLevel;
