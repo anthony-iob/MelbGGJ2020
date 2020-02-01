@@ -1,21 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class HUDManager : MonoBehaviour
 {
-    public TextMeshProUGUI timer, percentage;
+    public TextMeshProUGUI timerLabel, percentageLabel;
+    public Image floodBar;
+    float percentage;
 
     void Update()
     {
         UpdateTimer();
-        UpdatePercentage();
+        UpdateFloodInfo();
     }
 
-    void UpdatePercentage()
+    void UpdateFloodInfo()
     {
-        percentage.text = (100 * GameManager.instance.GetFloodPercentage()).ToString("0.0") + "%";
+        percentage = Mathf.Clamp(GameManager.instance.GetFloodPercentage(), 0f, 100f);
+        percentageLabel.text = (100 * percentage).ToString("0");
+        floodBar.fillAmount = percentage;
     }
 
     void UpdateTimer()
@@ -31,6 +36,6 @@ public class HUDManager : MonoBehaviour
 
         text += GameManager.instance.GetElapsedSeconds() + "s";
 
-        timer.text = text;
+        timerLabel.text = text;
     }
 }
