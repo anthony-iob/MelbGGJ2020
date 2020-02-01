@@ -319,12 +319,6 @@ MonoBehaviour:
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
   toggleCrouchSprint: 0
-  runSpeedInDarkness: 0
-  walkSpeedInDarkness: 0
-  lightsOn: 0
-  inBypass: 0
-  inColorPuzzle: 0
-  nearFlare: 0
   projectile: {fileID: 3483967524938864252, guid: 83f4e8918e83b460ca76516b00ab0a3f,
     type: 3}
   projectilePosition: {fileID: 6488266179136781745}
@@ -359,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936075326153851961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 936075326302140530}

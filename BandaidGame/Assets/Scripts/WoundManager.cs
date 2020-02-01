@@ -53,15 +53,20 @@ public class WoundManager : MonoBehaviour
         {
             SetWoundInterval();
             Bandaidable wound = GetClosedWound();
-            wound.bleed.Invoke();
+            if(wound != null) {
+                wound.bleed.Invoke();
+            }
         }
     }
 
     public Bandaidable GetClosedWound()
     {
         List<Bandaidable> closedWounds = wounds.FindAll(wound => !wound.isBleeding);
-        int pos = Random.Range(0, closedWounds.Count);
-        return closedWounds[pos];
+        if(closedWounds.Count > 0) {
+            int pos = Random.Range(0, closedWounds.Count - 1);
+            return closedWounds[pos];
+        }
+        return null;
     }
 
     public void UpdateBleedValue()

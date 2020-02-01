@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
-    int currentBloodLevel;
+    public int currentBloodLevel;
     public int MAX_BLOOD_LEVEL;
     public float timeElapsed;
     public UnityEvent gameOver;
@@ -28,7 +28,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     void Update() {
-        if(currentBloodLevel > MAX_BLOOD_LEVEL) {
+        if(currentBloodLevel >= MAX_BLOOD_LEVEL) {
             gameOver.Invoke();
             isGameOver = true;
         }
