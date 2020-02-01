@@ -133,7 +133,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-            // if(source != null) {
             //     if (source.clip.name == "Footstep01")
             //     {
             //         source.panStereo = -0.36f;
@@ -149,7 +148,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //         source.panStereo = 0;
             //         source.spatialBlend = 1.0f;
             //     }
-            // }
             //CROUCHING =========================================================
             if (Input.GetButtonDown("Fire1"))
             //&& m_IsWalking == true)
@@ -246,13 +244,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        // private void PlayJumpSound()
-        // {
-        //     if(m_AudioSource != null) {
-        //         m_AudioSource.clip = m_JumpSound;
-        //         m_AudioSource.Play();
-        //     }
-        // }
+        private void PlayJumpSound()
+        {
+            if(m_AudioSource != null) {
+                m_AudioSource.clip = m_JumpSound;
+                m_AudioSource.Play();
+            }
+        }
 
 
         private void ProgressStepCycle(float speed)
@@ -270,7 +268,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-            PlayFootStepAudio();
+            // PlayFootStepAudio();
         }
 
 
