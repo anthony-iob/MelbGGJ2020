@@ -443,10 +443,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Shoot() {
             RaycastHit hit;
-            if (Physics.SphereCast(transform.position, 1, transform.forward, out hit, 50)) {
-                // var damage = Random.Range (10,20);
-                // BroadcastMessage ("ApplyDamage", damage);
-                Debug.Log("hit something");
+            if (Physics.SphereCast(transform.position, 0.1f, transform.forward, out hit, 5)) {
+                if(hit.collider.tag == "bandaidable") {
+                    Bandaidable bandaidable = hit.collider.gameObject.GetComponent<Bandaidable>();
+                    if(bandaidable) {
+                        bandaidable.Repair();
+                    }
+                }
             }
         }       
     }
