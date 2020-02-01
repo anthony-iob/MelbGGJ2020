@@ -13,7 +13,6 @@ public class Flood : MonoBehaviour
         var minHeightPosition = minHeight.position;
         var maxHeightPosition = maxHeight.position;
         var percentage = GameManager.instance.GetFloodPercentage();
-        Debug.Log(percentage);
         var newHeight = (maxHeightPosition.y - minHeightPosition.y) * percentage;
         var up = new Vector3(0, newHeight, 0);
         flood.transform.position = minHeightPosition + up;
