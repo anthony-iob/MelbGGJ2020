@@ -158,13 +158,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //     }
             // }
             //CROUCHING =========================================================
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetButtonDown("Fire1"))
             //&& m_IsWalking == true)
             {
                 m_CharacterController.height = 1;
                 m_Camera.transform.parent.localPosition = crouchedCameraLocalPos;
             }
-            if (Input.GetKeyUp(KeyCode.LeftControl))
+            if (Input.GetButtonUp("Fire1"))
             {
                 m_CharacterController.height = characterControllerHeightOnStart;
                 m_Camera.transform.parent.localPosition = normalCameraLocalPos;
@@ -185,6 +185,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
+            }
+            
+            if (Input.GetButtonDown("Fire2")) {
+                this.Shoot();
             }
         }
 
@@ -334,7 +338,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             switch (toggleCrouchSprint)
             {
                 case true:
-                    if (!Input.GetKey(KeyCode.LeftControl))
+                    if (!Input.GetButton("Fire1"))
                     {
 						if (sprintCooldown && SceneManager.GetActiveScene().name == "Chapter2")
 						{
@@ -342,20 +346,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
 						}
 						else
 						{
-							m_IsWalking = !Input.GetKey(KeyCode.LeftShift) && (horizontal != 0 || vertical != 0);
+							m_IsWalking = !Input.GetButton("Fire1") && (horizontal != 0 || vertical != 0);
 						}
                     }
                     else m_IsWalking = true;
                     break;
                 case false:
-                    m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+                    m_IsWalking = !Input.GetButton("Fire1");
                     break;
             }
 
             if (m_IsWalking)
             {
                 // Running.
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetButton("Fire1"))
                 {
                     cameraPivot.speed = 1;
                 }
@@ -366,7 +370,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetButton("Fire1"))
                 {
                     cameraPivot.speed = 1;
                 }
@@ -436,5 +440,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.8f, hit.point, ForceMode.Impulse);
         }
+
+        private void Shoot() {
+            RaycastHit hit;
+            if (Physics.SphereCast(transform.position, 0.1f, transform.forward, out hit, 5)) {
+                if(hit.collider.tag == "bandaidable") {
+                    Bandaidable bandaidable = hit.collider.gameObject.GetComponent<Bandaidable>();
+                    if(bandaidable) {
+                        bandaidable.Repair();
+                    }
+                }
+            }
+        }       
     }
 }
