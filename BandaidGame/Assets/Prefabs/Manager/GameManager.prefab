@@ -10,8 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7194501990801557231}
   - component: {fileID: 7194501990801557228}
-  - component: {fileID: 7194501990801557229}
-  - component: {fileID: 7194501990801557230}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,31 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968c6f0f42ae94776a9a86169ab3d840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentBloodLevel: 0
   MAX_BLOOD_LEVEL: 0
   timeElapsed: 0
---- !u!114 &7194501990801557229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7194501990801557226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b224d0c2e9b4b49f9bef104ecfbb2a9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  npcs: []
---- !u!114 &7194501990801557230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7194501990801557226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a410b6838f14106bd44dc921ad5e44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
+  gameOver:
+    m_PersistentCalls:
+      m_Calls: []
+  initialBloodVisualHeight: 0
+  maxBloodVisualHeight: 0
+  visualBlood: {fileID: 0}
