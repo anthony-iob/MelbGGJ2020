@@ -17,9 +17,12 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
+        Debug.Log("collide");
         if(collision.gameObject.tag == "bandaidable") {
+            Debug.Log("baindaidable");
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
             if(bandaidable.isBleeding) {
+                Debug.Log("isBleeding");
                 bandaidable.repair.Invoke();
             }
         }

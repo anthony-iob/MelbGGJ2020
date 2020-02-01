@@ -8,6 +8,10 @@ public class NPCManager : Singleton<NPCManager>
     // Update is called once per frame
     public int UpdateBloodLevel()
     {
+        // foreach (var item in npcs)
+        // {
+        //     npc
+        // }
         return 10;
     }
 }

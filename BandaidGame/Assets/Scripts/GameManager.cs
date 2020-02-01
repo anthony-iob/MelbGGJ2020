@@ -23,11 +23,11 @@ public class GameManager : Singleton<GameManager>
     {
         if(!isGameOver) {
             currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
+            timeElapsed += Time.deltaTime;
         }
     }
 
     void Update() {
-        timeElapsed += Time.deltaTime;
         if(currentBloodLevel > MAX_BLOOD_LEVEL) {
             gameOver.Invoke();
             isGameOver = true;

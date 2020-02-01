@@ -9,6 +9,12 @@ public class Bandaidable : MonoBehaviour
     public bool isBleeding;
     public UnityEvent repair, bleed;
 
+    public void Awake() {
+        emitter.SetActive(false);
+        bandaid.SetActive(false);
+        isBleeding = false;
+    }
+
     public void Bleed ()
     {
         Debug.Log("Bleeding");
@@ -19,6 +25,5 @@ public class Bandaidable : MonoBehaviour
     {
         Debug.Log("Repairing");
         isBleeding = false;
-    }
-    
+    }    
 }

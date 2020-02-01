@@ -7,10 +7,9 @@ public class WoundManager : MonoBehaviour
 {
     public GameObject[] woundPositions;
     List<Bandaidable> wounds;
-    public GameObject woundBlueprint;
     public int maxWounds, bleedMultiplier, totalBleedValue, minWoundInterval, maxWoundInterval;
-    int woundInterval, timeSinceLastWounded;
-    public UnityEvent getBleedValue;
+    int woundInterval;
+    float timeSinceLastWounded;
     void Start()
     {
         SetWoundInterval();
@@ -23,8 +22,13 @@ public class WoundManager : MonoBehaviour
         OpenWound();
     }
 
+    void Update() {
+        timeSinceLastWounded += Time.deltaTime;
+    }
+
     void SetWoundInterval()
     {
+        timeSinceLastWounded = 0;
         woundInterval = Random.Range(minWoundInterval, maxWoundInterval);
     }
 
@@ -33,7 +37,8 @@ public class WoundManager : MonoBehaviour
         wounds = new List<Bandaidable>();
         while (wounds.Count < maxWounds)
         {
-            int pos = Random.Range(0, maxWounds);
+            int pos = Random.Range(0, woundPositions.Length);
+            Debug.Log(pos);
             if (!woundPositions[pos].activeSelf)
             {
                 woundPositions[pos].SetActive(true);
@@ -46,7 +51,6 @@ public class WoundManager : MonoBehaviour
     {
         if (timeSinceLastWounded >= woundInterval)
         {
-            timeSinceLastWounded = 0;
             SetWoundInterval();
             Bandaidable wound = GetClosedWound();
             wound.bleed.Invoke();
