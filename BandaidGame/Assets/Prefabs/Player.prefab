@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 936075326101429407}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,8 +325,9 @@ MonoBehaviour:
   inBypass: 0
   inColorPuzzle: 0
   nearFlare: 0
-  projectile: {fileID: 0}
-  projectilePosition: {fileID: 0}
+  projectile: {fileID: 3483967524938864252, guid: 83f4e8918e83b460ca76516b00ab0a3f,
+    type: 3}
+  projectilePosition: {fileID: 6488266179136781745}
   speed: 0
   SprintTimeRemaining: 0
   sprintCooldown: 0
@@ -358,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936075326153851961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 936075326302140530}
@@ -492,7 +493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6488266179136781745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0.6}
+  m_LocalPosition: {x: 0.25, y: -0.1, z: 0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 936075326302140530}

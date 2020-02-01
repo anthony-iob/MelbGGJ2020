@@ -211,6 +211,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &149491851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149491852}
+  m_Layer: 0
+  m_Name: Bandaid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149491852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149491851}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.780645, y: -0.921185, z: -0.8936154}
+  m_LocalScale: {x: 4.749691, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 770276133}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &214871446
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214871447}
+  m_Layer: 0
+  m_Name: BloodEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &214871447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214871446}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.780645, y: -0.921185, z: -0.8936154}
+  m_LocalScale: {x: 4.749691, y: 5, z: 5}
+  m_Children: []
+  m_Father: {fileID: 770276133}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &382275765
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,12 +376,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af47637d79d514a2faf7328fd62dff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &721597672 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6488266179136781745, guid: 9f9d15f4acb0943828a1de59553ddeb9,
-    type: 3}
-  m_PrefabInstance: {fileID: 936075325940618426}
-  m_PrefabAsset: {fileID: 0}
+  emitter: {fileID: 0}
+  bandaid: {fileID: 0}
+  isBleeding: 0
+  repair:
+    m_PersistentCalls:
+      m_Calls: []
+  bleed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &770276132
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +416,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.459, y: 0.187, z: 0.011956215}
   m_LocalScale: {x: 0.105270006, y: 0.1, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 149491852}
+  - {fileID: 214871447}
   m_Father: {fileID: 1831824673}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -369,6 +434,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af47637d79d514a2faf7328fd62dff14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  emitter: {fileID: 214871446}
+  bandaid: {fileID: 149491851}
+  isBleeding: 0
+  repair:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 149491851}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 214871446}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 770276134}
+        m_MethodName: Repair
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  bleed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 149491851}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 214871446}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 770276134}
+        m_MethodName: Bleed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &770276135
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -695,22 +835,6 @@ PrefabInstance:
     - target: {fileID: 936075326101429393, guid: 9f9d15f4acb0943828a1de59553ddeb9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 936075326101429407, guid: 9f9d15f4acb0943828a1de59553ddeb9,
-        type: 3}
-      propertyPath: projectile
-      value: 
-      objectReference: {fileID: 3483967524938864252, guid: 83f4e8918e83b460ca76516b00ab0a3f,
-        type: 3}
-    - target: {fileID: 936075326101429407, guid: 9f9d15f4acb0943828a1de59553ddeb9,
-        type: 3}
-      propertyPath: projectilePosition
-      value: 
-      objectReference: {fileID: 721597672}
-    - target: {fileID: 1639504095984131524, guid: 9f9d15f4acb0943828a1de59553ddeb9,
-        type: 3}
-      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

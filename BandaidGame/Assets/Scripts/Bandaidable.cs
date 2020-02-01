@@ -1,13 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bandaidable : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject emitter, bandaid;
+    public bool isBleeding;
+    public UnityEvent repair, bleed;
+
+    public void Bleed ()
+    {
+        Debug.Log("Bleeding");
+        isBleeding = true;
+    }
+
     public void Repair()
     {
-        Debug.Log("Repairable");
+        Debug.Log("Repairing");
+        isBleeding = false;
     }
     
 }
