@@ -36,6 +36,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+
+        private AudioSource bulletFire;
+
+        public AudioClip[] bulletSFX;
+
         //Crouch sprint toggle
         public bool toggleCrouchSprint;
 
@@ -89,6 +94,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             runSpeedOnStart = m_RunSpeed;
             walkSpeedOnStart = m_WalkSpeed;
+
+            if (gameObject.GetComponent<AudioSource>() != null)
+            {
+                bulletFire = GetComponent<AudioSource>();
+            }
+            else Debug.Log("An AudioSource is missing from an object which makes noises");
         }
 
 
@@ -180,6 +191,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             if (Input.GetButtonDown("Fire2")) {
                 this.Shoot();
+                //play random shoot sound from array. 
+                bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
+
+
+
             }
         }
 

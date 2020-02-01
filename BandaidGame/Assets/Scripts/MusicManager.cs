@@ -29,6 +29,19 @@ public class MusicManager : MonoBehaviour
 
     // private GameManager _gameManager;
 
+    /* This script involves creating audiosource children on a MusicManager gameobject, then dragging in the relevant tracks into the audioClip slots on the MusicManager script. 
+     * When the functions are called it should fade between the current and next queued track in your list.
+     * 
+     * The intro track deos not need an object and will start populated in the first audiosource, when it stops playing it will be replaced by the first loop, and then subsequent loops 
+     * will do the volume thing. 
+     * 
+     * There will be a system coming which swaps between two loop halves - allowing for different chord progressions to keep in time with each other - this will
+     * be used primarily to trigger an upwards endstate track which climbs a scale and is illsuited to a fade in. 
+     * 
+     * Finally the gameEndState is very much the last thing which will be heard and should accompany the failure of this game - before playing the gameOver in time with the relevant text/state - 
+     * that could also be added directly onto the GameOver text to be played although it would be better to have it here so we can try and avoid overlap. 
+     */
+
     void Start()
     {
         // var gameController = GameObject.FindGameObjectWithTag("GameController");
@@ -93,8 +106,9 @@ public class MusicManager : MonoBehaviour
         if (trackNumber == 1) { StartCoroutine("MusicLoop1"); }
         if (trackNumber == 2) { StartCoroutine("MusicLoop2"); }
         if (trackNumber == 3) { StartCoroutine("MusicLoop3"); }
-        if (trackNumber == 3) { StartCoroutine("MusicLoop4"); }
-        if (trackNumber == 3) { StartCoroutine("MusicLoop5"); }
+        if (trackNumber == 4) { StartCoroutine("MusicLoop4"); }
+        if (trackNumber == 5) { StartCoroutine("MusicLoop5"); }
+        if (trackNumber == 6) { StartCoroutine("MusicLoop6"); }
     }
 
    IEnumerator MusicLoop1()
@@ -126,14 +140,7 @@ public class MusicManager : MonoBehaviour
 
     IEnumerator MusicLoop3()
     {
-        /* 
-        loop1.volume = 0.0f;
-        loop2.volume = 0.0f;
-        loop3.volume = 1.0f;
-        loop4.volume = 0.0f;
-        loop5.volume = 0.0f;
-        endLoop.volume = 0.0f;
-        */
+ 
         while (loop2.volume > 0)
         {
             currentTime += Time.deltaTime;
@@ -156,6 +163,14 @@ public class MusicManager : MonoBehaviour
         currentTime += Time.deltaTime;
         loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
         loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+        yield return null;
+    }
+
+    IEnumerator MusicLoop6()
+    {
+        currentTime += Time.deltaTime;
+        loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+        endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
         yield return null;
     }
 

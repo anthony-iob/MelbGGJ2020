@@ -189,11 +189,11 @@ MonoBehaviour:
   loop3Track: {fileID: 8300000, guid: 480c66146544da24cb7f3ba0c5c13682, type: 3}
   loop4Track: {fileID: 8300000, guid: 6fdaf74e2b3d46148bacb78af3cf783e, type: 3}
   loop5Track: {fileID: 8300000, guid: 62c672ae69c85504099e48c4bc059b4f, type: 3}
-  endLoopTrack: {fileID: 8300000, guid: 62c672ae69c85504099e48c4bc059b4f, type: 3}
-  gameEndState: {fileID: 8300000, guid: f74b84d93dbfa1f4290c0cd6033cea87, type: 3}
-  gameOver: {fileID: 8300000, guid: 8d6ed646097bcb74b8989e9be0c0dc00, type: 3}
+  endLoopTrack: {fileID: 8300000, guid: f74b84d93dbfa1f4290c0cd6033cea87, type: 3}
+  gameEndState: {fileID: 8300000, guid: d4c2b78000e03a14fb7771717baff0f3, type: 3}
+  gameOver: {fileID: 8300000, guid: 5fe67fdc478109741a40fc5b27cf9e3a, type: 3}
   trackNumber: 0
-  fadeTime: 10
+  fadeTime: 20
 --- !u!1 &9059995617547912242
 GameObject:
   m_ObjectHideFlags: 0

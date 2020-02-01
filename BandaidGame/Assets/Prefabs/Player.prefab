@@ -318,6 +318,10 @@ MonoBehaviour:
   m_FootstepSounds: []
   m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 0}
+  bulletSFX:
+  - {fileID: 8300000, guid: 39d89b94e6a36de41bd07fe64b0c6e09, type: 3}
+  - {fileID: 8300000, guid: 7f32c8d3c52dd0747966135045e5e012, type: 3}
+  - {fileID: 8300000, guid: 66e4f3f742609b4498c7ced0eabfb4a5, type: 3}
   toggleCrouchSprint: 0
   projectile: {fileID: 3483967524938864252, guid: 83f4e8918e83b460ca76516b00ab0a3f,
     type: 3}

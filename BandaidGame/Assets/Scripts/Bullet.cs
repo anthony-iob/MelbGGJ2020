@@ -6,10 +6,15 @@ public class Bullet : MonoBehaviour
     // public new Rigidbody rigidbody;
     public int travelSpeed;
 
+    private float lifetime = 5;
+
     // Start is called before the first frame update
     void Start()
     {
-        this.Shoot();
+       this.Shoot();
+
+        //make sure bullets don't keep building up over time
+        Destroy(gameObject, lifetime);
     }
 
     private void Shoot() {
