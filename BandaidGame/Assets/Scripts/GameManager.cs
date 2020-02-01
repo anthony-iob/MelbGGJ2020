@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : Singleton<GameManager>
 {
     int currentBloodLevel;
     public int MAX_BLOOD_LEVEL;
     public float timeElapsed;
+    public UnityEvent gameOver;
+    bool isGameOver = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +21,17 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void FixedUpdate()
     {
-        currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
+        if(!isGameOver) {
+            currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
+        }
     }
 
     void Update() {
         timeElapsed += Time.deltaTime;
+        if(currentBloodLevel > MAX_BLOOD_LEVEL) {
+            gameOver.Invoke();
+            isGameOver = true;
+        }
     }
 
     public int GetElapsedMilliSeconds() {
