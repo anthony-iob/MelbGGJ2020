@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 56ca610fce61a074da23f23f2d746ea7
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: slash_medium_360_slash
+    100004: slash_slash_fat_180
+    100006: slash_slash_fat_360
+    100008: slash_slash_medium_180
+    100010: slash_slash_thin_180
+    100012: slash_slash_thin_360
+    400000: //RootNode
+    400002: slash_medium_360_slash
+    400004: slash_slash_fat_180
+    400006: slash_slash_fat_360
+    400008: slash_slash_medium_180
+    400010: slash_slash_thin_180
+    400012: slash_slash_thin_360
+    2300000: slash_medium_360_slash
+    2300002: slash_slash_fat_180
+    2300004: slash_slash_fat_360
+    2300006: slash_slash_medium_180
+    2300008: slash_slash_thin_180
+    2300010: slash_slash_thin_360
+    3300000: slash_medium_360_slash
+    3300002: slash_slash_fat_180
+    3300004: slash_slash_fat_360
+    3300006: slash_slash_medium_180
+    3300008: slash_slash_thin_180
+    3300010: slash_slash_thin_360
+    4300000: slash_medium_360_slash
+    4300002: slash_slash_fat_180
+    4300004: slash_slash_fat_360
+    4300006: slash_slash_medium_180
+    4300008: slash_slash_thin_180
+    4300010: slash_slash_thin_360
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_medium_360_slashMat
+    second: {fileID: 2100000, guid: 1011aa4ca76d3ab488e83099e7e2c8b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_slash_fat_180Mat
+    second: {fileID: 2100000, guid: 349f54ebb75b58143bec2ccdc39f33d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_slash_fat_360Mat
+    second: {fileID: 2100000, guid: 44bd70e15f7b20d4d9ee8f56bd10740d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_slash_medium_180Mat
+    second: {fileID: 2100000, guid: 45aeb93b7a28c654dbd194611bcf45c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_slash_thin_180Mat
+    second: {fileID: 2100000, guid: 46d1cab5ba524654ba3ce1ee8348f606, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: slash_slash_thin_360Mat
+    second: {fileID: 2100000, guid: 591e075d15f0bd54782fbf8c3d45fd7a, type: 2}
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
