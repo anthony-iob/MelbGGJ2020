@@ -8,6 +8,8 @@ public class WanderBehaviour : MonoBehaviour
     public float speed = 5;
     public float directionChangeInterval = 1;
     public float maxHeadingChange = 30;
+    public float whiskerRadius, whiskerRange, whiskerForwardSpawnModifier;
+    Vector3 whiskerSpawnPoint;
 
     CharacterController controller;
     float heading;
@@ -31,6 +33,21 @@ public class WanderBehaviour : MonoBehaviour
         controller.SimpleMove(forward * speed);
     }
 
+    private void FixedUpdate()
+    {
+        RaycastHit hit;
+
+        Debug.DrawRay(controller.transform.position, controller.transform.forward.normalized * whiskerRange, Color.green);
+
+        whiskerSpawnPoint = controller.transform.position + new Vector3(0, whiskerForwardSpawnModifier, 0);
+
+        if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, controller.transform.forward, out hit, whiskerRange))
+        {
+            Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+            AvoidWall();
+        }
+    }
+
     IEnumerator NewHeading()
     {
         while (true)
@@ -46,5 +63,11 @@ public class WanderBehaviour : MonoBehaviour
         var ceil = transform.eulerAngles.y + maxHeadingChange;
         heading = Random.Range(floor, ceil);
         targetRotation = new Vector3(0, heading, 0);
+    }
+
+    void AvoidWall()
+    {
+        Debug.Log("avoiding wall");
+        targetRotation = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 }
