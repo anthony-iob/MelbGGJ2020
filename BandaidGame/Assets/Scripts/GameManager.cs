@@ -16,21 +16,21 @@ public class GameManager : Singleton<GameManager>
     {
         timeElapsed = 0;
         currentBloodLevel = 0;
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(!isGameOver) {
-            currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
-            timeElapsed += Time.deltaTime;
-        }
+        currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
+        timeElapsed += Time.deltaTime;
     }
 
     void Update() {
         if(currentBloodLevel >= MAX_BLOOD_LEVEL) {
             gameOver.Invoke();
             isGameOver = true;
+            Time.timeScale = 0;
         }
     }
 
