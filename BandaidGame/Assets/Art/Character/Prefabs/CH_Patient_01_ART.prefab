@@ -27,11 +27,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8299389762784743831}
+  - {fileID: 5475595746303511357}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3915862055757150861
+--- !u!1001 &1046961141715443751
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -43,6 +43,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH_Frank_01_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: -6874540395504895234, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
     - target: {fileID: -4216859302048453862, guid: 25abc96279a5e0b4c8e405a782310b4c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -98,26 +103,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 25abc96279a5e0b4c8e405a782310b4c,
+    - target: {fileID: -1732776117180483009, guid: 25abc96279a5e0b4c8e405a782310b4c,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 25abc96279a5e0b4c8e405a782310b4c,
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 2345211957819186503, guid: 25abc96279a5e0b4c8e405a782310b4c,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 25abc96279a5e0b4c8e405a782310b4c,
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 5978353756071193034, guid: 25abc96279a5e0b4c8e405a782310b4c,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100
-      objectReference: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 6683954778380288806, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 9080525108790672607, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 9092733533079782267, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: -3470269113283508471, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
+    - target: {fileID: 4091380175172127247, guid: 25abc96279a5e0b4c8e405a782310b4c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cd122b47f8685324aba4682a62327726, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25abc96279a5e0b4c8e405a782310b4c, type: 3}
---- !u!4 &8299389762784743831 stripped
+--- !u!4 &5475595746303511357 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 25abc96279a5e0b4c8e405a782310b4c,
     type: 3}
-  m_PrefabInstance: {fileID: 3915862055757150861}
+  m_PrefabInstance: {fileID: 1046961141715443751}
   m_PrefabAsset: {fileID: 0}
