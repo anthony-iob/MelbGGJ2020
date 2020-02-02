@@ -484,6 +484,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -224.6, y: -30, z: 0}
+--- !u!114 &295342702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778397293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c754efa9c62c4838a3ff67a07fe08af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &364027367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1402,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseGame.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 295342702}
     - target: {fileID: 1054257836907044713, guid: d2d69c062f9a14670af5362b495923c2,
         type: 3}
       propertyPath: pauseGame.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1420,7 +1432,7 @@ PrefabInstance:
         type: 3}
       propertyPath: resumeGame.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 295342702}
     - target: {fileID: 1054257836907044713, guid: d2d69c062f9a14670af5362b495923c2,
         type: 3}
       propertyPath: resumeGame.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1629,6 +1641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613643293066866451, guid: 3d7210bfa267444bfb5301833bb0c1c8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d7210bfa267444bfb5301833bb0c1c8, type: 3}
