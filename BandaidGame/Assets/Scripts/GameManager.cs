@@ -35,15 +35,15 @@ public class GameManager : Singleton<GameManager>
     }
 
     public int GetElapsedMilliSeconds() {
-        return (int)Mathf.Round(timeElapsed * 100);
+        return (int)(timeElapsed * 100);
     }
 
     public int GetElapsedSeconds() {
-        return (int)Mathf.Round(timeElapsed);
+        return (int)(timeElapsed % 60);
     }
 
     public int GetElapsedMinutes() {
-        return (int)Mathf.Round(timeElapsed / 60);
+        return (int)(timeElapsed / 60);
     }
 
     public float GetFloodPercentage() {
