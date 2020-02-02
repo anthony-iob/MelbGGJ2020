@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using EZCameraShake;
 
 public class Gun : Singleton<Gun>
 {
@@ -31,10 +32,12 @@ public class Gun : Singleton<Gun>
         if (chargeTime >= chargeShotDelay)
         {
             loadedBullet.GetComponent<Bullet>().charged = true;
+			CameraShaker.Instance.ShakeOnce(8f, 2f, 0.1f, 3f);
             loadedBullet.transform.localScale *= chargeShotSizeMultiplier;
-        }
+		}
         explosion.Play();
-        bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
+		CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
+		bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
         chargeTime = 0;
     }
 

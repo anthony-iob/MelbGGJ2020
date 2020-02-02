@@ -16,11 +16,11 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void LoadMainMenu() {
-        SceneManager.LoadScene(SceneManager.GetSceneByName("MainMenu").buildIndex);
+        SceneManager.LoadScene("Scenes/MainMenu");
     }
 
     public void LoadLevel1() { 
-        SceneManager.LoadScene(SceneManager.GetSceneByName("Level1").buildIndex); 
+        SceneManager.LoadScene("Scenes/Level1"); 
     }
 
     public void QuitGame() {

@@ -129,7 +129,8 @@ public class MusicManager : MonoBehaviour
 
         if (GameManager.instance.GetFloodPercentage() >= 90)
         {
-            endLoop.loop = !isActiveAndEnabled;
+          //  endLoop.loop = !isActiveAndEnabled;
+            endLoop.loop = false;
         }
 
         if (!endLoop.isPlaying && !loop1.isPlaying)
