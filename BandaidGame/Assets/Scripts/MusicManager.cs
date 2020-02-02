@@ -24,14 +24,11 @@ public class MusicManager : MonoBehaviour
     public AudioClip gameEndState;
     public AudioClip gameOver;
 
+    public AudioClip klaxon;
+
     public int trackNumber;
     public float fadeTime;
     private float currentTime;
-
-
-    // private GameManager _gameManager;
-
-
 
     /* This script involves creating audiosource children on a MusicManager gameobject, then dragging in the relevant tracks into the audioClip slots on the MusicManager script. 
      * When the functions are called it should fade between the current and next queued track in your list.
@@ -48,7 +45,8 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
-        // var gameController = GameObject.FindGameObjectWithTag("GameController");
+
+        
         // _gameManager = gameController.GetComponent<GameManager>();
 
         //turn off loop when threshold is passed - when not playing swap tracks. 
@@ -102,18 +100,43 @@ public class MusicManager : MonoBehaviour
             loop5.Play();
             loop5.loop = isActiveAndEnabled;
 
+            loop6.clip = loop6Track;
+            loop6.Play();
+            loop6.loop = isActiveAndEnabled;
 
+            endLoop.clip = endLoopTrack;
+            endLoop.Play();
+            endLoop.loop = isActiveAndEnabled;
         }
 
     }
     private void FixedUpdate()
     {
-        if (trackNumber == 1) { StartCoroutine("MusicLoop1"); }
-        if (trackNumber == 2) { StartCoroutine("MusicLoop2"); }
-        if (trackNumber == 3) { StartCoroutine("MusicLoop3"); }
-        if (trackNumber == 4) { StartCoroutine("MusicLoop4"); }
-        if (trackNumber == 5) { StartCoroutine("MusicLoop5"); }
-        if (trackNumber == 6) { StartCoroutine("MusicLoop6"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.10) { StartCoroutine("MusicLoop1"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.25) { StartCoroutine("MusicLoop2"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.35) { StartCoroutine("MusicLoop3"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.50) { StartCoroutine("MusicLoop4"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.75)
+        {
+            StartCoroutine("MusicLoop5");
+            //put in a klaxon/warning here? 
+        }
+        if (GameManager.instance.GetFloodPercentage() >= 85)
+        {
+            StartCoroutine("MusicLoop6");
+            //warning here too?
+        }
+
+        if (GameManager.instance.GetFloodPercentage() >= 90)
+        {
+            endLoop.loop = !isActiveAndEnabled;
+        }
+
+        if (!endLoop.isPlaying && !loop1.isPlaying)
+        {
+            endLoop.clip = gameEndState;
+            endLoop.Play();
+        }
     }
 
    IEnumerator MusicLoop1()
@@ -133,8 +156,7 @@ public class MusicManager : MonoBehaviour
         }
 
     }
-
-
+    
     IEnumerator MusicLoop2()
     {
         while (loop2.volume > 0)
