@@ -21,7 +21,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLevel1() { 
         SceneManager.LoadScene(SceneManager.GetSceneByName("Level1").buildIndex); 
-    } 
+    }
 
     public void QuitGame() {
         Application.Quit();
