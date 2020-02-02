@@ -8,6 +8,11 @@ public class Bullet : MonoBehaviour
     public UnityEvent hit;
     private float lifetime = 5;
 
+    public AudioClip[] bulletImpact;
+    private AudioSource audioSource;
+
+   // private WoundManager woundManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +29,12 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.tag == "bandaidable") {
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
-            if(bandaidable.isBleeding) {
+            WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
+           // audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);
+
+            if (bandaidable.isBleeding) {
                 bandaidable.repair.Invoke();
+                woundManager.CuredNoisePlay();
             }
         }
 
