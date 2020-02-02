@@ -158,6 +158,8 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
+  charged: 0
+  bulletImpact: []
 --- !u!1 &6302376985433536967
 GameObject:
   m_ObjectHideFlags: 0

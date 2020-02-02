@@ -8,7 +8,7 @@ public class Gun : Singleton<Gun>
 {
     public GameObject projectile;
     public GameObject projectilePosition;
-    public float chargeShotSizeMultiplier = 2, chargeShotDelay = 1;
+    public float chargeShotSizeMultiplier, chargeShotDelay;
     GameObject loadedBullet;
 
     float chargeTime = 0;
@@ -33,8 +33,8 @@ public class Gun : Singleton<Gun>
         {
             loadedBullet.GetComponent<Bullet>().charged = true;
 			CameraShaker.Instance.ShakeOnce(8f, 2f, 0.1f, 3f);
+            loadedBullet.transform.localScale *= chargeShotSizeMultiplier;
 		}
-        loadedBullet.transform.localScale *= chargeShotSizeMultiplier * GetChargePercentage();
         explosion.Play();
 		CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
 		bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
@@ -48,6 +48,6 @@ public class Gun : Singleton<Gun>
 
     public float GetChargePercentage()
     {
-        return chargeTime / chargeShotDelay;
+        return Mathf.Clamp(chargeTime / chargeShotDelay, 0, 1);
     }
 }

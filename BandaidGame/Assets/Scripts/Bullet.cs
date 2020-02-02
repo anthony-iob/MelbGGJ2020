@@ -28,7 +28,15 @@ public class Bullet : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.tag == "bandaidable") {
+
+        if (charged) 
+        {
+            if(collision.gameObject.tag == "npc")
+            {
+                Debug.Log("REPAIRING ALL WOUNDS");
+                collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds(); ;
+            }
+        } else if (collision.gameObject.tag == "bandaidable") {
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
             WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
            // audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);
