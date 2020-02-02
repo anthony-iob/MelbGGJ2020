@@ -84,7 +84,7 @@ MonoBehaviour:
   whiskerRadius: 0.3
   whiskerRange: 2
   whiskerForwardSpawnModifier: 1
-  wallAvoidanceTurnDegrees: 0
+  wallAvoidanceTurnDegrees: 170
 --- !u!212 &4527059520526135584
 SpriteRenderer:
   m_ObjectHideFlags: 0
