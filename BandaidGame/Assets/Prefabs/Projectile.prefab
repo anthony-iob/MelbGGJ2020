@@ -158,6 +158,8 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
+  charged: 0
+  bulletImpact: []
 --- !u!1 &6302376985433536967
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +382,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.15144563, g: 0.9150943, b: 0.11654504, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
