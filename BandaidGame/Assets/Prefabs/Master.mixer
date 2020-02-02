@@ -48,6 +48,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -8959606400527451928}
+  - {fileID: 6960194008117012552}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -63,6 +64,7 @@ AudioMixerController:
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: 2904876962516514038}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -121,6 +123,22 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: f8a97b61572806f4cae037a19795ba8f
   m_FloatValues:
+    4d451114f4ef614448f33e6ab1398f3d: 22000
+    d5ed9ed5de4543143bcf61860f6e773e: -0.1
+    2c215b89b3818574eb29a40a52f0798d: -0.08374829
+  m_TransitionOverrides: {}
+--- !u!245 &2904876962516514038
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LowPass
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: 879102c4a89475945b2243d84e336add
+  m_FloatValues:
+    07c0dd403f86b704b9b86d8795e060e8: 1
+    4d451114f4ef614448f33e6ab1398f3d: 444
     d5ed9ed5de4543143bcf61860f6e773e: -0.16685188
     2c215b89b3818574eb29a40a52f0798d: -0.08374829
   m_TransitionOverrides: {}
@@ -135,6 +153,24 @@ AudioMixerEffectController:
   m_EffectName: Attenuation
   m_MixLevel: a3fd72d8ba309284b81814071b436901
   m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &6960194008117012552
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: f951b7a52336e7047a1fbf57221b5b66
+  m_EffectName: Lowpass
+  m_MixLevel: 0817f23962ad25f4f9687c20e09e4f18
+  m_Parameters:
+  - m_ParameterName: Cutoff freq
+    m_GUID: 4d451114f4ef614448f33e6ab1398f3d
+  - m_ParameterName: Resonance
+    m_GUID: 07c0dd403f86b704b9b86d8795e060e8
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0

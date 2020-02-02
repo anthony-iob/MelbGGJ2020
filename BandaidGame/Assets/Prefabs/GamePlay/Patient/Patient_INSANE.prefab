@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8461748972821476996}
   m_Layer: 0
   m_Name: Patient_INSANE
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,10 +81,10 @@ MonoBehaviour:
   speed: 6
   directionChangeInterval: 1
   maxHeadingChange: 30
-  whiskerRadius: 0.3
+  whiskerRadius: 0.2
   whiskerRange: 2
-  whiskerForwardSpawnModifier: 1
-  wallAvoidanceTurnDegrees: 0
+  whiskerForwardSpawnModifier: 1.5
+  wallAvoidanceTurnDegrees: 90
 --- !u!212 &4527059520526135584
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -547,8 +547,17 @@ MonoBehaviour:
   totalBleedValue: 0
   minWoundInterval: 4
   maxWoundInterval: 4
-  hurtNoises: []
-  curedNoises: []
+  hurtNoises:
+  - {fileID: 8300000, guid: 85928503ffadeeb43aaf5835e80a51c9, type: 3}
+  - {fileID: 8300000, guid: 80aab1d2c11685b4ea04f74b1d5da2e6, type: 3}
+  - {fileID: 8300000, guid: 9ab8e4f712f99814ea961608ceeb6f13, type: 3}
+  - {fileID: 8300000, guid: 75a0c9c19fa1d844eac99220dc2e6055, type: 3}
+  - {fileID: 8300000, guid: 336267ac5d0d1bd46b77317b7e29ecec, type: 3}
+  curedNoises:
+  - {fileID: 8300000, guid: 7015bbe27e1ea72448a5c97cde1d4eaf, type: 3}
+  - {fileID: 8300000, guid: 7c1e31a974dacd141afe32547826cd35, type: 3}
+  - {fileID: 8300000, guid: 29c449bb0329d7143a437cc8729807de, type: 3}
+  - {fileID: 8300000, guid: c0f4a5d4fe5855f4b98c1733706e8be5, type: 3}
   bandaidImpacts: []
 --- !u!95 &380237465
 Animator:

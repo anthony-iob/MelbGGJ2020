@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8461748972821476996}
   m_Layer: 0
   m_Name: CH_Patient_01
-  m_TagString: Untagged
+  m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,10 +81,10 @@ MonoBehaviour:
   speed: 5
   directionChangeInterval: 1
   maxHeadingChange: 30
-  whiskerRadius: 0.5
+  whiskerRadius: 0.2
   whiskerRange: 2
   whiskerForwardSpawnModifier: 1.5
-  wallAvoidanceTurnDegrees: 0
+  wallAvoidanceTurnDegrees: 90
 --- !u!212 &4527059520526135584
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -542,6 +542,7 @@ MonoBehaviour:
   - {fileID: 6639429557447191082}
   - {fileID: 6639429557172312964}
   - {fileID: 6639429556439778644}
+  BLOOD_FREQUENCY_SECONDS: 0
   maxWounds: 2
   bleedMultiplier: 2
   totalBleedValue: 0
@@ -1011,13 +1012,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.10000001
+      propertyPath: m_LocalScale.y
+      value: 0.09999998
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.09999998
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1178,13 +1179,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.10000006
+      propertyPath: m_LocalScale.y
+      value: 0.10000007
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.10000007
+      propertyPath: m_LocalScale.z
+      value: 0.10000006
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1345,13 +1346,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.10000001
+      propertyPath: m_LocalScale.y
+      value: 0.09999998
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005661, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.09999998
+      propertyPath: m_LocalScale.z
+      value: 0.10000001
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
