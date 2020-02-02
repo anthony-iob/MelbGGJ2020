@@ -4,6 +4,7 @@ using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
+using EZCameraShake;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
@@ -11,9 +12,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof(AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
-        public Gun weaponScript;
-        public Vector3 normalCameraLocalPos = new Vector3(0, 2.44f, 0);
+		public GameObject playerObj;
+		public Vector3 normalCameraLocalPos = new Vector3(0, 2.44f, 0);
         public Vector3 crouchedCameraLocalPos = new Vector3(0, 1, 0);
+        public float chargeShotSizeMultiplier = 2, chargeShotDelay = 1;
+        float chargeTime = 0;
         public Animator cameraPivot;
         [SerializeField] private bool m_IsWalking;
         public float m_WalkSpeed; //un-serialzed and made public so the light script can make player speed 0 while in light
@@ -36,6 +39,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+
+
+        private AudioSource bulletFire;
+
+        public AudioClip[] bulletSFX;
+		public ParticleSystem explosion;
 
         //Crouch sprint toggle
         public bool toggleCrouchSprint;
@@ -89,6 +98,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             runSpeedOnStart = m_RunSpeed;
             walkSpeedOnStart = m_WalkSpeed;
+
+            if (gameObject.GetComponent<AudioSource>() != null)
+            {
+                bulletFire = GetComponent<AudioSource>();
+            }
+            else Debug.Log("An AudioSource is missing from an object which makes noises");
         }
 
         public void ForceLockCursor()
@@ -99,6 +114,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public void EnableCursor() {
             m_MouseLook.SetCursorLock(false);
         }
+
+        public GameObject projectile;
+        public GameObject projectilePosition;
 
         // Update is called once per frame
         private void Update()
@@ -167,12 +185,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             
             if (Input.GetButtonUp("Fire1")) {
-                weaponScript.Shoot();
+                if(chargeTime >= chargeShotDelay)
+                {
+                    this.Charge();
+				}
+                else
+                {
+                    this.Shoot();
+				}
+                //play random shoot sound from array. 
+                chargeTime = 0;
+                bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
             }
             
             if (Input.GetButton("Fire1"))
             {
-                weaponScript.Charge();
+                chargeTime += Time.deltaTime;
             }
 
             
@@ -368,7 +396,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 #endif
             // set the desired speed to be walking or running
-            speed = m_WalkSpeed;
+            speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
 
 			if (!m_IsWalking)
 			{
@@ -425,6 +453,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 return;
             }
             body.AddForceAtPosition(m_CharacterController.velocity * 0.8f, hit.point, ForceMode.Impulse);
+        }
+
+        public void Shoot() {
+            GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
+			explosion.Play();
+			CameraShaker.Instance.ShakeOnce(6f, 3f, .1f, .2f);
+		}       
+        
+        private void Charge()
+        {
+            GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
+            bullet.transform.localScale *= chargeShotSizeMultiplier;
         }
     }
 }
