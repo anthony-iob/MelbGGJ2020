@@ -7,13 +7,14 @@ using TMPro;
 public class HUDManager : MonoBehaviour
 {
     public TextMeshProUGUI timerLabel, percentageLabel;
-    public Image floodBar;
+    public Image floodBar, chargeBar;
     float percentage;
 
     void Update()
     {
         UpdateTimer();
         UpdateFloodInfo();
+        UpdateChargeBar();
     }
 
     void UpdateFloodInfo()
@@ -37,5 +38,10 @@ public class HUDManager : MonoBehaviour
         text += GameManager.instance.GetElapsedSeconds() + "s";
 
         timerLabel.text = text;
+    }
+
+    void UpdateChargeBar()
+    {
+        chargeBar.fillAmount = Gun.instance.GetChargePercentage();
     }
 }

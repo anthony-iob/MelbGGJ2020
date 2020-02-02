@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public int travelSpeed;
     public UnityEvent hit;
     private float lifetime = 5;
+    public bool charged = false;
 
     public AudioClip[] bulletImpact;
     private AudioSource audioSource;
