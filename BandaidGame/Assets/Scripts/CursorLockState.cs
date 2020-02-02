@@ -7,4 +7,8 @@ public class CursorLockState : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    void UnlockCursor() {
+        
+    }
 }

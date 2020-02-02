@@ -101,11 +101,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else Debug.Log("An AudioSource is missing from an object which makes noises");
         }
 
-
         public void ForceLockCursor()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            m_MouseLook.SetCursorLock(true);
+        }
+
+        public void EnableCursor() {
+            m_MouseLook.SetCursorLock(false);
         }
 
         public GameObject projectile;
