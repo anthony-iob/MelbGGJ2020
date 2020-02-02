@@ -13,6 +13,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
     {
         public Vector3 normalCameraLocalPos = new Vector3(0, 2.44f, 0);
         public Vector3 crouchedCameraLocalPos = new Vector3(0, 1, 0);
+        public float chargeShotSizeMultiplier = 2, chargeShotDelay = 1;
+        float chargeTime = 0;
         public Animator cameraPivot;
         [SerializeField] private bool m_IsWalking;
         public float m_WalkSpeed; //un-serialzed and made public so the light script can make player speed 0 while in light
@@ -162,17 +164,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //         source.spatialBlend = 1.0f;
             //     }
             //CROUCHING =========================================================
-            if (Input.GetButtonDown("Fire1"))
-            //&& m_IsWalking == true)
-            {
-                m_CharacterController.height = 1;
-                m_Camera.transform.parent.localPosition = crouchedCameraLocalPos;
-            }
-            if (Input.GetButtonUp("Fire1"))
-            {
-                m_CharacterController.height = characterControllerHeightOnStart;
-                m_Camera.transform.parent.localPosition = normalCameraLocalPos;
-            }
 
             if (m_CharacterController.isGrounded)
             {
@@ -191,14 +182,26 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
             }
             
-            if (Input.GetButtonDown("Fire2")) {
-                this.Shoot();
+            if (Input.GetButtonUp("Fire1")) {
+                if(chargeTime >= chargeShotDelay)
+                {
+                    this.Charge();
+                }
+                else
+                {
+                    this.Shoot();
+                }
                 //play random shoot sound from array. 
+                chargeTime = 0;
                 bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
-				
-
-
             }
+            
+            if (Input.GetButton("Fire1"))
+            {
+                chargeTime += Time.deltaTime;
+            }
+
+            
         }
 
 		void CheckHeartBeatAndBreathing()
@@ -454,5 +457,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
 			explosion.Play();
         }       
+        
+        private void Charge()
+        {
+            GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
+            bullet.transform.localScale *= chargeShotSizeMultiplier;
+        }
     }
 }
