@@ -21,13 +21,15 @@ public class Bullet : MonoBehaviour
         this.GetComponent<Rigidbody>().AddForce(transform.forward * travelSpeed);
     }
 
+    private void Charged()
+    {
+        this.transform.localScale *= chargeShotSizeMultiplier;
+    }
+
     void OnCollisionEnter(Collision collision) {
-        Debug.Log("collide");
         if(collision.gameObject.tag == "bandaidable") {
-            Debug.Log("baindaidable");
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
             if(bandaidable.isBleeding) {
-                Debug.Log("isBleeding");
                 bandaidable.repair.Invoke();
             }
         }

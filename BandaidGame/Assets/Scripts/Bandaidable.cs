@@ -17,13 +17,11 @@ public class Bandaidable : MonoBehaviour
 
     public void Bleed ()
     {
-        Debug.Log("Bleeding");
         isBleeding = true;
     }
 
     public void Repair()
     {
-        Debug.Log("Repairing");
         isBleeding = false;
     }    
 }
