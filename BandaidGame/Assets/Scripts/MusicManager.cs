@@ -49,7 +49,9 @@ public class MusicManager : MonoBehaviour
 
     public int trackNumber;
     public float fadeTime;
-    private float currentTime;
+    public float currentTime;
+
+    private bool ohNoEndTime = false;
 
 
 
@@ -64,7 +66,7 @@ public class MusicManager : MonoBehaviour
         loop1.clip = introTrack;
         loop1.Play();
 
-        trackNumber = 0;
+        trackNumber = 0; //btw this is useless I should delete it but here I am writing a comment instead
 
         loop1.volume = 1.0f;
         loop2.volume = 0.0f;
@@ -80,11 +82,12 @@ public class MusicManager : MonoBehaviour
     void Update()
     {
      
-        if (!loop1.isPlaying)
+        if (!loop1.isPlaying && endLoop != gameEndState)
         {
             loop1.clip = loop1Track;
             loop1.Play();
             loop1.loop = isActiveAndEnabled;
+            
 
             loop2.clip = loop2Track;
             loop2.Play();
@@ -111,43 +114,50 @@ public class MusicManager : MonoBehaviour
             endLoop.loop = isActiveAndEnabled;
         }
 
-    }
-    private void FixedUpdate()
-    {
-        if (GameManager.instance.GetFloodPercentage() >= 0.10) { StartCoroutine("MusicLoop1"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.20) { StartCoroutine("MusicLoop2"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.30) { StartCoroutine("MusicLoop3"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.45) { StartCoroutine("MusicLoop4"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.55)
+   // }
+  //  private void FixedUpdate()
+ //   {
+        if (loop1.clip == loop1Track)
         {
-            StartCoroutine("MusicLoop5");
-            //an alarm here.
+            if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 5) { StartCoroutine("MusicLoop1"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.5 && GameManager.instance.GetFloodPercentage() < 15) { StartCoroutine("MusicLoop2"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 30) { StartCoroutine("MusicLoop3"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 45) { StartCoroutine("MusicLoop4"); }
 
-            // klaxonAudioSource.Play();
+            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 55)
+            {
+                StartCoroutine("MusicLoop5");
+                //an alarm here.
 
+                // klaxonAudioSource.Play();
+
+            }
+            if (GameManager.instance.GetFloodPercentage() >= 0.55 && GameManager.instance.GetFloodPercentage() < 70)
+            {
+                StartCoroutine("MusicLoop6");
+                //another alarm here.
+
+                //klaxonAudioSource.Play();
+            }
+
+            if (GameManager.instance.GetFloodPercentage() >= 0.70)
+            {
+                endLoop.loop = false;
+                Debug.Log("Loop should have turned off now!! End state approacheth");
+            }
+
+            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.80 && ohNoEndTime == false)
+            {
+                endLoop.clip = gameEndState;
+                endLoop.Play();
+                Debug.Log("The game is about to end...last trak");
+                trackNumber = 8;
+                ohNoEndTime = true;
+               // currentTime = 0;
+
+            }
         }
-        if (GameManager.instance.GetFloodPercentage() >= 65)
-        {
-            StartCoroutine("MusicLoop6");
-            //another alarm here.
-
-            //klaxonAudioSource.Play();
-        }
-
-        if (GameManager.instance.GetFloodPercentage() >= 80)
-        {
-            //endLoop.loop = !isActiveAndEnabled;
-            endLoop.loop = false;
-            Debug.Log("Loop should have turned off now!! End state approacheth");
-        }
-
-        if (GameManager.instance.GetFloodPercentage() >=50 && !endLoop.isPlaying && !loop1.isPlaying)
-        {
-            endLoop.clip = gameEndState;
-            endLoop.Play();
-            Debug.Log("The game is about to end...last trak");
-        }
-    }
+     }
 
    IEnumerator MusicLoop1()
     {
@@ -158,6 +168,7 @@ public class MusicManager : MonoBehaviour
             loop1.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop2.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 2 is now playing");
+            trackNumber = 2;
             yield return null;
         }
 
@@ -176,6 +187,7 @@ public class MusicManager : MonoBehaviour
             loop2.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop3.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 3 is now playing");
+            trackNumber = 3;
             yield return null;
         }
 
@@ -195,6 +207,7 @@ public class MusicManager : MonoBehaviour
             loop3.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop4.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 4 is now playing");
+            trackNumber = 4;
             yield return null;
         }
 
@@ -212,6 +225,7 @@ public class MusicManager : MonoBehaviour
             loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 5 is now playing");
+            trackNumber = 5;
             yield return null;
         }
         if (loop4.volume == 0)
@@ -229,20 +243,26 @@ public class MusicManager : MonoBehaviour
             loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop6.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 6 is now playing");
+            trackNumber = 6;
             yield return null;
         }
-
-
-
-    }
+        if (loop5.volume == 0)
+        {
+            currentTime = 0;
+        }
+     }
 
     IEnumerator MusicLoop6()
     {
-        currentTime += Time.deltaTime;
-        loop6.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
-        endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
-        Debug.Log("The End Loop is now playing");
-        yield return null;
+        while (loop6.volume > 0)
+        {
+            currentTime += Time.deltaTime;
+            loop6.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
+            endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("The End Loop is now playing");
+            trackNumber = 7;
+            yield return null;
+        }
     }
 
 }

@@ -14,8 +14,10 @@ public class WoundManager : MonoBehaviour
 
     public AudioClip[] hurtNoises;
     public AudioClip[] curedNoises;
-       
+    public AudioClip healedSFX, allHealSFX;
+           
     private AudioSource audioSource;
+    public AudioSource healSFXSource;
     private float bleedUpdateTime;
 
 
@@ -111,6 +113,7 @@ public class WoundManager : MonoBehaviour
     public void CuredNoisePlay()
     {
         if (audioSource != null) { audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length - 1)]); }
+        if (healSFXSource != null) { healSFXSource.PlayOneShot(healedSFX); }
         else Debug.Log("You're missing an audio source on a patient");
         //Debug.Log("NOISES FOR CURE");
     }
@@ -120,6 +123,10 @@ public class WoundManager : MonoBehaviour
         foreach(Bandaidable wound in wounds)
         {
             wound.repair.Invoke();
+            if (audioSource != null) { audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length - 1)]); }
+            else Debug.Log("You're missing an audio source on a patient");
+
+            if (healSFXSource != null) {healSFXSource.PlayOneShot(allHealSFX);}
         }
     }
 }

@@ -322,7 +322,8 @@ MonoBehaviour:
   gameEndState: {fileID: 8300000, guid: d4c2b78000e03a14fb7771717baff0f3, type: 3}
   gameOver: {fileID: 8300000, guid: 5fe67fdc478109741a40fc5b27cf9e3a, type: 3}
   trackNumber: 0
-  fadeTime: 20
+  fadeTime: 10
+  currentTime: 0
 --- !u!1 &9059995617547912242
 GameObject:
   m_ObjectHideFlags: 0

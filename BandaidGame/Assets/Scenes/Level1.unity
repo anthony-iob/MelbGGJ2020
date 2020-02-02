@@ -1219,6 +1219,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9059995617261244861, guid: a421f476fe8ce6b40b5451760574581a,
+        type: 3}
+      propertyPath: fadeTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9059995619000584102, guid: a421f476fe8ce6b40b5451760574581a,
         type: 3}
       propertyPath: OutputAudioMixerGroup

@@ -10,6 +10,7 @@ public class Bandaidable : MonoBehaviour
     public UnityEvent repair, bleed;
 
     public void Awake() {
+
         emitter.SetActive(false);
         bandaid.SetActive(false);
         isBleeding = false;
@@ -25,8 +26,4 @@ public class Bandaidable : MonoBehaviour
         isBleeding = false;
     }  
     
-    public void CuredNoisePlay()
-    {
-
-    }
 }
