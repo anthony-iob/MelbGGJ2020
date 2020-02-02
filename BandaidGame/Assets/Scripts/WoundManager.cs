@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class WoundManager : MonoBehaviour
 {
     public GameObject[] woundPositions;
+    public float BLOOD_FREQUENCY_SECONDS;
     List<Bandaidable> wounds;
     public int maxWounds, bleedMultiplier, totalBleedValue, minWoundInterval, maxWoundInterval;
     int woundInterval;
@@ -15,13 +16,16 @@ public class WoundManager : MonoBehaviour
     public AudioClip[] curedNoises;
     public AudioClip[] bandaidImpacts;
 
+    
     private AudioSource audioSource;
+    private float bleedUpdateTime;
+
 
     void Start()
     {
         SetWoundInterval();
         InitialiseWounds();
-
+        bleedUpdateTime = 0;
         if (gameObject.GetComponent<AudioSource>() != null)
         {
             audioSource = GetComponent<AudioSource>();
@@ -31,12 +35,16 @@ public class WoundManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        UpdateBleedValue();
         OpenWound();
     }
 
     void Update() {
         timeSinceLastWounded += Time.deltaTime;
+        bleedUpdateTime += Time.deltaTime;
+        if (bleedUpdateTime >= BLOOD_FREQUENCY_SECONDS) {
+            UpdateBleedValue();
+            bleedUpdateTime = 0;
+        }
     }
 
     void SetWoundInterval()
