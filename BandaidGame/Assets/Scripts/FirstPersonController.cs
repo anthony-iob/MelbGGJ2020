@@ -40,6 +40,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private AudioSource bulletFire;
 
         public AudioClip[] bulletSFX;
+		public ParticleSystem explosion;
 
         //Crouch sprint toggle
         public bool toggleCrouchSprint;
@@ -192,7 +193,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 this.Shoot();
                 //play random shoot sound from array. 
                 bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
-
+				
 
 
             }
@@ -449,6 +450,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void Shoot() {
             GameObject bullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
+			explosion.Play();
         }       
     }
 }
