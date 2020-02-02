@@ -21,6 +21,8 @@ public class Bullet : MonoBehaviour
 
         //make sure bullets don't keep building up over time
         Destroy(gameObject, lifetime);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Shoot() {
@@ -41,8 +43,10 @@ public class Bullet : MonoBehaviour
 
         if(collision.gameObject.tag != "Player")
         {
+            audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);
             this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
+
+            Destroy(this.gameObject, lifetime);
         }
     }
 

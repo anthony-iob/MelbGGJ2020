@@ -14,7 +14,7 @@ public class WoundManager : MonoBehaviour
 
     public AudioClip[] hurtNoises;
     public AudioClip[] curedNoises;
-    public AudioClip[] bandaidImpacts;
+  //  public AudioClip[] bandaidImpacts;
 
     
     private AudioSource audioSource;
@@ -112,6 +112,6 @@ public class WoundManager : MonoBehaviour
     public void CuredNoisePlay()
     {
         audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length)]);
-        Debug.Log("NOISES FOR CURE");
+        //Debug.Log("NOISES FOR CURE");
     }
 }
