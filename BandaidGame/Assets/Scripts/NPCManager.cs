@@ -51,6 +51,7 @@ public class NPCManager : Singleton<NPCManager>
                     currentNPCs[pos] = Instantiate(npcBlueprints[spawnedNPCs], spawnPoint.position, spawnPoint.rotation);
                     spawnedNPCs += 1;
                     sinceSpawn = 0;
+                    break;
                 }
             } 
         }
