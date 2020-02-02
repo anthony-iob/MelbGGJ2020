@@ -25,4 +25,8 @@ public class Bandaidable : MonoBehaviour
         isBleeding = false;
     }  
     
+    public void CuredNoisePlay()
+    {
+
+    }
 }
