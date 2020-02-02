@@ -5,10 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class WanderBehaviour : MonoBehaviour
 {
+    [Header("Wander Behaviour")]
     public float speed = 5;
     public float directionChangeInterval = 1;
     public float maxHeadingChange = 30;
-    public float whiskerRadius, whiskerRange, whiskerForwardSpawnModifier;
+
+    [Header("Whiskers/WallAvoidance")]
+    public float whiskerRadius, whiskerRange, whiskerForwardSpawnModifier, wallAvoidanceTurnDegrees;
     Vector3 whiskerSpawnPoint;
 
     CharacterController controller;
@@ -68,6 +71,6 @@ public class WanderBehaviour : MonoBehaviour
     void AvoidWall()
     {
         Debug.Log("avoiding wall");
-        targetRotation = new Vector3(0, transform.eulerAngles.y + 180, 0);
+        targetRotation = new Vector3(0, transform.eulerAngles.y + wallAvoidanceTurnDegrees, 0);
     }
 }
