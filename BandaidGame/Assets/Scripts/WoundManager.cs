@@ -76,7 +76,7 @@ public class WoundManager : MonoBehaviour
             Bandaidable wound = GetClosedWound();
             if(wound != null) {
                 wound.bleed.Invoke();
-                audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length)]);
+                audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length-1)]);
             }
         }
     }
