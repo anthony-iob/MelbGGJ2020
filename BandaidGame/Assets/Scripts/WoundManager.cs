@@ -114,4 +114,12 @@ public class WoundManager : MonoBehaviour
         audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length)]);
         Debug.Log("NOISES FOR CURE");
     }
+
+    public void RepairAllWounds()
+    {
+        foreach(Bandaidable wound in wounds)
+        {
+            wound.repair.Invoke();
+        }
+    }
 }
