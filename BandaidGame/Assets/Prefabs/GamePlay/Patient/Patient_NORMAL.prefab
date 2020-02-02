@@ -81,10 +81,10 @@ MonoBehaviour:
   speed: 2.5
   directionChangeInterval: 2
   maxHeadingChange: 30
-  whiskerRadius: 0.3
+  whiskerRadius: 0.2
   whiskerRange: 2
-  whiskerForwardSpawnModifier: 1
-  wallAvoidanceTurnDegrees: 0
+  whiskerForwardSpawnModifier: 1.5
+  wallAvoidanceTurnDegrees: 90
 --- !u!212 &4527059520526135584
 SpriteRenderer:
   m_ObjectHideFlags: 0

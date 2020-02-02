@@ -81,10 +81,10 @@ MonoBehaviour:
   speed: 5
   directionChangeInterval: 1
   maxHeadingChange: 30
-  whiskerRadius: 0.5
+  whiskerRadius: 0.2
   whiskerRange: 2
   whiskerForwardSpawnModifier: 1.5
-  wallAvoidanceTurnDegrees: 0
+  wallAvoidanceTurnDegrees: 90
 --- !u!212 &4527059520526135584
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -542,6 +542,7 @@ MonoBehaviour:
   - {fileID: 6639429557447191082}
   - {fileID: 6639429557172312964}
   - {fileID: 6639429556439778644}
+  BLOOD_FREQUENCY_SECONDS: 0
   maxWounds: 2
   bleedMultiplier: 2
   totalBleedValue: 0
