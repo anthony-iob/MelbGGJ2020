@@ -10,10 +10,23 @@ public class WoundManager : MonoBehaviour
     public int maxWounds, bleedMultiplier, totalBleedValue, minWoundInterval, maxWoundInterval;
     int woundInterval;
     float timeSinceLastWounded;
+
+    public AudioClip[] hurtNoises;
+    public AudioClip[] curedNoises;
+    public AudioClip[] bandaidImpacts;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         SetWoundInterval();
         InitialiseWounds();
+
+        if (gameObject.GetComponent<AudioSource>() != null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+        else Debug.Log("An AudioSource is missing from an object which makes noises");
     }
 
     void FixedUpdate()
@@ -55,6 +68,7 @@ public class WoundManager : MonoBehaviour
             Bandaidable wound = GetClosedWound();
             if(wound != null) {
                 wound.bleed.Invoke();
+                audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length)]);
             }
         }
     }
@@ -85,5 +99,11 @@ public class WoundManager : MonoBehaviour
         int tempValue = totalBleedValue;
         totalBleedValue = 0;
         return tempValue;
+    }
+
+    public void CuredNoisePlay()
+    {
+        audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length)]);
+        Debug.Log("NOISES FOR CURE");
     }
 }

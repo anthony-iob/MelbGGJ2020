@@ -11,7 +11,11 @@ public class WanderBehaviour : MonoBehaviour
     public float maxHeadingChange = 30;
 
     [Header("Whiskers/WallAvoidance")]
-    public float whiskerRadius, whiskerRange, whiskerForwardSpawnModifier, wallAvoidanceTurnDegrees;
+    public float whiskerRadius;
+    public float whiskerRange;
+    public float whiskerForwardSpawnModifier;
+    public float wallAvoidanceTurnDegrees;
+
     Vector3 whiskerSpawnPoint;
 
     CharacterController controller;

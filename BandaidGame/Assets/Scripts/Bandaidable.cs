@@ -23,5 +23,10 @@ public class Bandaidable : MonoBehaviour
     public void Repair()
     {
         isBleeding = false;
-    }    
+    }  
+    
+    public void CuredNoisePlay()
+    {
+
+    }
 }
