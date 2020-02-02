@@ -564,10 +564,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1bb15240899c66e4dbbd4e8e36c69693, type: 3}
   - {fileID: 8300000, guid: d2e7683ac2148b64286c87dc90d51c08, type: 3}
   - {fileID: 8300000, guid: 3c85641d5a9b00f4db73c55cb650fab5, type: 3}
-  bandaidImpacts:
-  - {fileID: 8300000, guid: b083f49d81c3be34fb2ba711c6657f63, type: 3}
-  - {fileID: 8300000, guid: 02f9a2cfd72a12444b74a64111ba302c, type: 3}
-  - {fileID: 8300000, guid: 8b151ca33c1c8d3459cb1db163943e79, type: 3}
 --- !u!82 &1483103204405923944
 AudioSource:
   m_ObjectHideFlags: 0
@@ -577,7 +573,7 @@ AudioSource:
   m_GameObject: {fileID: 6771986033341660502}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -3582357401627695584, guid: e35590625597cd44bbf8ea3dfb9492a2,
+  OutputAudioMixerGroup: {fileID: 7047302845096148944, guid: e35590625597cd44bbf8ea3dfb9492a2,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1

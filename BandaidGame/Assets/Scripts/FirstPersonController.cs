@@ -34,8 +34,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
         [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-        [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
+        //[SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
+        //[SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
         //Crouch sprint toggle
         public bool toggleCrouchSprint;
@@ -83,7 +83,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             characterControllerHeightOnStart = m_CharacterController.height; //Crouching
             source = GetComponent<AudioSource>();
-            m_AudioSource.clip = m_LandSound;
+            //m_AudioSource.clip = m_LandSound;
 
             cameraPivot.speed = 0;
 
@@ -122,7 +122,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                PlayLandingSound();
+                //PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -198,6 +198,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			}
 		}
 
+        /*
+
 		private void PlayLandingSound()
         {
             if(m_AudioSource != null) {
@@ -206,7 +208,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_NextStep = m_StepCycle + .5f;
             }
         }
-
+        */
 
         public float speed;
 		public float SprintTimeRemaining;
@@ -239,13 +241,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        private void PlayJumpSound()
-        {
-            if(m_AudioSource != null) {
-                m_AudioSource.clip = m_JumpSound;
-                m_AudioSource.Play();
+        /*private void PlayJumpSound()
+            {
+                if(m_AudioSource != null) {
+                    m_AudioSource.clip = m_JumpSound;
+                    m_AudioSource.Play();
+                }
             }
-        }
+        */
 
 
         private void ProgressStepCycle(float speed)

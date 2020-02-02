@@ -1,9 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio; //this is important if you wanna use snapshots - they're controlled in the pause menu but also here for volume increases. 
 
 public class MusicManager : MonoBehaviour
 {
+    /* This script involves creating audiosource children on a MusicManager gameobject, then dragging in the relevant tracks into the audioClip slots on the MusicManager script. 
+ * When the functions are called it should fade between the current and next queued track in your list. 
+ * 
+ * The intro track deos not need an object and will start populated in the first audiosource, when it stops playing it will be replaced by the first loop, and then subsequent loops 
+ * will do the volume thing. 
+ * 
+ * There was going to be a system coming which swaps between two loop halves - allowing for different chord progressions to keep in time with each other - this will
+ * be used primarily to trigger an upwards endstate track which climbs a scale and is illsuited to a fade in. This is done by turning off the loop on the last track of the first half, 
+ * and when that track finishes the next track in the system plays which could be part of a separate loop.
+ * 
+ * Finally the gameEndState is very much the last thing which will be heard and should accompany the failure of this game - before playing the gameOver in time with the relevant text/state - 
+ * that could also be added directly onto the GameOver text to be played although it would be better to have it here so we can try and avoid overlap - that would depend on Game Over 
+ * implentation technique.
+ * 
+ * Any questions ask that Jer guy he knows what's up (not really I made so many mistakes please don't judge me). 
+ */
+
+ 
+
     public AudioSource loop1;
     public AudioSource loop2;
     public AudioSource loop3;
@@ -11,6 +31,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource loop5;
     public AudioSource loop6;
     public AudioSource endLoop;
+    //public AudioSource klaxonAudioSource;
 
 
     public AudioClip introTrack;
@@ -24,24 +45,13 @@ public class MusicManager : MonoBehaviour
     public AudioClip gameEndState;
     public AudioClip gameOver;
 
-    public AudioClip klaxon;
+    //public AudioClip klaxon;
 
     public int trackNumber;
     public float fadeTime;
     private float currentTime;
 
-    /* This script involves creating audiosource children on a MusicManager gameobject, then dragging in the relevant tracks into the audioClip slots on the MusicManager script. 
-     * When the functions are called it should fade between the current and next queued track in your list.
-     * 
-     * The intro track deos not need an object and will start populated in the first audiosource, when it stops playing it will be replaced by the first loop, and then subsequent loops 
-     * will do the volume thing. 
-     * 
-     * There will be a system coming which swaps between two loop halves - allowing for different chord progressions to keep in time with each other - this will
-     * be used primarily to trigger an upwards endstate track which climbs a scale and is illsuited to a fade in. 
-     * 
-     * Finally the gameEndState is very much the last thing which will be heard and should accompany the failure of this game - before playing the gameOver in time with the relevant text/state - 
-     * that could also be added directly onto the GameOver text to be played although it would be better to have it here so we can try and avoid overlap. 
-     */
+
 
     void Start()
     {
@@ -69,15 +79,7 @@ public class MusicManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire3"))
-        {
-            //gameState health state system? 
-            trackNumber += 1;
-            Debug.Log(trackNumber);
-
-        }
-
-
+     
         if (!loop1.isPlaying)
         {
             loop1.clip = loop1Track;
@@ -113,30 +115,37 @@ public class MusicManager : MonoBehaviour
     private void FixedUpdate()
     {
         if (GameManager.instance.GetFloodPercentage() >= 0.10) { StartCoroutine("MusicLoop1"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.25) { StartCoroutine("MusicLoop2"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.35) { StartCoroutine("MusicLoop3"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.50) { StartCoroutine("MusicLoop4"); }
-        if (GameManager.instance.GetFloodPercentage() >= 0.75)
+        if (GameManager.instance.GetFloodPercentage() >= 0.20) { StartCoroutine("MusicLoop2"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.30) { StartCoroutine("MusicLoop3"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.45) { StartCoroutine("MusicLoop4"); }
+        if (GameManager.instance.GetFloodPercentage() >= 0.55)
         {
             StartCoroutine("MusicLoop5");
-            //put in a klaxon/warning here? 
+            //an alarm here.
+
+            // klaxonAudioSource.Play();
+
         }
-        if (GameManager.instance.GetFloodPercentage() >= 85)
+        if (GameManager.instance.GetFloodPercentage() >= 65)
         {
             StartCoroutine("MusicLoop6");
-            //warning here too?
+            //another alarm here.
+
+            //klaxonAudioSource.Play();
         }
 
-        if (GameManager.instance.GetFloodPercentage() >= 90)
+        if (GameManager.instance.GetFloodPercentage() >= 80)
         {
-          //  endLoop.loop = !isActiveAndEnabled;
+            //endLoop.loop = !isActiveAndEnabled;
             endLoop.loop = false;
+            Debug.Log("Loop should have turned off now!! End state approacheth");
         }
 
-        if (!endLoop.isPlaying && !loop1.isPlaying)
+        if (GameManager.instance.GetFloodPercentage() >=50 && !endLoop.isPlaying && !loop1.isPlaying)
         {
             endLoop.clip = gameEndState;
             endLoop.Play();
+            Debug.Log("The game is about to end...last trak");
         }
     }
 
@@ -148,6 +157,7 @@ public class MusicManager : MonoBehaviour
             currentTime += Time.deltaTime;
             loop1.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop2.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("Track 2 is now playing");
             yield return null;
         }
 
@@ -165,6 +175,7 @@ public class MusicManager : MonoBehaviour
             currentTime += Time.deltaTime;
             loop2.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop3.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("Track 3 is now playing");
             yield return null;
         }
 
@@ -183,6 +194,7 @@ public class MusicManager : MonoBehaviour
             currentTime += Time.deltaTime;
             loop3.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop4.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("Track 4 is now playing");
             yield return null;
         }
 
@@ -199,6 +211,7 @@ public class MusicManager : MonoBehaviour
             currentTime += Time.deltaTime;
             loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("Track 5 is now playing");
             yield return null;
         }
         if (loop4.volume == 0)
@@ -215,6 +228,7 @@ public class MusicManager : MonoBehaviour
             currentTime += Time.deltaTime;
             loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop6.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+            Debug.Log("Track 6 is now playing");
             yield return null;
         }
 
@@ -227,6 +241,7 @@ public class MusicManager : MonoBehaviour
         currentTime += Time.deltaTime;
         loop6.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
         endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
+        Debug.Log("The End Loop is now playing");
         yield return null;
     }
 

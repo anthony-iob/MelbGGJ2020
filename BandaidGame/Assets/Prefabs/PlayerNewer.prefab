@@ -40,8 +40,9 @@ AudioSource:
   m_GameObject: {fileID: 684183459}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3394c75692267954b973f07df7fe8551, type: 3}
+  OutputAudioMixerGroup: {fileID: -3582357401627695584, guid: e35590625597cd44bbf8ea3dfb9492a2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: fa10f0781f0e5a14b8dfaa0357f579b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -167,10 +168,11 @@ AudioSource:
   m_GameObject: {fileID: 945703380}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -3582357401627695584, guid: e35590625597cd44bbf8ea3dfb9492a2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2c6a3a5b96fb30c439100314d068eef6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.503
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6689,8 +6691,6 @@ MonoBehaviour:
     BobAmount: 0
   m_StepInterval: 0
   m_FootstepSounds: []
-  m_JumpSound: {fileID: 0}
-  m_LandSound: {fileID: 0}
   toggleCrouchSprint: 0
   speed: 0
   SprintTimeRemaining: 0
