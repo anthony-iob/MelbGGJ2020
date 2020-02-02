@@ -39,7 +39,6 @@ public class Bullet : MonoBehaviour
         } else if (collision.gameObject.tag == "bandaidable") {
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
             WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
-           // audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);
 
             if (bandaidable.isBleeding) {
                 bandaidable.repair.Invoke();

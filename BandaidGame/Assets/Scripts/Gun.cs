@@ -36,10 +36,9 @@ public class Gun : Singleton<Gun>
         {
             loadedBullet.GetComponent<Bullet>().charged = true;
 			CameraShaker.Instance.ShakeOnce(8f, 2f, 0.1f, 3f);
+            explosion.Play();
 			chargedBulletFire.Play();
-		}
-        loadedBullet.transform.localScale *= chargeShotSizeMultiplier * GetChargePercentage();
-        explosion.Play();
+        }
 		CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
 		bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
         chargeTime = 0;
