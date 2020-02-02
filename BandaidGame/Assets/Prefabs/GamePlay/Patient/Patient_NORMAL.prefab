@@ -547,8 +547,22 @@ MonoBehaviour:
   totalBleedValue: 0
   minWoundInterval: 6
   maxWoundInterval: 8
-  hurtNoises: []
-  curedNoises: []
+  hurtNoises:
+  - {fileID: 8300000, guid: 9d908a0428f34e048b1713f037743430, type: 3}
+  - {fileID: 8300000, guid: b1a66e8c8c6c17541b0f66f034153fd4, type: 3}
+  - {fileID: 8300000, guid: fa4a98bb69fa62940b4d3ccfb0f309db, type: 3}
+  - {fileID: 8300000, guid: dc46cfeb0632e1641965c3a959fddc90, type: 3}
+  - {fileID: 8300000, guid: 1d4d601b035d23c48bd5936e44638053, type: 3}
+  - {fileID: 8300000, guid: d201eccc4e3682e48b48de88aa9594ea, type: 3}
+  curedNoises:
+  - {fileID: 8300000, guid: aef319e7df7c21e4091da5b4fef00224, type: 3}
+  - {fileID: 8300000, guid: 01cbe2951612a9f44a7977b3526bd9de, type: 3}
+  - {fileID: 8300000, guid: 130b4b7ea61e74c48a3100caa5f093e0, type: 3}
+  - {fileID: 8300000, guid: 1c32c216521b7f94ba89e0d8e23433ce, type: 3}
+  - {fileID: 8300000, guid: dfa74eaa5337a08478289d4e9c833e7a, type: 3}
+  - {fileID: 8300000, guid: 1bb15240899c66e4dbbd4e8e36c69693, type: 3}
+  - {fileID: 8300000, guid: d2e7683ac2148b64286c87dc90d51c08, type: 3}
+  - {fileID: 8300000, guid: 3c85641d5a9b00f4db73c55cb650fab5, type: 3}
   bandaidImpacts: []
 --- !u!95 &380237465
 Animator:
