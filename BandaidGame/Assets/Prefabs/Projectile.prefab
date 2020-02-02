@@ -159,6 +159,7 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
+  lifetime: 1.5
   charged: 0
   bulletImpact:
   - {fileID: 8300000, guid: b083f49d81c3be34fb2ba711c6657f63, type: 3}

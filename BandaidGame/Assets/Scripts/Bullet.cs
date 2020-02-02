@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     // public new Rigidbody rigidbody;
     public int travelSpeed;
     public UnityEvent hit;
-    private float lifetime = 5;
+    public float lifetime = 1.5f;
     public bool charged = false;
 
     public AudioClip[] bulletImpact;
@@ -19,8 +19,10 @@ public class Bullet : MonoBehaviour
     {
        this.Shoot();
 
-        //make sure bullets don't keep building up over time
+        //make sure bullets don't keep building up over time / destroy after period - can be disabled if we put in particles on collision.
         Destroy(gameObject, lifetime);
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Shoot() {
@@ -46,10 +48,15 @@ public class Bullet : MonoBehaviour
             }
         }
 
-        if(collision.gameObject.tag != "Player")
+        if(collision.gameObject)
         {
-            this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
+            if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length - 1)]);}
+
+            /* turned this off because it kills the audio - also kinda cool having the things around...instead should turn off and instantiate a particle system -> Audio on particle
+            will match action - so hit wall = wall sound, hit dude = a sparkle for healing and a success sound. */
+
+            //this.gameObject.SetActive(false); 
+
         }
     }
 
