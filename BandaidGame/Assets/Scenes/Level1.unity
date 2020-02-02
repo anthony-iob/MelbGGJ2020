@@ -1031,18 +1031,6 @@ Transform:
   m_Father: {fileID: 622012083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1625011100 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4494221816134679964, guid: a7534aeb3e0e30f49acfc12a068427eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1778397293}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c754efa9c62c4838a3ff67a07fe08af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1778397293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1109,6 +1097,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -56.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.81
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7534aeb3e0e30f49acfc12a068427eb, type: 3}
@@ -1313,7 +1321,7 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseGame.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1625011100}
+      objectReference: {fileID: 0}
     - target: {fileID: 1054257836907044713, guid: d2d69c062f9a14670af5362b495923c2,
         type: 3}
       propertyPath: pauseGame.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -1343,7 +1351,7 @@ PrefabInstance:
         type: 3}
       propertyPath: resumeGame.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1625011100}
+      objectReference: {fileID: 0}
     - target: {fileID: 1054257836907044713, guid: d2d69c062f9a14670af5362b495923c2,
         type: 3}
       propertyPath: resumeGame.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
