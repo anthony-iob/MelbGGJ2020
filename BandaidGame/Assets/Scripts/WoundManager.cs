@@ -111,7 +111,7 @@ public class WoundManager : MonoBehaviour
 
     public void CuredNoisePlay()
     {
-        audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length)]);
+        audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length-1)]);
         Debug.Log("NOISES FOR CURE");
     }
 
