@@ -168,15 +168,20 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             if (Input.GetButtonUp("Fire1")) {
                 weaponScript.Shoot();
-            }
-            
-            if (Input.GetButton("Fire1"))
-            {
-                weaponScript.Charge();
+				weaponScript.CancelCharge();
             }
 
-            
-        }
+			if (Input.GetButton("Fire1"))
+			{
+				weaponScript.Charge();
+			}
+
+			if (Input.GetButtonDown("Fire1"))
+			{
+				weaponScript.chargeSFX.Play();
+			}
+
+		}
 
 		void CheckHeartBeatAndBreathing()
 		{

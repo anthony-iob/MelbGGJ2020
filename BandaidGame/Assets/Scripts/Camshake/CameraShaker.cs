@@ -44,26 +44,26 @@ namespace EZCameraShake
             posAddShake = Vector3.zero;
             rotAddShake = Vector3.zero;
 
-            for (int i = 0; i < cameraShakeInstances.Count; i++)
-            {
-                if (i >= cameraShakeInstances.Count)
-                    break;
+			for (int i = 0; i < cameraShakeInstances.Count; i++)
+			{
+				if (i >= cameraShakeInstances.Count)
+					break;
 
-                CameraShakeInstance c = cameraShakeInstances[i];
+				CameraShakeInstance c = cameraShakeInstances[i];
 
-                if (c.CurrentState == CameraShakeState.Inactive && c.DeleteOnInactive)
-                {
-                    cameraShakeInstances.RemoveAt(i);
-                    i--;
-                }
-                else if (c.CurrentState != CameraShakeState.Inactive)
-                {
-                    posAddShake += CameraUtilities.MultiplyVectors(c.UpdateShake(), c.PositionInfluence);
-                    rotAddShake += CameraUtilities.MultiplyVectors(c.UpdateShake(), c.RotationInfluence);
-                }
-            }
+				if (c.CurrentState == CameraShakeState.Inactive && c.DeleteOnInactive)
+				{
+					cameraShakeInstances.RemoveAt(i);
+					i--;
+				}
+				else if (c.CurrentState != CameraShakeState.Inactive)
+				{
+					posAddShake += CameraUtilities.MultiplyVectors(c.UpdateShake(), c.PositionInfluence);
+					rotAddShake += CameraUtilities.MultiplyVectors(c.UpdateShake(), c.RotationInfluence);
+				}
+			}
 
-            transform.localPosition = posAddShake + RestPositionOffset;
+			transform.localPosition = posAddShake + RestPositionOffset;
             transform.localEulerAngles = rotAddShake + RestRotationOffset;
         }
 
@@ -177,7 +177,7 @@ namespace EZCameraShake
 
         void OnDestroy()
         {
-            instanceList.Remove(gameObject.name);
+            //instanceList.Remove(gameObject.name);
         }
     }
 }
