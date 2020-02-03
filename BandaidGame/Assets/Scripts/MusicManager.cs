@@ -119,12 +119,12 @@ public class MusicManager : MonoBehaviour
  //   {
         if (loop1.clip == loop1Track)
         {
-            if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 5) { StartCoroutine("MusicLoop1"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.5 && GameManager.instance.GetFloodPercentage() < 15) { StartCoroutine("MusicLoop2"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 30) { StartCoroutine("MusicLoop3"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 45) { StartCoroutine("MusicLoop4"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 0.05) { StartCoroutine("MusicLoop1"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.05 && GameManager.instance.GetFloodPercentage() < 0.15) { StartCoroutine("MusicLoop2"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 0.30) { StartCoroutine("MusicLoop3"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 0.45) { StartCoroutine("MusicLoop4"); }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 55)
+            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 0.55)
             {
                 StartCoroutine("MusicLoop5");
                 //an alarm here.
@@ -132,7 +132,7 @@ public class MusicManager : MonoBehaviour
                 // klaxonAudioSource.Play();
 
             }
-            if (GameManager.instance.GetFloodPercentage() >= 0.55 && GameManager.instance.GetFloodPercentage() < 70)
+            if (GameManager.instance.GetFloodPercentage() >= 0.55 && GameManager.instance.GetFloodPercentage() < 0.70)
             {
                 StartCoroutine("MusicLoop6");
                 //another alarm here.

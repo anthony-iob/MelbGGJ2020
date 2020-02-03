@@ -322,6 +322,12 @@ PrefabInstance:
       propertyPath: gameOver.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: unpausedAudio
+      value: 
+      objectReference: {fileID: 24500006, guid: e35590625597cd44bbf8ea3dfb9492a2,
+        type: 2}
     - target: {fileID: 7194501990801557229, guid: 2e154cfd72aa1454d9b31dd53e439446,
         type: 3}
       propertyPath: npcs.Array.size

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -11,12 +12,16 @@ public class GameManager : Singleton<GameManager>
     public UnityEvent gameOver;
     bool isGameOver = false;
 
+    public AudioMixerSnapshot unpausedAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         timeElapsed = 0;
         currentBloodLevel = 0;
         Time.timeScale = 1;
+        unpausedAudio.TransitionTo(0f);
+
     }
 
     // Update is called once per frame
