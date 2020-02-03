@@ -1840,6 +1840,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1675201315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9009346733152076551, guid: 3dc0a7b4c1a19ca4ebe376f21231f2fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 719534846}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1675201319
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675201315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -460950041221735312, guid: 85ae92d5271d0bc4d862ad559cce674f, type: 3}
 --- !u!1001 &1778397293
 PrefabInstance:
   m_ObjectHideFlags: 0
