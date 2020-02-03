@@ -47,7 +47,7 @@ public class MusicManager : MonoBehaviour
 
     //public AudioClip klaxon;
 
-    public int trackNumber;
+   // public int trackNumber;
     public float fadeTime;
     public float currentTime;
 
@@ -66,7 +66,7 @@ public class MusicManager : MonoBehaviour
         loop1.clip = introTrack;
         loop1.Play();
 
-        trackNumber = 0; //btw this is useless I should delete it but here I am writing a comment instead
+       // trackNumber = 0; //btw this is useless I should delete it but here I am writing a comment instead
 
         loop1.volume = 1.0f;
         loop2.volume = 0.0f;
@@ -146,12 +146,12 @@ public class MusicManager : MonoBehaviour
                 Debug.Log("Loop should have turned off now!! End state approacheth");
             }
 
-            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.80 && ohNoEndTime == false)
+            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.70 && ohNoEndTime == false)
             {
                 endLoop.clip = gameEndState;
                 endLoop.Play();
                 Debug.Log("The game is about to end...last trak");
-                trackNumber = 8;
+               // trackNumber = 8;
                 ohNoEndTime = true;
                // currentTime = 0;
 
@@ -168,7 +168,7 @@ public class MusicManager : MonoBehaviour
             loop1.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop2.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 2 is now playing");
-            trackNumber = 2;
+            //trackNumber = 2;
             yield return null;
         }
 
@@ -187,7 +187,7 @@ public class MusicManager : MonoBehaviour
             loop2.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop3.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 3 is now playing");
-            trackNumber = 3;
+           // trackNumber = 3;
             yield return null;
         }
 
@@ -207,7 +207,7 @@ public class MusicManager : MonoBehaviour
             loop3.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop4.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 4 is now playing");
-            trackNumber = 4;
+           // trackNumber = 4;
             yield return null;
         }
 
@@ -225,7 +225,7 @@ public class MusicManager : MonoBehaviour
             loop4.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop5.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 5 is now playing");
-            trackNumber = 5;
+           // trackNumber = 5;
             yield return null;
         }
         if (loop4.volume == 0)
@@ -243,7 +243,7 @@ public class MusicManager : MonoBehaviour
             loop5.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             loop6.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("Track 6 is now playing");
-            trackNumber = 6;
+           // trackNumber = 6;
             yield return null;
         }
         if (loop5.volume == 0)
@@ -260,7 +260,7 @@ public class MusicManager : MonoBehaviour
             loop6.volume = Mathf.Lerp(1, 0, currentTime / fadeTime);
             endLoop.volume = Mathf.Lerp(0, 1, currentTime / fadeTime);
             Debug.Log("The End Loop is now playing");
-            trackNumber = 7;
+           // trackNumber = 7;
             yield return null;
         }
     }
