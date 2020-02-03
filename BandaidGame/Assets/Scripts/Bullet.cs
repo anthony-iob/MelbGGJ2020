@@ -50,7 +50,7 @@ public class Bullet : MonoBehaviour
 
         if(collision.gameObject)
         {
-            if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length - 1)]);}
+            if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);}
 
             /* turned this off because it kills the audio - also kinda cool having the things around...instead should turn off and instantiate a particle system -> Audio on particle
             will match action - so hit wall = wall sound, hit dude = a sparkle for healing and a success sound. */

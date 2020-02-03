@@ -1625,6 +1625,109 @@ Transform:
   m_Father: {fileID: 622012083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1587372225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8863055639436421239, guid: 70224d1c221a14a8ca7ac89a8823ba69,
+    type: 3}
+  m_PrefabInstance: {fileID: 414654613083787436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1587372229
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587372225}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -975565384941506807, guid: e35590625597cd44bbf8ea3dfb9492a2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: d4c2b78000e03a14fb7771717baff0f3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1778397293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2276,31 +2379,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
         type: 3}
-      propertyPath: maxNPCs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: existingNPCs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: spawnPoints.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: maxNPCs.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
       propertyPath: existingNPCs.Array.data[0]
       value: 
       objectReference: {fileID: 561952456}
@@ -2309,65 +2387,6 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1579045608}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[0]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[1]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[2]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 8f340febc7faf2747a11afeb6c7388a3,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcSpawnInterval
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[3]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 8f340febc7faf2747a11afeb6c7388a3,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[4]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 8f340febc7faf2747a11afeb6c7388a3,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[5]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[6]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[7]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-    - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
-        type: 3}
-      propertyPath: npcBlueprints.Array.data[8]
-      value: 
-      objectReference: {fileID: 76968784102452721, guid: b51efcbeae1c0e447aa5bfe6f452520f,
-        type: 3}
     - target: {fileID: 4177554577965927372, guid: 555696eda3eb1481d806df57712ddb13,
         type: 3}
       propertyPath: spawnPoints.Array.data[1]

@@ -13,8 +13,12 @@ public class NPCManager : Singleton<NPCManager>
     float sinceSpawn;
     List<WoundManager> activeNPCs;
 
+    public AudioClip[] patientSpawnSFX;
+    private AudioSource audioSource;
+
     void Start() 
     {
+        audioSource = GetComponent<AudioSource>(); 
         currentNPCs = new GameObject[npcBlueprints.Length + existingNPCs.Length];
         spawnedNPCs = 0;
         int count = 0;
@@ -49,6 +53,10 @@ public class NPCManager : Singleton<NPCManager>
                 if(npc == null) {
                     Transform spawnPoint = GetRandomSpawnPoint();
                     currentNPCs[pos] = Instantiate(npcBlueprints[spawnedNPCs], spawnPoint.position, spawnPoint.rotation);
+                    if (audioSource != null) { audioSource.PlayOneShot(patientSpawnSFX[Random.Range(0, patientSpawnSFX.Length)]); }
+                    else Debug.Log("You're missing an audio source on the NPC Manager");
+
+  
                     spawnedNPCs += 1;
                     sinceSpawn = 0;
                     break;
