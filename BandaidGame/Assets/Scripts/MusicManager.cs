@@ -124,7 +124,7 @@ public class MusicManager : MonoBehaviour
             if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 0.30) { StartCoroutine("MusicLoop3"); }
             if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 0.45) { StartCoroutine("MusicLoop4"); }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 0.55)
+            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 0.60)
             {
                 StartCoroutine("MusicLoop5");
                 //an alarm here.
@@ -132,7 +132,7 @@ public class MusicManager : MonoBehaviour
                 // klaxonAudioSource.Play();
 
             }
-            if (GameManager.instance.GetFloodPercentage() >= 0.55 && GameManager.instance.GetFloodPercentage() < 0.70)
+            if (GameManager.instance.GetFloodPercentage() >= 0.60 && GameManager.instance.GetFloodPercentage() < 0.65)
             {
                 StartCoroutine("MusicLoop6");
                 //another alarm here.
@@ -140,13 +140,13 @@ public class MusicManager : MonoBehaviour
                 //klaxonAudioSource.Play();
             }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.70)
+            if (GameManager.instance.GetFloodPercentage() >= 0.65)
             {
                 endLoop.loop = false;
                 Debug.Log("Loop should have turned off now!! End state approacheth");
             }
 
-            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.70 && ohNoEndTime == false)
+            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.65 && ohNoEndTime == false)
             {
                 endLoop.clip = gameEndState;
                 endLoop.Play();
