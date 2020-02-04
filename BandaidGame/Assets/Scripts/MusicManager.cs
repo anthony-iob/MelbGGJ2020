@@ -119,8 +119,8 @@ public class MusicManager : MonoBehaviour
  //   {
         if (loop1.clip == loop1Track)
         {
-            if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 0.05) { StartCoroutine("MusicLoop1"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.05 && GameManager.instance.GetFloodPercentage() < 0.15) { StartCoroutine("MusicLoop2"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 0.08) { StartCoroutine("MusicLoop1"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.08 && GameManager.instance.GetFloodPercentage() < 0.15) { StartCoroutine("MusicLoop2"); }
             if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 0.30) { StartCoroutine("MusicLoop3"); }
             if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 0.45) { StartCoroutine("MusicLoop4"); }
 

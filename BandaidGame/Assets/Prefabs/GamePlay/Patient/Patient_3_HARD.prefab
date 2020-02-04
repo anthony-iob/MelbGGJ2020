@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2647510459747030510}
   - component: {fileID: 8461748972821476996}
   m_Layer: 0
-  m_Name: Patient_HARD
+  m_Name: Patient_3_HARD
   m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfb486273958763478d8cad6009f8aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   directionChangeInterval: 1.5
   maxHeadingChange: 30
   whiskerRadius: 0.2
@@ -672,8 +672,8 @@ MonoBehaviour:
   - {fileID: 6639429557172312964}
   - {fileID: 6639429556439778644}
   BLOOD_FREQUENCY_SECONDS: 1
-  maxWounds: 4
-  bleedMultiplier: 30
+  maxWounds: 5
+  bleedMultiplier: 20
   totalBleedValue: 0
   minWoundInterval: 4
   maxWoundInterval: 8

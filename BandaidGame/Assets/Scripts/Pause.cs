@@ -15,12 +15,14 @@ public class Pause : Singleton<MonoBehaviour>
     // Start is called before the first frame update
     public void PauseGame()
     {
+        pausedAudio.TransitionTo(0f);
         Time.timeScale = 0;
         paused = true;
     }
 
     public void ResumeGame() {
         Time.timeScale = 1;
+        unpausedAudio.TransitionTo(0f);
         paused = false;
     }
     
@@ -33,12 +35,12 @@ public class Pause : Singleton<MonoBehaviour>
             if(paused) {
                 Debug.Log("resuming");
                 resumeGame.Invoke();
-                unpausedAudio.TransitionTo(0f);
+
                 
             } else {
                 Debug.Log("pausing");
                 pauseGame.Invoke();
-                pausedAudio.TransitionTo(0f);
+
             }
         }
     }
