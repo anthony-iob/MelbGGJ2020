@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 76968784102452721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2171, y: 1.2171, z: 1.2171}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 7211130776750118101}
   m_Father: {fileID: 0}
@@ -773,8 +773,8 @@ MonoBehaviour:
   maxWounds: 3
   bleedMultiplier: 15
   totalBleedValue: 0
-  minWoundInterval: 6
-  maxWoundInterval: 10
+  minWoundInterval: 8
+  maxWoundInterval: 12
   hurtNoises:
   - {fileID: 8300000, guid: 9d908a0428f34e048b1713f037743430, type: 3}
   - {fileID: 8300000, guid: b1a66e8c8c6c17541b0f66f034153fd4, type: 3}
@@ -2404,6 +2404,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6661083941457938925, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
+    - target: {fileID: 6852761822171090365, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
+    - target: {fileID: 8117858611395748700, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
+    - target: {fileID: 3909209028417081470, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
+    - target: {fileID: 3318115283374816608, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
+    - target: {fileID: 3323432715902868185, guid: 61e9b99d8406474428bddf664575cbe6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 48c7bcc6744b4f047b3a27caa050fe9a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61e9b99d8406474428bddf664575cbe6, type: 3}
 --- !u!1 &7766484804368398147 stripped

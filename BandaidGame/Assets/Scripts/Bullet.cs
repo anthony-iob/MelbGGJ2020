@@ -40,9 +40,9 @@ public class Bullet : MonoBehaviour
             }
         } else if (collision.gameObject.tag == "bandaidable") {
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
-            WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
+			WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
 
-            if (bandaidable.isBleeding) {
+			if (bandaidable.isBleeding) {
                 bandaidable.repair.Invoke();
                 woundManager.CuredNoisePlay();
             }
