@@ -793,6 +793,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2971927475358323285}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480488319 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1721235774938781119, guid: 81477675753824117b3023765e0d5d6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 676611294155735152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1480488325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480488319}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b98dfe41fa692b14a96ba9a11664af50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1482590895 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9140640509754900020, guid: b20f1c3b46e0a1644b88c112c5f829e8,
@@ -1716,6 +1741,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 912689112}
+    - target: {fileID: 5799559522008464609, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773690260618973182, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773690260618973182, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4122009514544578572, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1881,6 +1921,16 @@ PrefabInstance:
       propertyPath: m_Transition
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6037209791454992514, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618673897149417328, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_Transition
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1386619743676733296, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_Enabled
@@ -1907,6 +1957,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7987708327375128474, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877365995017611178, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877365995017611178, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4290032820
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877365995017611178, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877365995017611178, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_fontColor.b
       value: 1
