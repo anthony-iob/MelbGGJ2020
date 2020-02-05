@@ -67,7 +67,7 @@ public class NPCManager : Singleton<NPCManager>
 
     Transform GetRandomSpawnPoint() 
     {
-        int pos = Random.Range(0, spawnPoints.Length - 1);
+        int pos = Random.Range(0, spawnPoints.Length); //Removed the (spawnPoints.Length - 1) line as it was never generating the max value for some odd reason
         Transform spawnPoint = spawnPoints[pos];
         return spawnPoint;
     }
