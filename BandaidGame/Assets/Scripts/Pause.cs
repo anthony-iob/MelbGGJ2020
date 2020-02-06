@@ -15,15 +15,18 @@ public class Pause : Singleton<MonoBehaviour>
     // Start is called before the first frame update
     public void PauseGame()
     {
+        GameManager.instance.disablePewPew = true;
         pausedAudio.TransitionTo(0f);
         Time.timeScale = 0;
         paused = true;
+        
     }
 
     public void ResumeGame() {
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
         paused = false;
+        GameManager.instance.disablePewPew = false;
     }
     
     public void InvokeResume() {

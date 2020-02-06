@@ -13,12 +13,14 @@ public class PressYtoRegret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonUp("AddSlime"))
+        if (MusicManager.instance.loop2.isPlaying)
         {
-            GameManager.instance.currentBloodLevel += 500;
-            Debug.Log(GameManager.instance.currentBloodLevel);
+            if (Input.GetButtonUp("AddSlime"))
+            {
+                GameManager.instance.currentBloodLevel += 500;
+                Debug.Log(GameManager.instance.currentBloodLevel);
+            }
         }
-
         if (Input.GetButtonUp("RemoveSlime"))
         {
             GameManager.instance.currentBloodLevel -= 500;

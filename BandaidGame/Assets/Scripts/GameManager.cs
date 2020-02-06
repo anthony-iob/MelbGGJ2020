@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     public float timeElapsed;
     public UnityEvent gameOver;
     bool isGameOver = false;
+    public bool disablePewPew = false;
 
     public AudioMixerSnapshot unpausedAudio;
 
@@ -48,6 +49,7 @@ public class GameManager : Singleton<GameManager>
             {
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
+                disablePewPew = true;
             }
 
         }

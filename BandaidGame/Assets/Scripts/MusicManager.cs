@@ -176,6 +176,9 @@ public class MusicManager : Singleton<MusicManager>
             loop2.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop3.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
             Debug.Log("Track 3 is now playing");
+
+            loop1.volume = 0;
+
            // trackNumber = 3;
             yield return null;
         }
@@ -196,7 +199,10 @@ public class MusicManager : Singleton<MusicManager>
             loop3.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop4.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
             Debug.Log("Track 4 is now playing");
-           // trackNumber = 4;
+
+            loop1.volume = 0;
+
+            // trackNumber = 4;
             yield return null;
         }
 
@@ -214,7 +220,10 @@ public class MusicManager : Singleton<MusicManager>
             loop4.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop5.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
             Debug.Log("Track 5 is now playing");
-           // trackNumber = 5;
+
+            loop3.volume = 0;
+
+            // trackNumber = 5;
             yield return null;
         }
         if (loop4.volume == 0)
@@ -231,6 +240,9 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop5.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop6.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
+
+            loop4.volume = 0;
+            
             Debug.Log("Track 6 is now playing");
            // trackNumber = 6;
             yield return null;
@@ -249,7 +261,10 @@ public class MusicManager : Singleton<MusicManager>
             loop6.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             endLoop.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
             Debug.Log("The End Loop is now playing");
-           // trackNumber = 7;
+
+            loop5.volume = 0;
+
+            // trackNumber = 7;
             yield return null;
         }
     }

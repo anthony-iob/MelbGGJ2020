@@ -103,84 +103,90 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            RotateView();
-			CheckHeartBeatAndBreathing();
-
-            // the jump state needs to read here to make sure it is not missed
-            m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
-
-            if (m_JumpEarly > 0)
             {
-                m_JumpEarly--;
-            }
+                RotateView();
+                CheckHeartBeatAndBreathing();
 
-            if (m_Jump)
-            {
-                m_JumpEarly = 5;
-            }
+                // the jump state needs to read here to make sure it is not missed
+                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 
-            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
-            {
-                StartCoroutine(m_JumpBob.DoBobCycle());
-                //PlayLandingSound();
-                m_MoveDir.y = 0f;
-                m_Jumping = false;
-            }
-            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-            {
-                m_MoveDir.y = 0f;
-            }
-
-            m_PreviouslyGrounded = m_CharacterController.isGrounded;
-            //     if (source.clip.name == "Footstep01")
-            //     {
-            //         source.panStereo = -0.36f;
-            //         source.spatialBlend = 0;
-            //     }
-            //     if (source.clip.name == "Footstep02")
-            //     {
-            //         source.panStereo = 0.36f;
-            //         source.spatialBlend = 0;
-            //     }
-            //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
-            //     {
-            //         source.panStereo = 0;
-            //         source.spatialBlend = 1.0f;
-            //     }
-            //CROUCHING =========================================================
-
-            if (m_CharacterController.isGrounded)
-            {
-                m_MoveDir.y = -m_StickToGroundForce;
-
-                if (m_JumpEarly > 0 && m_JumpAllowed)
+                if (m_JumpEarly > 0)
                 {
-                    m_MoveDir.y = m_JumpSpeed;
-                    // PlayJumpSound();
-                    m_Jump = false;
-                    m_Jumping = true;
+                    m_JumpEarly--;
                 }
-            }
-            else
-            {
-                m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
-            }
+
+                if (m_Jump)
+                {
+                    m_JumpEarly = 5;
+                }
+
+                if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+                {
+                    StartCoroutine(m_JumpBob.DoBobCycle());
+                    //PlayLandingSound();
+                    m_MoveDir.y = 0f;
+                    m_Jumping = false;
+                }
+                if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+                {
+                    m_MoveDir.y = 0f;
+                }
+
+                m_PreviouslyGrounded = m_CharacterController.isGrounded;
+                //     if (source.clip.name == "Footstep01")
+                //     {
+                //         source.panStereo = -0.36f;
+                //         source.spatialBlend = 0;
+                //     }
+                //     if (source.clip.name == "Footstep02")
+                //     {
+                //         source.panStereo = 0.36f;
+                //         source.spatialBlend = 0;
+                //     }
+                //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
+                //     {
+                //         source.panStereo = 0;
+                //         source.spatialBlend = 1.0f;
+                //     }
+                //CROUCHING =========================================================
+
+                if (m_CharacterController.isGrounded)
+                {
+                    m_MoveDir.y = -m_StickToGroundForce;
+
+                    if (m_JumpEarly > 0 && m_JumpAllowed)
+                    {
+                        m_MoveDir.y = m_JumpSpeed;
+                        // PlayJumpSound();
+                        m_Jump = false;
+                        m_Jumping = true;
+                    }
+                }
+                else
+                {
+                    m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
+                }
+
+                if (GameManager.instance.disablePewPew == false)
+                {
+
+                    if (Input.GetButtonUp("Fire1"))
+                    {
+                        weaponScript.Shoot();
+                        weaponScript.CancelCharge();
+                    }
+
+                    if (Input.GetButton("Fire1"))
+                    {
+                        weaponScript.Charge();
+                    }
+
+                    if (Input.GetButtonDown("Fire1"))
+                    {
+                        weaponScript.chargeSFX.Play();
+                    }
+                }
             
-            if (Input.GetButtonUp("Fire1")) {
-                weaponScript.Shoot();
-				weaponScript.CancelCharge();
-            }
-
-			if (Input.GetButton("Fire1"))
-			{
-				weaponScript.Charge();
-			}
-
-			if (Input.GetButtonDown("Fire1"))
-			{
-				weaponScript.chargeSFX.Play();
-			}
-
 		}
 
 		void CheckHeartBeatAndBreathing()

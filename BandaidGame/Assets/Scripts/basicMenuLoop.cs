@@ -18,6 +18,7 @@ public class basicMenuLoop : MonoBehaviour
     {
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
+        GameManager.instance.disablePewPew = false;
     }
 
     // Update is called once per frame
