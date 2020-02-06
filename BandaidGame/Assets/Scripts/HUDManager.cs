@@ -8,6 +8,9 @@ public class HUDManager : MonoBehaviour
 {
     public TextMeshProUGUI timerLabel, percentageLabel, percentageIcon;
     public Image floodBar, chargeBar;
+    //public GameObject percentageBox;
+    //Vector3 percentageBoxScaleMin = new Vector3(1.0f, 1.0f, 1.0f); 
+    //Vector3 percentageBoxScaleMax = new Vector3(1.2f, 1.2f, 1.2f);
     float percentage;
     public Color emptyFillColour = Color.white;
     public Color fullFillColour = Color.green;
@@ -25,6 +28,7 @@ public class HUDManager : MonoBehaviour
         percentageLabel.text = (100 * percentage).ToString("0");
         percentageLabel.color = Color.Lerp(emptyFillColour, fullFillColour, (percentage * 100) / 100f);
         percentageIcon.color = Color.Lerp(emptyFillColour, fullFillColour, (percentage * 100) / 100f);
+        //percentageBox.transform.localScale = Vector3.Lerp(percentageBoxScaleMin, percentageBoxScaleMax, (percentage * 100) / 100f);
         floodBar.fillAmount = percentage;
     }
 
