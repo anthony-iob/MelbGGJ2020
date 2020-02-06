@@ -56,7 +56,7 @@ MonoBehaviour:
   - {fileID: 76968784102452721, guid: 8f340febc7faf2747a11afeb6c7388a3, type: 3}
   - {fileID: 76968784102452721, guid: 3030e796cd20ef04bb90b6d86d810544, type: 3}
   - {fileID: 76968784102452721, guid: b51efcbeae1c0e447aa5bfe6f452520f, type: 3}
-  npcSpawnInterval: 12
+  npcSpawnInterval: 15
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}

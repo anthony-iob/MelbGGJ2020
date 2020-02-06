@@ -120,11 +120,11 @@ public class MusicManager : MonoBehaviour
         if (loop1.clip == loop1Track)
         {
             if (GameManager.instance.GetFloodPercentage() >= 0.02 && GameManager.instance.GetFloodPercentage() < 0.08) { StartCoroutine("MusicLoop1"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.08 && GameManager.instance.GetFloodPercentage() < 0.15) { StartCoroutine("MusicLoop2"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.15 && GameManager.instance.GetFloodPercentage() < 0.30) { StartCoroutine("MusicLoop3"); }
-            if (GameManager.instance.GetFloodPercentage() >= 0.30 && GameManager.instance.GetFloodPercentage() < 0.45) { StartCoroutine("MusicLoop4"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.08 && GameManager.instance.GetFloodPercentage() < 0.20) { StartCoroutine("MusicLoop2"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.20 && GameManager.instance.GetFloodPercentage() < 0.35) { StartCoroutine("MusicLoop3"); }
+            if (GameManager.instance.GetFloodPercentage() >= 0.35 && GameManager.instance.GetFloodPercentage() < 0.50) { StartCoroutine("MusicLoop4"); }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.45 && GameManager.instance.GetFloodPercentage() < 0.60)
+            if (GameManager.instance.GetFloodPercentage() >= 0.50 && GameManager.instance.GetFloodPercentage() < 0.65)
             {
                 StartCoroutine("MusicLoop5");
                 //an alarm here.
@@ -132,7 +132,7 @@ public class MusicManager : MonoBehaviour
                 // klaxonAudioSource.Play();
 
             }
-            if (GameManager.instance.GetFloodPercentage() >= 0.60 && GameManager.instance.GetFloodPercentage() < 0.65)
+            if (GameManager.instance.GetFloodPercentage() >= 0.65 && GameManager.instance.GetFloodPercentage() < 0.75)
             {
                 StartCoroutine("MusicLoop6");
                 //another alarm here.
@@ -140,7 +140,7 @@ public class MusicManager : MonoBehaviour
                 //klaxonAudioSource.Play();
             }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.65)
+            if (GameManager.instance.GetFloodPercentage() >= 0.75)
             {
                 endLoop.loop = false;
                 Debug.Log("Loop should have turned off now!! End state approacheth");
