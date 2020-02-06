@@ -6,9 +6,11 @@ using TMPro;
 
 public class HUDManager : MonoBehaviour
 {
-    public TextMeshProUGUI timerLabel, percentageLabel;
+    public TextMeshProUGUI timerLabel, percentageLabel, percentageIcon;
     public Image floodBar, chargeBar;
     float percentage;
+    public Color emptyFillColour = Color.white;
+    public Color fullFillColour = Color.green;
 
     void Update()
     {
@@ -21,6 +23,8 @@ public class HUDManager : MonoBehaviour
     {
         percentage = Mathf.Clamp(GameManager.instance.GetFloodPercentage(), 0f, 100f);
         percentageLabel.text = (100 * percentage).ToString("0");
+        percentageLabel.color = Color.Lerp(emptyFillColour, fullFillColour, (percentage * 100) / 100f);
+        percentageIcon.color = Color.Lerp(emptyFillColour, fullFillColour, (percentage * 100) / 100f);
         floodBar.fillAmount = percentage;
     }
 
