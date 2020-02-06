@@ -5065,6 +5065,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6341830187741132435}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &420708062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5875531059631321292, guid: 81477675753824117b3023765e0d5d6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 676611294155735152}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &420708066
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420708062}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 96c3aa38ad5db5e4c857b5349d6fae66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &426165208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9140640509754900020, guid: d48ce2b08827c554d966b0920535519e,
@@ -12148,6 +12173,40 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974332514384495609, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974332514384495609, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_text
+      value: 'Your monster creations are hemorrhaging slime by the second and flooding
+        your laboratory! Using your trusty band-aid gun, patch the holes in your monsters
+        and stop the flooding!
+
+
+        controls:
+
+
+        Left Click         - Fire Band-aid
+
+        Hold Left Click - Mega Band-aid
+
+        wasd                 - move
+
+        esc                   - pause'
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 314
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81477675753824117b3023765e0d5d6e, type: 3}
