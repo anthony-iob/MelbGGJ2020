@@ -1476,8 +1476,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerLabel: {fileID: 6073411286715873626}
   percentageLabel: {fileID: 4974098354354829844}
+  percentageIcon: {fileID: 1462464381}
   floodBar: {fileID: 712921983565257003}
   chargeBar: {fileID: 877467553}
+  emptyFillColour: {r: 1, g: 1, b: 1, a: 1}
+  fullFillColour: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &7088493459638197385
 GameObject:
   m_ObjectHideFlags: 0
