@@ -14,6 +14,8 @@ public class GameManager : Singleton<GameManager>
 
     public AudioMixerSnapshot unpausedAudio;
 
+    public GameObject gameOverHUD, HUD, pauseMenu;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,15 +29,27 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void FixedUpdate()
     {
-        currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
-        timeElapsed += Time.deltaTime;
+        if (isGameOver == false)
+        {
+            currentBloodLevel += NPCManager.instance.UpdateBloodLevel();
+            timeElapsed += Time.deltaTime;
+        }
     }
 
     void Update() {
         if(currentBloodLevel >= MAX_BLOOD_LEVEL) {
-            gameOver.Invoke();
+            // gameOver.Invoke();
             isGameOver = true;
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
+            HUD.SetActive(false);
+            pauseMenu.SetActive(false);
+
+            if (!MusicManager.instance.endLoop.isPlaying)
+            {
+                gameOverHUD.SetActive(true);
+                Time.timeScale = 0;
+            }
+
         }
     }
 

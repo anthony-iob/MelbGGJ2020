@@ -7,7 +7,7 @@ public class PressYtoRegret : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.MAX_BLOOD_LEVEL = 1000;
+       // GameManager.instance.MAX_BLOOD_LEVEL = 10000;
     }
 
     // Update is called once per frame
@@ -15,13 +15,13 @@ public class PressYtoRegret : MonoBehaviour
     {
         if (Input.GetButtonUp("AddSlime"))
         {
-            GameManager.instance.currentBloodLevel += 100;
+            GameManager.instance.currentBloodLevel += 500;
             Debug.Log(GameManager.instance.currentBloodLevel);
         }
 
         if (Input.GetButtonUp("RemoveSlime"))
         {
-            GameManager.instance.currentBloodLevel -= 100;
+            GameManager.instance.currentBloodLevel -= 500;
             Debug.Log(GameManager.instance.currentBloodLevel);
         }
     }

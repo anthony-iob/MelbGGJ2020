@@ -328,6 +328,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24500006, guid: e35590625597cd44bbf8ea3dfb9492a2,
         type: 2}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: gameOverHUD
+      value: 
+      objectReference: {fileID: 1786241084}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 545116327}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1102563614}
     - target: {fileID: 7194501990801557229, guid: 2e154cfd72aa1454d9b31dd53e439446,
         type: 3}
       propertyPath: npcs.Array.size
@@ -2199,6 +2214,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a421f476fe8ce6b40b5451760574581a, type: 3}
+--- !u!1 &1263847027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7194501990801557226, guid: 2e154cfd72aa1454d9b31dd53e439446,
+    type: 3}
+  m_PrefabInstance: {fileID: 42914643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1263847030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263847027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a27711cf97dacb48914edf456b1d16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1306750600 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9059995617261244860, guid: a421f476fe8ce6b40b5451760574581a,
@@ -3343,6 +3376,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778397295}
   m_Mesh: {fileID: 8236233635957273240, guid: dbab428eb66821940a2860ccb373b8bb, type: 3}
+--- !u!1 &1786241084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7030944105848946739, guid: 70224d1c221a14a8ca7ac89a8823ba69,
+    type: 3}
+  m_PrefabInstance: {fileID: 414654613083787436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1951726606
 GameObject:
   m_ObjectHideFlags: 0
@@ -3456,6 +3495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameOverHUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 7030944105848946739, guid: 70224d1c221a14a8ca7ac89a8823ba69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6798004147809268487, guid: 70224d1c221a14a8ca7ac89a8823ba69,
         type: 3}
@@ -3716,6 +3760,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826845736678599397, guid: 70224d1c221a14a8ca7ac89a8823ba69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70224d1c221a14a8ca7ac89a8823ba69, type: 3}
