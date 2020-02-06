@@ -39,7 +39,10 @@ public class GameManager : Singleton<GameManager>
 
     void Update() {
         if(currentBloodLevel >= MAX_BLOOD_LEVEL) {
-            // gameOver.Invoke();
+            // gameOver.Invoke(); 
+            // removed this to put in delayed game end below.
+
+
             isGameOver = true;
             //Time.timeScale = 0;
             HUD.SetActive(false);
@@ -49,7 +52,7 @@ public class GameManager : Singleton<GameManager>
             {
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
-                disablePewPew = true;
+                disablePewPew = true; //this turns off player shoot controls. 
             }
 
         }

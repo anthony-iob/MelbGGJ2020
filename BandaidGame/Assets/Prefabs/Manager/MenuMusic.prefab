@@ -144,6 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 809859031496691988}
   loopTrack: {fileID: 8300000, guid: 629852a78f2080a4ba5a467db8bc7cdc, type: 3}
+  unpausedAudio: {fileID: 24500006, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
 --- !u!165 &809859031496691990
 AudioHighPassFilter:
   m_ObjectHideFlags: 0

@@ -186,28 +186,29 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         weaponScript.chargeSFX.Play();
                     }
                 }
-            
-		}
 
-		void CheckHeartBeatAndBreathing()
-		{
-			if (SceneManager.GetActiveScene().name != "Chapter2") return;
+            }
 
-			float BreathingVolume = -0.01f * SprintTimeRemaining + 0.2f;
-			BreathingSound.volume = BreathingVolume;
+            void CheckHeartBeatAndBreathing()
+            {
+                if (SceneManager.GetActiveScene().name != "Chapter2") return;
 
-			HeartBeatSound.volume = Mathf.Lerp(HeartBeatSound.volume, BreathingVolume, Time.deltaTime);
+                float BreathingVolume = -0.01f * SprintTimeRemaining + 0.2f;
+                BreathingSound.volume = BreathingVolume;
 
-			if (SprintTimeRemaining == 0)
-			{
-				sprintCooldown = true;
-			}
+                HeartBeatSound.volume = Mathf.Lerp(HeartBeatSound.volume, BreathingVolume, Time.deltaTime);
 
-			if (SprintTimeRemaining > cooldownThreshold)
-			{
-				sprintCooldown = false;
-			}
-		}
+                if (SprintTimeRemaining == 0)
+                {
+                    sprintCooldown = true;
+                }
+
+                if (SprintTimeRemaining > cooldownThreshold)
+                {
+                    sprintCooldown = false;
+                }
+            }
+        }
 
         /*
 
