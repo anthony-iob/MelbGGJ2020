@@ -17,7 +17,9 @@ public class basicMenuLoop : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-        unpausedAudio.TransitionTo(0f);
+		Cursor.visible = true;
+		Cursor.lockState = CursorLockMode.None;
+		unpausedAudio.TransitionTo(0f);
     }
 
     // Update is called once per frame
