@@ -33,10 +33,18 @@ public class Bullet : MonoBehaviour
 
         if (charged) 
         {
-            if(collision.gameObject.tag == "npc")
+            if(collision.gameObject.tag == "npc" || collision.gameObject.tag == "bandaidable")
             {
                 Debug.Log("REPAIRING ALL WOUNDS");
-                collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds(); ;
+                if (collision.gameObject.GetComponentInChildren <WoundManager>() != null)
+                {
+                    collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds(); 
+                }
+                else if (collision.gameObject.GetComponentInParent<WoundManager>() != null)
+                {
+                    collision.gameObject.GetComponentInParent <WoundManager>().RepairAllWounds();
+                   // Debug.Log("you hit a wound but it's okay because I fixed it");
+                }
             }
         } else if (collision.gameObject.tag == "bandaidable") {
             Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
@@ -52,6 +60,8 @@ public class Bullet : MonoBehaviour
         {
             if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]);}
 
+            
+            
             /* turned this off because it kills the audio - also kinda cool having the things around...instead should turn off and instantiate a particle system -> Audio on particle
             will match action - so hit wall = wall sound, hit dude = a sparkle for healing and a success sound. */
 

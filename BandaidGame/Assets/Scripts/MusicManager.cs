@@ -121,7 +121,7 @@ public class MusicManager : Singleton<MusicManager>
                 // klaxonAudioSource.Play();
 
             }
-            if (GameManager.instance.GetFloodPercentage() >= 0.65 && GameManager.instance.GetFloodPercentage() < 0.75)
+            if (GameManager.instance.GetFloodPercentage() >= 0.65 && GameManager.instance.GetFloodPercentage() < 0.70)
             {
                 StartCoroutine("MusicLoop6");
                 //another alarm here.
@@ -129,13 +129,13 @@ public class MusicManager : Singleton<MusicManager>
                 //klaxonAudioSource.Play();
             }
 
-            if (GameManager.instance.GetFloodPercentage() >= 0.75)
+            if (GameManager.instance.GetFloodPercentage() >= 0.70)
             {
                 endLoop.loop = false;
                 Debug.Log("Loop should have turned off now!! End state approacheth");
             }
 
-            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.65 && ohNoEndTime == false)
+            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.70 && ohNoEndTime == false)
             {
                 endLoop.clip = gameEndState;
                 endLoop.Play();
