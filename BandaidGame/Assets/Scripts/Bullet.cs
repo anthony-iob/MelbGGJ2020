@@ -15,8 +15,8 @@ public class Bullet : MonoBehaviour
     private Vector3 newSize;
     private float currentTime = 0;
 
-    Vector3 originalScale; 
-    Vector3 destinationScale; 
+    Vector3 originalScale;
+    Vector3 destinationScale;
 
     // private WoundManager woundManager;
 
@@ -36,74 +36,74 @@ public class Bullet : MonoBehaviour
     private void Shoot()
     {
         this.GetComponent<Rigidbody>().AddForce(transform.forward * travelSpeed);
-        // ShrinkOverLifetime();    }
-
-        void OnCollisionEnter(Collision collision)
+        // ShrinkOverLifetime();    
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (charged)
         {
-            if (charged)
+            if (collision.gameObject.tag == "npc" || collision.gameObject.tag == "bandaidable")
             {
-                if (collision.gameObject.tag == "npc" || collision.gameObject.tag == "bandaidable")
+                Debug.Log("REPAIRING ALL WOUNDS");
+                if (collision.gameObject.GetComponentInChildren<WoundManager>() != null)
                 {
-                    Debug.Log("REPAIRING ALL WOUNDS");
-                    if (collision.gameObject.GetComponentInChildren<WoundManager>() != null)
-                    {
-                        collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds();
-                    }
-                    else if (collision.gameObject.GetComponentInParent<WoundManager>() != null)
-                    {
-                        collision.gameObject.GetComponentInParent<WoundManager>().RepairAllWounds();
-                        // Debug.Log("you hit a wound but it's okay because I fixed it");
-                    }
+                    collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds();
+                }
+                else if (collision.gameObject.GetComponentInParent<WoundManager>() != null)
+                {
+                    collision.gameObject.GetComponentInParent<WoundManager>().RepairAllWounds();
+                    // Debug.Log("you hit a wound but it's okay because I fixed it");
                 }
             }
-            else if (collision.gameObject.tag == "bandaidable")
+        }
+        else if (collision.gameObject.tag == "bandaidable")
+        {
+            Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
+            WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
+
+            if (bandaidable.isBleeding)
             {
-                Bandaidable bandaidable = collision.gameObject.GetComponent<Bandaidable>();
-                WoundManager woundManager = collision.gameObject.GetComponentInParent<WoundManager>();
-
-                if (bandaidable.isBleeding)
-                {
-                    bandaidable.repair.Invoke();
-                    woundManager.CuredNoisePlay();
-                }
+                bandaidable.repair.Invoke();
+                woundManager.CuredNoisePlay();
             }
+        }
 
-            if (collision.gameObject)
-            {
-                if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]); }
-                this.GetComponent<Rigidbody>().useGravity = true;
+        if (collision.gameObject)
+        {
+            if (audioSource != null) { audioSource.PlayOneShot(bulletImpact[Random.Range(0, bulletImpact.Length)]); }
+            this.GetComponent<Rigidbody>().useGravity = true;
 
 
-                /* turned this off because it kills the audio - also kinda cool having the things around...instead should turn off and instantiate a particle system -> Audio on particle
-                will match action - so hit wall = wall sound, hit dude = a sparkle for healing and a success sound. */
+            /* turned this off because it kills the audio - also kinda cool having the things around...instead should turn off and instantiate a particle system -> Audio on particle
+            will match action - so hit wall = wall sound, hit dude = a sparkle for healing and a success sound. */
 
-                //this.gameObject.SetActive(false); 
+            //this.gameObject.SetActive(false); 
 
-            }
         }
     }
 
-     void Update()
+
+    void Update()
+    {
+        currentTime += Time.deltaTime;
+        if (!charged)
+        { this.gameObject.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / lifetime); }
+        else if (charged)
         {
-            currentTime += Time.deltaTime;
-            if (!charged)
-            { this.gameObject.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / lifetime); }
-            else if (charged)
-            {
-                // this has been commented out because it makes frankies and the player fly. 
+            // this has been commented out because it makes frankies and the player fly. 
 
-                 // newSize = this.gameObject.transform.localScale *= 2;   
-                 // this.gameObject.transform.localScale = Vector3.Lerp(newSize, destinationScale, currentTime / lifetime);
-            }
-
+            //newSize = this.gameObject.transform.localScale *= 2;   
+             //this.gameObject.transform.localScale = Vector3.Lerp(newSize, destinationScale, currentTime / lifetime);
         }
+
+    }
 
     void ShrinkOverLifetime()
     {
-                       
 
 
-        
+
+
     }
 
 
@@ -111,6 +111,7 @@ public class Bullet : MonoBehaviour
     {
         //placeholder for generic bullet collission audio/behaviour/animations
     }
-
-
 }
+
+
+
