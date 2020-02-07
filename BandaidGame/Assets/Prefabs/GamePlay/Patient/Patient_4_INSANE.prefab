@@ -683,6 +683,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9ab8e4f712f99814ea961608ceeb6f13, type: 3}
   - {fileID: 8300000, guid: 75a0c9c19fa1d844eac99220dc2e6055, type: 3}
   - {fileID: 8300000, guid: 336267ac5d0d1bd46b77317b7e29ecec, type: 3}
+  bandaidPop:
+  - {fileID: 8300000, guid: f148a63ee62c0824c978d3f2f73db231, type: 3}
+  - {fileID: 8300000, guid: ffb6e9e94c1973f4c965070029bcefcf, type: 3}
+  - {fileID: 8300000, guid: 8da07cd97e79f9a49aba22e5afac47da, type: 3}
   curedNoises:
   - {fileID: 8300000, guid: 7015bbe27e1ea72448a5c97cde1d4eaf, type: 3}
   - {fileID: 8300000, guid: 7c1e31a974dacd141afe32547826cd35, type: 3}

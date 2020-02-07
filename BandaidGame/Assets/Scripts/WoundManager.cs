@@ -12,7 +12,7 @@ public class WoundManager : MonoBehaviour
     int woundInterval;
     float timeSinceLastWounded;
 
-    public AudioClip[] hurtNoises;
+    public AudioClip[] hurtNoises, bandaidPop;
     public AudioClip[] curedNoises;
     public AudioClip healedSFX, allHealSFX;
            
@@ -76,7 +76,12 @@ public class WoundManager : MonoBehaviour
             Bandaidable wound = GetClosedWound();
             if(wound != null) {
                 wound.bleed.Invoke();
-                if (audioSource != null) { audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length - 1)]); }
+                if (audioSource != null)
+                {
+                    audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length)]);
+                    audioSource.PlayOneShot(bandaidPop[Random.Range(0, bandaidPop.Length)]);
+
+                }
                 else Debug.Log("You're missing an audio source on a patient");
             }
         }
