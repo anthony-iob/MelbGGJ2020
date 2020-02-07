@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void FixedUpdate()
+    public void CursorShow()
     {
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
