@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public AudioMixerSnapshot unpausedAudio;
 
     public GameObject gameOverHUD, HUD, pauseMenu;
+	public bool calledGameOver;
     
     // Start is called before the first frame update
     void Start()
@@ -50,6 +51,12 @@ public class GameManager : Singleton<GameManager>
 
             if (!MusicManager.instance.endLoop.isPlaying)
             {
+				if (!calledGameOver)
+				{
+					gameOver.Invoke();
+					calledGameOver = true;
+				}
+
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
                 disablePewPew = true; //this turns off player shoot controls. 

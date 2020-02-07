@@ -11,7 +11,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof(AudioSource))]
     public class FirstPersonController : MonoBehaviour
     {
-        public Gun weaponScript;
+		public float horizontal;
+		public float vertical;
+		public Gun weaponScript;
         public Vector3 normalCameraLocalPos = new Vector3(0, 2.44f, 0);
         public Vector3 crouchedCameraLocalPos = new Vector3(0, 1, 0);
         public Animator cameraPivot;
@@ -85,7 +87,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             source = GetComponent<AudioSource>();
             //m_AudioSource.clip = m_LandSound;
 
-            cameraPivot.speed = 0;
+            //cameraPivot.speed = 0;
 
             runSpeedOnStart = m_RunSpeed;
             walkSpeedOnStart = m_WalkSpeed;
@@ -103,95 +105,91 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+            RotateView();
+            CheckHeartBeatAndBreathing();
+
+            // the jump state needs to read here to make sure it is not missed
+            m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+
+            if (m_JumpEarly > 0)
             {
-                RotateView();
-                CheckHeartBeatAndBreathing();
+                m_JumpEarly--;
+            }
 
-                // the jump state needs to read here to make sure it is not missed
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+            if (m_Jump)
+            {
+                m_JumpEarly = 5;
+            }
 
-                if (m_JumpEarly > 0)
+            if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+            {
+                StartCoroutine(m_JumpBob.DoBobCycle());
+                //PlayLandingSound();
+                m_MoveDir.y = 0f;
+                m_Jumping = false;
+            }
+            if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
+            {
+                m_MoveDir.y = 0f;
+            }
+
+            m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            //     if (source.clip.name == "Footstep01")
+            //     {
+            //         source.panStereo = -0.36f;
+            //         source.spatialBlend = 0;
+            //     }
+            //     if (source.clip.name == "Footstep02")
+            //     {
+            //         source.panStereo = 0.36f;
+            //         source.spatialBlend = 0;
+            //     }
+            //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
+            //     {
+            //         source.panStereo = 0;
+            //         source.spatialBlend = 1.0f;
+            //     }
+            //CROUCHING =========================================================
+
+            if (m_CharacterController.isGrounded)
+            {
+                m_MoveDir.y = -m_StickToGroundForce;
+
+                if (m_JumpEarly > 0 && m_JumpAllowed)
                 {
-                    m_JumpEarly--;
+                    m_MoveDir.y = m_JumpSpeed;
+                    // PlayJumpSound();
+                    m_Jump = false;
+                    m_Jumping = true;
+                }
+            }
+            else
+            {
+                m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
+            }
+
+            if (GameManager.instance.disablePewPew == false)
+            {
+                if (Input.GetButtonUp("Fire1"))
+                {
+                    weaponScript.Shoot();
+                    weaponScript.CancelCharge();
                 }
 
-                if (m_Jump)
+                if (Input.GetButton("Fire1"))
                 {
-                    m_JumpEarly = 5;
+                    weaponScript.Charge();
                 }
 
-                if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
+                if (Input.GetButtonDown("Fire1"))
                 {
-                    StartCoroutine(m_JumpBob.DoBobCycle());
-                    //PlayLandingSound();
-                    m_MoveDir.y = 0f;
-                    m_Jumping = false;
+                    weaponScript.chargeSFX.Play();
                 }
-                if (!m_CharacterController.isGrounded && !m_Jumping && m_PreviouslyGrounded)
-                {
-                    m_MoveDir.y = 0f;
-                }
-
-                m_PreviouslyGrounded = m_CharacterController.isGrounded;
-                //     if (source.clip.name == "Footstep01")
-                //     {
-                //         source.panStereo = -0.36f;
-                //         source.spatialBlend = 0;
-                //     }
-                //     if (source.clip.name == "Footstep02")
-                //     {
-                //         source.panStereo = 0.36f;
-                //         source.spatialBlend = 0;
-                //     }
-                //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
-                //     {
-                //         source.panStereo = 0;
-                //         source.spatialBlend = 1.0f;
-                //     }
-                //CROUCHING =========================================================
-
-                if (m_CharacterController.isGrounded)
-                {
-                    m_MoveDir.y = -m_StickToGroundForce;
-
-                    if (m_JumpEarly > 0 && m_JumpAllowed)
-                    {
-                        m_MoveDir.y = m_JumpSpeed;
-                        // PlayJumpSound();
-                        m_Jump = false;
-                        m_Jumping = true;
-                    }
-                }
-                else
-                {
-                    m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
-                }
-
-                if (GameManager.instance.disablePewPew == false)
-                {
-
-                    if (Input.GetButtonUp("Fire1"))
-                    {
-                        weaponScript.Shoot();
-                        weaponScript.CancelCharge();
-                    }
-
-                    if (Input.GetButton("Fire1"))
-                    {
-                        weaponScript.Charge();
-                    }
-
-                    if (Input.GetButtonDown("Fire1"))
-                    {
-                        weaponScript.chargeSFX.Play();
-                    }
-                }
-
             }
 
             void CheckHeartBeatAndBreathing()
             {
-                if (SceneManager.GetActiveScene().name != "Chapter2") return;
+                if (SceneManager.GetActiveScene().name != "Level1") return;
 
                 float BreathingVolume = -0.01f * SprintTimeRemaining + 0.2f;
                 BreathingSound.volume = BreathingVolume;
@@ -210,18 +208,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        /*
-
-		private void PlayLandingSound()
-        {
-            if(m_AudioSource != null) {
-                m_AudioSource.clip = m_LandSound;
-                m_AudioSource.Play();
-                m_NextStep = m_StepCycle + .5f;
-            }
-        }
-        */
-
         public float speed;
 		public float SprintTimeRemaining;
 		public bool sprintCooldown;
@@ -232,6 +218,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		private void FixedUpdate()
         {
             GetInput(out speed);
+
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward * m_Input.y + transform.right * m_Input.x;
 
@@ -252,17 +239,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.UpdateCursorLock();
         }
 
-
-        /*private void PlayJumpSound()
-            {
-                if(m_AudioSource != null) {
-                    m_AudioSource.clip = m_JumpSound;
-                    m_AudioSource.Play();
-                }
-            }
-        */
-
-
         private void ProgressStepCycle(float speed)
         {
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
@@ -281,7 +257,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // PlayFootStepAudio();
         }
 
-
         private void PlayFootStepAudio()
         {
             if (!m_CharacterController.isGrounded)
@@ -297,7 +272,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_FootstepSounds[n] = m_FootstepSounds[0];
             m_FootstepSounds[0] = m_AudioSource.clip;
         }
-
 
         private void UpdateCameraPosition(float speed)
         {
@@ -322,12 +296,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Camera.transform.localPosition = newCameraPosition;
         }
 
-
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            vertical = CrossPlatformInputManager.GetAxis("Vertical");
 
             bool waswalking = m_IsWalking;
 
@@ -339,21 +312,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             switch (toggleCrouchSprint)
             {
                 case true:
-                    if (!Input.GetButton("Fire1"))
-                    {
-						if (sprintCooldown && SceneManager.GetActiveScene().name == "Chapter2")
-						{
-							m_IsWalking = true;
-						}
-						else
-						{
-							m_IsWalking = !Input.GetButton("Fire1") && (horizontal != 0 || vertical != 0);
-						}
-                    }
-                    else m_IsWalking = true;
+					if (sprintCooldown)
+					{
+						m_IsWalking = horizontal != 0 || vertical != 0;
+					}
+					else
+					{
+						m_IsWalking = horizontal != 0 || vertical != 0;
+					}
                     break;
                 case false:
-                    m_IsWalking = !Input.GetButton("Fire1");
+                    m_IsWalking = horizontal != 0 || vertical != 0;
                     break;
             }
 
@@ -377,7 +346,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
                 else
                 {
-                    cameraPivot.speed = 0;
+                    //cameraPivot.speed = 0;
                 }
             }
 
