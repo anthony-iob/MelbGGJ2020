@@ -134,24 +134,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
-            //     if (source.clip.name == "Footstep01")
-            //     {
-            //         source.panStereo = -0.36f;
-            //         source.spatialBlend = 0;
-            //     }
-            //     if (source.clip.name == "Footstep02")
-            //     {
-            //         source.panStereo = 0.36f;
-            //         source.spatialBlend = 0;
-            //     }
-            //     if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
-            //     {
-            //         source.panStereo = 0;
-            //         source.spatialBlend = 1.0f;
-            //     }
-            //CROUCHING =========================================================
+			//if (source.clip.name == "Footstep01")
+			//{
+			//	source.panStereo = -0.36f;
+			//	source.spatialBlend = 0;
+			//}
+			//if (source.clip.name == "Footstep02")
+			//{
+			//	source.panStereo = 0.36f;
+			//	source.spatialBlend = 0;
+			//}
+			//if (source.clip.name != "Footstep01" && source.clip.name != "Footstep02")
+			//{
+			//	source.panStereo = 0;
+			//	source.spatialBlend = 1.0f;
+			//}
+			//CROUCHING =========================================================
 
-            if (m_CharacterController.isGrounded)
+			if (m_CharacterController.isGrounded)
             {
                 m_MoveDir.y = -m_StickToGroundForce;
 
@@ -254,7 +254,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_NextStep = m_StepCycle + m_StepInterval;
 
-            // PlayFootStepAudio();
+            PlayFootStepAudio();
         }
 
         private void PlayFootStepAudio()

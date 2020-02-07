@@ -14418,6 +14418,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
         type: 3}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
       propertyPath: m_StickToGroundForce
       value: 1
       objectReference: {fileID: 0}
@@ -14436,6 +14441,36 @@ PrefabInstance:
       propertyPath: HeartBeatSound
       value: 
       objectReference: {fileID: 40107450}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: toggleCrouchSprint
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_StepInterval
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5597169189037898747, guid: a7534aeb3e0e30f49acfc12a068427eb,
         type: 3}
       propertyPath: m_Controller
@@ -18359,7 +18394,8 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 1980709365}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1410559414, guid: 555696eda3eb1481d806df57712ddb13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 555696eda3eb1481d806df57712ddb13, type: 3}
 --- !u!224 &6838218056220176588
 RectTransform:
