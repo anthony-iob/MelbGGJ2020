@@ -9,7 +9,7 @@ public class Gun : Singleton<Gun>
 {
     public GameObject projectile;
     public GameObject projectilePosition;
-    public float chargeShotSizeMultiplier = 2, chargeShotDelay = 1;
+    public float chargeShotSizeMultiplier, chargeShotDelay;
     GameObject loadedBullet;
 	public UnityEvent chargedShot;
 	public UnityEvent normalShot;

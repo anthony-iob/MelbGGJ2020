@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1477762008672063833}
   - component: {fileID: 3411309929849378837}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: BandaidProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
-  lifetime: 1.5
+  lifetime: 3
   charged: 0
   bulletImpact:
   - {fileID: 8300000, guid: b083f49d81c3be34fb2ba711c6657f63, type: 3}
