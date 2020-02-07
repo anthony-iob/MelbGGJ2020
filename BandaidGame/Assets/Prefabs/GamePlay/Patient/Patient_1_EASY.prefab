@@ -547,7 +547,7 @@ MonoBehaviour:
   maxWounds: 1
   bleedMultiplier: 20
   totalBleedValue: 0
-  minWoundInterval: 4
+  minWoundInterval: 5
   maxWoundInterval: 12
   hurtNoises:
   - {fileID: 8300000, guid: 9d908a0428f34e048b1713f037743430, type: 3}
@@ -1054,7 +1054,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1247,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1440,7 +1440,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1633,7 +1633,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1806,7 +1806,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1979,7 +1979,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556251508014, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2164,6 +2164,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 1190367734003393588}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &1190367734003393588 stripped
@@ -2315,7 +2320,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2584,7 +2589,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2757,7 +2762,7 @@ PrefabInstance:
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
-      value: 3.15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}

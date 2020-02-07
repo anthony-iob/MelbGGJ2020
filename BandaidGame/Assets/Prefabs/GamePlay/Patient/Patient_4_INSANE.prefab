@@ -672,7 +672,7 @@ MonoBehaviour:
   - {fileID: 6639429557172312964}
   - {fileID: 6639429556439778644}
   BLOOD_FREQUENCY_SECONDS: 1
-  maxWounds: 8
+  maxWounds: 3
   bleedMultiplier: 22
   totalBleedValue: 0
   minWoundInterval: 4
@@ -1046,6 +1046,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429556995707878}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &6639429556926344955 stripped
@@ -1224,6 +1229,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429558002629784}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!4 &6639429557447191083 stripped
@@ -1402,6 +1412,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429557727363507}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &6639429557796879534 stripped
@@ -1580,6 +1595,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429557723843894}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &6639429557723843894 stripped
@@ -1738,6 +1758,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 8869182811906105133}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!4 &8869182812424374686 stripped
@@ -1886,6 +1911,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 7832997572918463197}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &7832997572400290927 stripped
@@ -2064,6 +2094,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 1190367734003393588}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &1190367734003393588 stripped
@@ -2212,6 +2247,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 930714278536980891}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &930714279059095337 stripped
@@ -2476,6 +2516,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 99330153127486030}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &99330153057984339 stripped
@@ -2634,6 +2679,11 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 4217996673181151100}
+    - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e273dce281a854fbcdaca6b6d9634b, type: 3}
 --- !u!1 &4217996673181151100 stripped
