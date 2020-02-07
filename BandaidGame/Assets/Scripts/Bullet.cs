@@ -18,8 +18,6 @@ public class Bullet : MonoBehaviour
     Vector3 originalScale;
     Vector3 destinationScale;
 
-    // private WoundManager woundManager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +42,7 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.tag == "npc" || collision.gameObject.tag == "bandaidable")
             {
-                Debug.Log("REPAIRING ALL WOUNDS");
+                
                 if (collision.gameObject.GetComponentInChildren<WoundManager>() != null)
                 {
                     collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds();
