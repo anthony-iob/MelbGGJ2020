@@ -1338,10 +1338,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.75
@@ -1385,6 +1381,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect (5)
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -1529,26 +1529,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: m_CookingOptions
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 99330152605021436, guid: e8d0231ca46e3614a8bd4d86d520497e,
         type: 3}
@@ -1809,6 +1789,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
+        type: 3}
+      propertyPath: m_CookingOptions
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889491491819170058, guid: e8d0231ca46e3614a8bd4d86d520497e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8d0231ca46e3614a8bd4d86d520497e, type: 3}
@@ -2096,10 +2096,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.267
@@ -2143,6 +2139,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -2229,10 +2229,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.912
@@ -2276,6 +2272,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect (3)
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -12263,10 +12263,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.132
@@ -12310,6 +12306,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect (2)
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -12496,10 +12496,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.641
@@ -12543,6 +12539,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect (4)
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -12603,26 +12603,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6381991318072924934, guid: 7f6323f609fb94ade99e66a0f4642f7e,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6381991318072924934, guid: 7f6323f609fb94ade99e66a0f4642f7e,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667692245400239030, guid: 7f6323f609fb94ade99e66a0f4642f7e,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667692245400239030, guid: 7f6323f609fb94ade99e66a0f4642f7e,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6073411287473211818, guid: 7f6323f609fb94ade99e66a0f4642f7e,
         type: 3}
       propertyPath: m_Name
@@ -12863,6 +12843,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6381991318072924934, guid: 7f6323f609fb94ade99e66a0f4642f7e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381991318072924934, guid: 7f6323f609fb94ade99e66a0f4642f7e,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667692245400239030, guid: 7f6323f609fb94ade99e66a0f4642f7e,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667692245400239030, guid: 7f6323f609fb94ade99e66a0f4642f7e,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6323f609fb94ade99e66a0f4642f7e, type: 3}
 --- !u!95 &1521774314 stripped
@@ -12870,6 +12870,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5249228269343573673, guid: 7f6323f609fb94ade99e66a0f4642f7e,
     type: 3}
   m_PrefabInstance: {fileID: 1521774313}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1544779254 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5597169188641909846, guid: a7534aeb3e0e30f49acfc12a068427eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1778397293}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1579045607
 GameObject:
@@ -13070,10 +13076,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1236958876}
     m_Modifications:
-    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
-      propertyPath: m_Name
-      value: GoopSprayEffect (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.261
@@ -13117,6 +13119,10 @@ PrefabInstance:
     - target: {fileID: 4000013488956786, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012909287652, guid: abb9f519b142e304d9c45b56afa768bc, type: 3}
+      propertyPath: m_Name
+      value: GoopSprayEffect (1)
       objectReference: {fileID: 0}
     - target: {fileID: 198000011254678926, guid: abb9f519b142e304d9c45b56afa768bc,
         type: 3}
@@ -14164,6 +14170,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d7210bfa267444bfb5301833bb0c1c8, type: 3}
+--- !u!1001 &3942083905536760710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3942083906987063557, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_Name
+      value: Leaderboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.3947
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906987063554, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905751546795, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1544779254}
+    - target: {fileID: 3942083907387767514, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083907387767514, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa3e6e9c8ca574e4787fddbb02570832, type: 3}
 --- !u!1001 &6831444017648957501
 PrefabInstance:
   m_ObjectHideFlags: 0
