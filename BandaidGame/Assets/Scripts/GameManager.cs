@@ -15,9 +15,8 @@ public class GameManager : Singleton<GameManager>
 
     public AudioMixerSnapshot unpausedAudio;
 
-    public GameObject gameOverHUD, HUD, pauseMenu;
-	public bool calledGameOver;
-    
+    public GameObject gameOverHUD, HUD, pauseMenu, player;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +24,7 @@ public class GameManager : Singleton<GameManager>
         currentBloodLevel = 0;
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
+        
 
     }
 
@@ -38,8 +38,10 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    void Update() {
-        if(currentBloodLevel >= MAX_BLOOD_LEVEL) {
+    void Update()
+    {
+        if (currentBloodLevel >= MAX_BLOOD_LEVEL)
+        {
             // gameOver.Invoke(); 
             // removed this to put in delayed game end below.
 
@@ -51,17 +53,17 @@ public class GameManager : Singleton<GameManager>
 
             if (!MusicManager.instance.endLoop.isPlaying)
             {
-				if (!calledGameOver)
-				{
-					gameOver.Invoke();
-					calledGameOver = true;
-				}
-
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
-                disablePewPew = true; //this turns off player shoot controls. 
-            }
+                disablePewPew = true;
 
+                // if (player != null) player.SetActive(false); else Debug.Log("Attach the player in gamemanager plz");
+
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+
+
+            }
         }
     }
 

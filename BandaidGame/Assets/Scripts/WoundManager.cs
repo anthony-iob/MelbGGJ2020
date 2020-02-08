@@ -9,8 +9,8 @@ public class WoundManager : MonoBehaviour
     public float BLOOD_FREQUENCY_SECONDS;
     List<Bandaidable> wounds;
     public int maxWounds, bleedMultiplier, totalBleedValue;
-    public float minWoundInterval, maxWoundInterval;
-    float woundInterval;
+    public int minWoundInterval, maxWoundInterval;
+    int woundInterval;
     float timeSinceLastWounded;
 
     public AudioClip[] hurtNoises, bandaidPop;
@@ -51,7 +51,7 @@ public class WoundManager : MonoBehaviour
     void SetWoundInterval()
     {
         timeSinceLastWounded = 0;
-        woundInterval = Random.Range(minWoundInterval , maxWoundInterval);
+        woundInterval = Random.Range(minWoundInterval, maxWoundInterval);
     }
 
     void InitialiseWounds()
@@ -73,7 +73,7 @@ public class WoundManager : MonoBehaviour
     {
         if (timeSinceLastWounded >= woundInterval)
         {
-            InitialiseWounds(); //added this here to randomise wound each time. 
+            // InitialiseWounds(); //added this here to randomise wound each time. 
             SetWoundInterval();
             Bandaidable wound = GetClosedWound();
             if(wound != null) {
