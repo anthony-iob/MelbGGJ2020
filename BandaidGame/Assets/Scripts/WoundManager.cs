@@ -138,8 +138,7 @@ public class WoundManager : MonoBehaviour
 
                 if (healSFXSource != null) { healSFXSource.PlayOneShot(allHealSFX); }
             }
-            else
-                Debug.Log("....but it doesn't affect Patient!");
+            //else Debug.Log("....but it doesn't affect Patient!");
         }
     }
 }
