@@ -21,6 +21,9 @@ public class WoundManager : MonoBehaviour
     public AudioSource healSFXSource;
     private float bleedUpdateTime;
 
+    private int pos = 0;
+
+    public int openWounds = 0;
 
     void Start()
     {
@@ -31,12 +34,21 @@ public class WoundManager : MonoBehaviour
         {
             audioSource = GetComponent<AudioSource>();
         }
-        else Debug.Log("An AudioSource is missing from an object which makes noises");
+        else Debug.Log("An AudioSource is missing from an patients wound which makes noises");
     }
 
     void FixedUpdate()
     {
-        OpenWound();
+
+        if (openWounds < maxWounds)
+        {
+            OpenWound();
+        }
+
+        if (maxWounds == openWounds) //did this so it doesn't immediately spawn a new wound when wound is cured. 
+        {
+            timeSinceLastWounded = 0;
+        }
     }
 
     void Update() {
@@ -57,35 +69,41 @@ public class WoundManager : MonoBehaviour
     void InitialiseWounds()
     {
         wounds = new List<Bandaidable>();
-        while (wounds.Count < maxWounds)
+        while (wounds.Count < woundPositions.Length)
         {
-            int pos = Random.Range(0, woundPositions.Length);
+            //int pos = Random.Range(0, woundPositions.Length);
             //Debug.Log(pos);
+
+            
             if (!woundPositions[pos].activeSelf)
             {
                 woundPositions[pos].SetActive(true);
                 wounds.Add(woundPositions[pos].GetComponent<Bandaidable>());
+                pos += 1;
             }
         }
     }
 
     public void OpenWound()
     {
+
+
+
         if (timeSinceLastWounded >= woundInterval)
         {
-            // InitialiseWounds(); //added this here to randomise wound each time. 
             SetWoundInterval();
             Bandaidable wound = GetClosedWound();
-            if(wound != null) {
+            if (wound != null)
+            {
                 wound.bleed.Invoke();
                 if (audioSource != null)
                 {
                     audioSource.PlayOneShot(hurtNoises[Random.Range(0, hurtNoises.Length)]);
                     audioSource.PlayOneShot(bandaidPop[Random.Range(0, bandaidPop.Length)]);
-
                 }
                 else Debug.Log("You're missing an audio source on a patient");
 
+                openWounds++;
             }
         }
     }
@@ -123,6 +141,8 @@ public class WoundManager : MonoBehaviour
         if (audioSource != null) { audioSource.PlayOneShot(curedNoises[Random.Range(0, curedNoises.Length)]); }
         if (healSFXSource != null) { healSFXSource.PlayOneShot(healedSFX); }
         else Debug.Log("You're missing an audio source on a patient");
+
+        openWounds--;
         //Debug.Log("NOISES FOR CURE");
     }
 
@@ -137,7 +157,8 @@ public class WoundManager : MonoBehaviour
                 else Debug.Log("You're missing an audio source on a patient");
 
                 if (healSFXSource != null) { healSFXSource.PlayOneShot(allHealSFX); }
-            }
+
+                openWounds = 0;            }
             //else Debug.Log("....but it doesn't affect Patient!");
         }
     }
