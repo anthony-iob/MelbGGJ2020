@@ -26,7 +26,16 @@ public class HUDManager : MonoBehaviour
     void UpdateFloodInfo()
     {
         percentage = Mathf.Clamp(GameManager.instance.GetFloodPercentage(), 0f, 100f);
-        percentageLabel.text = (100 * percentage).ToString("0") + "%";
+        if (percentage <= 1f)
+        {
+            percentageLabel.text = (100 * percentage).ToString("0") + "%";
+        }
+        else
+        {
+            percentage = 1f;
+            percentageLabel.text = (100 * percentage).ToString("0") + "%";
+        }
+        
         floodBar.fillAmount = percentage;
     }
 
