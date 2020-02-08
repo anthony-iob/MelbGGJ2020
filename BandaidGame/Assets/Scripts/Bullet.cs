@@ -63,6 +63,8 @@ public class Bullet : MonoBehaviour
             {
                 bandaidable.repair.Invoke();
                 woundManager.CuredNoisePlay();
+                
+                
             }
         }
 
@@ -84,15 +86,15 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         currentTime += Time.deltaTime;
-        if (!charged)
-        { this.gameObject.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / lifetime); }
-        else if (charged)
-        {
-            // this has been commented out because it makes frankies and the player fly. 
+       //  if (!charged)
+       // { this.gameObject.transform.localScale = Vector3.Lerp(originalScale, destinationScale, currentTime / lifetime); }
+       // else if (charged)
+       // {
+       // this has been commented out because it makes frankies and the player fly. 
 
-            //newSize = this.gameObject.transform.localScale *= 2;   
-             //this.gameObject.transform.localScale = Vector3.Lerp(newSize, destinationScale, currentTime / lifetime);
-        }
+       //  newSize = this.gameObject.transform.localScale *= 2;   
+       //  this.gameObject.transform.localScale = Vector3.Lerp(newSize, destinationScale, currentTime / lifetime);
+       // }
 
     }
 

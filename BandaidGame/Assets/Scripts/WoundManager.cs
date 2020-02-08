@@ -158,7 +158,8 @@ public class WoundManager : MonoBehaviour
 
                 if (healSFXSource != null) { healSFXSource.PlayOneShot(allHealSFX); }
 
-                openWounds = 0;            }
+                openWounds = 0; //turn this off and they'll be perma cured. 
+            }
             //else Debug.Log("....but it doesn't affect Patient!");
         }
     }
