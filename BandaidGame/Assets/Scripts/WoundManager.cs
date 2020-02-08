@@ -10,7 +10,7 @@ public class WoundManager : MonoBehaviour
     List<Bandaidable> wounds;
     public int maxWounds, bleedMultiplier, totalBleedValue;
     public int minWoundInterval, maxWoundInterval;
-    int woundInterval;
+    float woundInterval;
     float timeSinceLastWounded;
 
     public AudioClip[] hurtNoises, bandaidPop;
@@ -94,7 +94,7 @@ public class WoundManager : MonoBehaviour
     {
         List<Bandaidable> closedWounds = wounds.FindAll(wound => !wound.isBleeding);
         if(closedWounds.Count > 0) {
-            int pos = Random.Range(0, closedWounds.Count - 1);
+            int pos = Random.Range(0, closedWounds.Count);
             return closedWounds[pos];
         }
         return null;
