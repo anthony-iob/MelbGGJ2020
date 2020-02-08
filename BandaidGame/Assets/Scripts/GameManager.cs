@@ -12,6 +12,9 @@ public class GameManager : Singleton<GameManager>
     public UnityEvent gameOver;
     bool isGameOver = false;
     public bool disablePewPew = false;
+    public Animator TimeAnimator;
+    public Animator SlimeAnimator;
+    public Animator ChargeAnimator;
 
     public AudioMixerSnapshot unpausedAudio;
 
@@ -47,8 +50,11 @@ public class GameManager : Singleton<GameManager>
 
 
             isGameOver = true;
+            TimeAnimator.SetBool("GameOver", true);
+            SlimeAnimator.SetBool("GameOver", true);
+            ChargeAnimator.SetBool("GameOver", true);
             //Time.timeScale = 0;
-            HUD.SetActive(false);
+            //HUD.SetActive(false);
             pauseMenu.SetActive(false);
 
             if (!MusicManager.instance.endLoop.isPlaying)
