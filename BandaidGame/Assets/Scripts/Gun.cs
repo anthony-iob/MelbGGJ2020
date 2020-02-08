@@ -20,8 +20,11 @@ public class Gun : Singleton<Gun>
     public AudioSource bulletFire;
 	public AudioSource chargedBulletFire;
 	public AudioClip[] bulletSFX;
+    public AudioClip maxChargeSFX;
 	public AudioSource chargeSFX;
-    public ParticleSystem explosion;
+    public ParticleSystem explosion, maxChargeParticle;
+
+    public bool hasChargedBullet = false;
 
     private void Start()
     {
@@ -34,7 +37,8 @@ public class Gun : Singleton<Gun>
 
     public void Shoot()
     {
-		loadedBullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
+        hasChargedBullet = false;
+        loadedBullet = Instantiate(projectile, projectilePosition.transform.position, projectilePosition.transform.rotation) as GameObject;
 		if (chargeTime >= chargeShotDelay)
         {
 			loadedBullet.GetComponent<Bullet>().charged = true;
@@ -43,6 +47,7 @@ public class Gun : Singleton<Gun>
             explosion.Play();
 			chargedBulletFire.Play();
 			chargedShot.Invoke();
+            chargeSFX.volume = 0.15f;
 		}
 		CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
 		bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
@@ -65,4 +70,18 @@ public class Gun : Singleton<Gun>
 		chargeTime = 0;
 		chargeSFX.Stop();
 	}
+
+    void Update()
+    {
+        if(chargeTime >= chargeShotDelay && hasChargedBullet == false)
+        {
+            chargeSFX.volume = 0.1f;
+            if (bulletFire != null) { bulletFire.PlayOneShot(maxChargeSFX); }
+            if (maxChargeParticle != null) { maxChargeParticle.Play(); } else Debug.Log("You're missing a particle for the max charge just fyi");
+            hasChargedBullet = true;
+        }
+
+
+        
+    }
 }

@@ -172,7 +172,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 9200a6c582dd0b94ebc4884ad8c9c487, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.255
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6004,8 +6004,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39d89b94e6a36de41bd07fe64b0c6e09, type: 3}
   - {fileID: 8300000, guid: 7f32c8d3c52dd0747966135045e5e012, type: 3}
   - {fileID: 8300000, guid: 66e4f3f742609b4498c7ced0eabfb4a5, type: 3}
+  maxChargeSFX: {fileID: 8300000, guid: a9c6ec7be067af1418c16fea1d8ca80f, type: 3}
   chargeSFX: {fileID: 945703382}
   explosion: {fileID: 5597169189104263176}
+  maxChargeParticle: {fileID: 0}
+  hasChargedBullet: 0
 --- !u!82 &1821999712280468320
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6945,7 +6948,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bebb9807ff0a0c84fbd27765258f0ab4, type: 3}
   - {fileID: 8300000, guid: 2772b4ea6c120b640aee56d971dd6790, type: 3}
   toggleCrouchSprint: 0
-  footstepAudioSource: {fileID: 0}
+  footstepAudioSource: {fileID: 3515728084994497988}
   speed: 0
   SprintTimeRemaining: 0
   sprintCooldown: 0
@@ -12050,24 +12053,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalImpacts
       objectReference: {fileID: 0}
-    - target: {fileID: 1892351807075712, guid: 44be68b4fc4366142a9cd1ae1f761ea4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
+      propertyPath: lengthInSec
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
@@ -12076,12 +12065,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
-      propertyPath: lengthInSec
-      value: 2
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1655450820868138, guid: 44be68b4fc4366142a9cd1ae1f761ea4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 198910345005662624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
+        type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4226694388535814, guid: 44be68b4fc4366142a9cd1ae1f761ea4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12158,20 +12148,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198310867037917284, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198310867037917284, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 198310867037917284, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
-        type: 3}
       propertyPath: lengthInSec
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 198420119301487162, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
+    - target: {fileID: 198310867037917284, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198310867037917284, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -12181,7 +12166,7 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 198543023633713624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
+    - target: {fileID: 198420119301487162, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -12189,6 +12174,11 @@ PrefabInstance:
     - target: {fileID: 198543023633713624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
         type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198543023633713624, guid: 44be68b4fc4366142a9cd1ae1f761ea4,
+        type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -12237,5 +12227,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39d89b94e6a36de41bd07fe64b0c6e09, type: 3}
   - {fileID: 8300000, guid: 7f32c8d3c52dd0747966135045e5e012, type: 3}
   - {fileID: 8300000, guid: 66e4f3f742609b4498c7ced0eabfb4a5, type: 3}
+  maxChargeSFX: {fileID: 0}
   chargeSFX: {fileID: 0}
   explosion: {fileID: 0}
+  maxChargeParticle: {fileID: 0}
+  hasChargedBullet: 0

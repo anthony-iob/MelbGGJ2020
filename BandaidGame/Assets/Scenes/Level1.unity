@@ -2582,12 +2582,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 860218151}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &919278325 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3515728084994497988, guid: a7534aeb3e0e30f49acfc12a068427eb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1778397293}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &932174075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13690,11 +13684,6 @@ PrefabInstance:
       propertyPath: HeartBeatSound
       value: 
       objectReference: {fileID: 40107450}
-    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
-        type: 3}
-      propertyPath: footstepAudioSource
-      value: 
-      objectReference: {fileID: 919278325}
     - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
         type: 3}
       propertyPath: m_LocalPosition.x
