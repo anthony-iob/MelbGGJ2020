@@ -34,7 +34,7 @@ public class Pause : Singleton<MonoBehaviour>
     }
 
     void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) ) {
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown("joystick button 7")) {
             if(paused) {
                 Debug.Log("resuming");
                 resumeGame.Invoke();
