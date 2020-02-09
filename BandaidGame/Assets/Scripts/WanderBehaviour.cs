@@ -6,9 +6,9 @@ using UnityEngine;
 public class WanderBehaviour : MonoBehaviour
 {
     [Header("Wander Behaviour")]
-    public float speed = 5;
-    public float directionChangeInterval = 1;
-    public float maxHeadingChange = 30;
+    public float speed;
+    public float directionChangeInterval;
+    public float maxHeadingChange;
 
     [Header("Whiskers/WallAvoidance")]
     public float whiskerRadius;
@@ -50,7 +50,8 @@ public class WanderBehaviour : MonoBehaviour
 
         if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, controller.transform.forward, out hit, whiskerRange))
         {
-           // Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+            // Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+
             AvoidWall();
         }
     }
@@ -74,7 +75,7 @@ public class WanderBehaviour : MonoBehaviour
 
     void AvoidWall()
     {
-        // Debug.Log("avoiding wall");
+         Debug.Log("avoiding wall");
         targetRotation = new Vector3(0, transform.eulerAngles.y + wallAvoidanceTurnDegrees, 0);
     }
 }
