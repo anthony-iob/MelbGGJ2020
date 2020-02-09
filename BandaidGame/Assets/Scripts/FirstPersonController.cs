@@ -57,6 +57,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         public AudioSource footstepAudioSource;
+        private bool m_fired;
+        private bool m_chargeSoundPlayed;
 
         //Crouch function
         private float characterControllerHeightOnStart;
@@ -91,6 +93,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             runSpeedOnStart = m_RunSpeed;
             walkSpeedOnStart = m_WalkSpeed;
+            m_chargeSoundPlayed = false;
         }
 
         public void ForceLockCursor()
@@ -170,6 +173,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             if (GameManager.instance.disablePewPew == false)
             {
+                /* Mouse Inputs */
                 if (Input.GetButtonUp("Fire1"))
                 {
                     weaponScript.Shoot();
@@ -184,6 +188,29 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (Input.GetButtonDown("Fire1"))
                 {
                     weaponScript.chargeSFX.Play();
+                }
+
+                /* Controller Inputs */
+                if (Input.GetAxisRaw("Fire2") <= 0)
+                {
+                    if (!m_fired)
+                    {
+                        weaponScript.Shoot();
+                        weaponScript.CancelCharge();
+                        m_fired = true;
+                        m_chargeSoundPlayed = false;
+                    }
+                }
+
+                if (Input.GetAxisRaw("Fire2") > 0)
+                {
+                    m_fired = false;
+                    if (!m_chargeSoundPlayed)
+                    {
+                        weaponScript.chargeSFX.Play();
+                        m_chargeSoundPlayed = true;
+                    }          
+                    weaponScript.Charge();
                 }
             }
 
