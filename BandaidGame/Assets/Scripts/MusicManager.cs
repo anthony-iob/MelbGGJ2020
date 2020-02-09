@@ -23,13 +23,27 @@ public class MusicManager : Singleton<MusicManager>
  */
 
 
-
-    public AudioSource loop1, loop2, loop3, loop4, loop5, loop6, loop7, endLoop;
+    [Header("AudioSources")]
+    public AudioSource loop1;
+    public AudioSource loop2;
+    public AudioSource loop3;
+    public AudioSource loop4;
+    public AudioSource loop5;
+    public AudioSource loop6;
+    public AudioSource loop7;
+    public AudioSource endLoop;
 
     //public AudioSource klaxonAudioSource;
 
-
-    public AudioClip introTrack, loop1Track, loop2Track, loop3Track, loop4Track, loop5Track, loop6Track, loop7Track;
+    [Header("AudioClips")]
+    public AudioClip introTrack;
+    public AudioClip loop1Track;
+    public AudioClip loop2Track;
+    public AudioClip loop3Track;
+    public AudioClip loop4Track;
+    public AudioClip loop5Track;
+    public AudioClip loop6Track;
+    public AudioClip loop7Track;
     public AudioClip endLoopTrack;
     public AudioClip gameEndState;
     public AudioClip gameOver;
@@ -37,6 +51,7 @@ public class MusicManager : Singleton<MusicManager>
     //public AudioClip klaxon;
 
    // public int trackNumber;
+   [Header("Time to fade between tracks (ms)")]
     public float musicFadeTime;
     private float currentTime;
 
