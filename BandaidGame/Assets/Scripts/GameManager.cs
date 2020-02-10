@@ -15,6 +15,7 @@ public class GameManager : Singleton<GameManager>
     public Animator TimeAnimator;
     public Animator SlimeAnimator;
     public Animator ChargeAnimator;
+    private bool invoked;
 
     public AudioMixerSnapshot unpausedAudio;
 
@@ -27,6 +28,7 @@ public class GameManager : Singleton<GameManager>
         currentBloodLevel = 0;
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
+        invoked = false;
         
 
     }
@@ -62,6 +64,12 @@ public class GameManager : Singleton<GameManager>
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
                 disablePewPew = true;
+
+                if (!invoked)
+                {
+                    gameOver.Invoke();
+                    invoked = true;
+                }          
 
                 // if (player != null) player.SetActive(false); else Debug.Log("Attach the player in gamemanager plz");
 
