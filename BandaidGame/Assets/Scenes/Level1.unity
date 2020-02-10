@@ -25170,6 +25170,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1576786715, guid: 7f6323f609fb94ade99e66a0f4642f7e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f6323f609fb94ade99e66a0f4642f7e, type: 3}
 --- !u!95 &1521774314 stripped
@@ -36652,6 +36656,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 333716670635378847, guid: e2ef16057558c964185b88984087c40a,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5975674010433434198, guid: e2ef16057558c964185b88984087c40a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -36698,6 +36707,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11500000, guid: 28f5840b6beef4994a06bba267ee3c81,
         type: 3}
+    - target: {fileID: 5975674010433434198, guid: e2ef16057558c964185b88984087c40a,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3627821885302205968, guid: e2ef16057558c964185b88984087c40a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -36912,6 +36926,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevel1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513789361982592288, guid: e2ef16057558c964185b88984087c40a,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7907130038214699863, guid: e2ef16057558c964185b88984087c40a,
         type: 3}
