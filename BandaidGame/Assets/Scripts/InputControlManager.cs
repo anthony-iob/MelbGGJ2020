@@ -18,7 +18,6 @@ public class InputControlManager : MonoBehaviour
         reconnected = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         //This code checks if a joystick is connected or not through its name every update. When a joystick is disconnected, the EventManager will deselect all buttons in favour of mouse control.
