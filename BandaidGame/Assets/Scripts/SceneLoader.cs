@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    
+    //public Button backButton;
+    //public Button creditsButton;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -22,6 +27,16 @@ public class SceneLoader : MonoBehaviour
     public void LoadLevel1() { 
         SceneManager.LoadScene("Scenes/Level1"); 
     }
+
+    /*public void selectBack()
+    {
+        backButton.Select();
+    }
+
+    public void selectCredits()
+    {
+        creditsButton.Select();
+    }*/
 
     public void QuitGame() {
         Application.Quit();
