@@ -65,12 +65,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  directionChangeInterval: 1
-  maxHeadingChange: 30
-  whiskerRadius: 0.2
-  whiskerRange: 1.5
-  whiskerForwardSpawnModifier: 1
-  wallAvoidanceTurnDegrees: 180
+  directionChangeInterval: 5
+  maxHeadingChange: 40
+  whiskerRadius: 0.15
+  whiskerRange: 2.05
+  whiskerForwardSpawnModifier: 4.8
+  wallAvoidanceTurnDegrees: 60
 --- !u!136 &6001190923300251363
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -695,6 +695,7 @@ MonoBehaviour:
   healedSFX: {fileID: 8300000, guid: 8592fc9095fbaca439737aff6a8ad9b0, type: 3}
   allHealSFX: {fileID: 8300000, guid: 94a4852f39d3667498578e701725e93a, type: 3}
   healSFXSource: {fileID: 553950823733262795}
+  openWounds: 0
 --- !u!82 &8777242008297719961
 AudioSource:
   m_ObjectHideFlags: 0

@@ -65,12 +65,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  directionChangeInterval: 2.5
-  maxHeadingChange: 30
-  whiskerRadius: 0.2
-  whiskerRange: 1.5
-  whiskerForwardSpawnModifier: 1
-  wallAvoidanceTurnDegrees: 180
+  directionChangeInterval: 5
+  maxHeadingChange: 40
+  whiskerRadius: 0.15
+  whiskerRange: 2.05
+  whiskerForwardSpawnModifier: 4.8
+  wallAvoidanceTurnDegrees: 60
 --- !u!136 &4947344328732695751
 CapsuleCollider:
   m_ObjectHideFlags: 0
