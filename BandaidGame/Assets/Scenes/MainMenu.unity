@@ -5895,6 +5895,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1174811344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6233147135907563650, guid: 81477675753824117b3023765e0d5d6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 676611294155735152}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174811341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1181938992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5799559522008464609, guid: 81477675753824117b3023765e0d5d6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 676611294155735152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1188935667
 GameObject:
   m_ObjectHideFlags: 0
@@ -11338,6 +11356,7 @@ GameObject:
   - component: {fileID: 2034130282}
   - component: {fileID: 2034130281}
   - component: {fileID: 2034130280}
+  - component: {fileID: 2034130283}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -11393,6 +11412,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2034130283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034130279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c34ad7e5cc31644a04f760461e4d16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultButton: {fileID: 1174811344}
+  alternateDefaultButton: {fileID: 1480488322}
+  alternateCanvas: {fileID: 1181938992}
+  myEventSystem: {fileID: 2034130279}
 --- !u!1001 &2119617789
 PrefabInstance:
   m_ObjectHideFlags: 0
