@@ -47,6 +47,7 @@ public class MusicManager : Singleton<MusicManager>
     public AudioClip endLoopTrack;
     public AudioClip gameEndState;
     public AudioClip gameOver;
+    public AudioClip cPedal;
 
     //public AudioClip klaxon;
 
@@ -145,14 +146,29 @@ public class MusicManager : Singleton<MusicManager>
 
             if (GameManager.instance.GetFloodPercentage() >= 0.80)
             {
-                endLoop.loop = false;
-                Debug.Log("Loop should have turned off now!! End state approacheth");
+                //endLoop.loop = false;
+                //Debug.Log("Loop should have turned off now!! End state approacheth");
             }
 
-            if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.80 && ohNoEndTime == false)
+            //if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.85 && ohNoEndTime == false)
+            if (GameManager.instance.GetFloodPercentage() >= 0.85 && ohNoEndTime == false)
             {
+                loop1.volume = 0;
+                loop2.volume = 0;
+                loop3.volume = 0;
+                loop4.volume = 0;
+                loop5.volume = 0;
+                loop6.volume = 0;
+
+
+                loop7.clip = cPedal;
+                loop7.volume = 100;
+                loop7.loop = false;
+                loop7.Play();
                 endLoop.clip = gameEndState;
+                endLoop.volume = 100;
                 endLoop.Play();
+                endLoop.loop = false;
                 Debug.Log("...last trak");
                // trackNumber = 8;
                 ohNoEndTime = true;
