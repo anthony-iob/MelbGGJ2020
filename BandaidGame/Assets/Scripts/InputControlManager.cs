@@ -24,23 +24,34 @@ public class InputControlManager : MonoBehaviour
         //Alternatively when it does detect one it will set an active button depending on which canvas is currently active. This is currently best used with only two canvases.
 
         string[] inputs = Input.GetJoystickNames();
-        if (inputs[0] == "")
+        if (inputs.Length > 0)
         {
-            GameObject myEventSystem = GameObject.Find("EventSystem");
-            myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
-            reconnected = false;
-        }
-        else
-        {
-            if (alternateCanvas)
+            if (inputs[0] == "")
             {
-                if (alternateCanvas.activeInHierarchy)
+                GameObject myEventSystem = GameObject.Find("EventSystem");
+                myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+                reconnected = false;
+            }
+            else
+            {
+                if (alternateCanvas)
                 {
-                    if (!reconnected)
+                    if (alternateCanvas.activeInHierarchy)
                     {
-                        alternateDefaultButton.Select();
-                        reconnected = true;
-                    }                 
+                        if (!reconnected)
+                        {
+                            alternateDefaultButton.Select();
+                            reconnected = true;
+                        }
+                    }
+                    else
+                    {
+                        if (!reconnected)
+                        {
+                            defaultButton.Select();
+                            reconnected = true;
+                        }
+                    }
                 }
                 else
                 {
@@ -51,15 +62,6 @@ public class InputControlManager : MonoBehaviour
                     }
                 }
             }
-            else
-            {
-                if (!reconnected)
-                {
-                    defaultButton.Select();
-                    reconnected = true;
-                }     
-            }
-            
         }
     }
 }
