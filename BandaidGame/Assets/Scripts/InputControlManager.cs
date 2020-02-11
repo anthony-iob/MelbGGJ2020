@@ -65,5 +65,11 @@ public class InputControlManager : MonoBehaviour
 
 			}
 		}
+        else
+        {
+            GameObject myEventSystem = GameObject.Find("EventSystem");
+            myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
+            reconnected = false;
+        }
     }
 }
