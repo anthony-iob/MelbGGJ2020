@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Audio;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -16,8 +17,16 @@ public class GameManager : Singleton<GameManager>
     public Animator SlimeAnimator;
     public Animator ChargeAnimator;
     private bool invoked;
+	public PostProcessProfile profile;
+	private Vignette vig;
+	private LensDistortion lensD;
 
-    public AudioMixerSnapshot unpausedAudio;
+	public float vigChangeAmount = 2;
+	public float vigChangeSpeed = 2;
+	public float lensDChangeAmount = 2;
+	public float lensDChangeSpeed = 2;
+
+	public AudioMixerSnapshot unpausedAudio;
 
     public GameObject gameOverHUD, HUD, pauseMenu, player;
   
@@ -29,9 +38,12 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
         invoked = false;
-        
-
-    }
+		profile.TryGetSettings(out vig);
+		profile.TryGetSettings(out lensD);
+		vig.intensity.value = 0;
+		lensD.intensity.value = 0;
+		lensD.scale.value = 1;
+	}
 
     // Update is called once per frame
     void FixedUpdate()
@@ -59,7 +71,7 @@ public class GameManager : Singleton<GameManager>
             //HUD.SetActive(false);
             pauseMenu.SetActive(false);
 
-            if (!MusicManager.instance.endLoop.isPlaying)
+			if (!MusicManager.instance.endLoop.isPlaying)
             {
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
@@ -79,6 +91,12 @@ public class GameManager : Singleton<GameManager>
 
             }
         }
+
+		if (currentBloodLevel >= 10000)
+		{
+			vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
+			lensD.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
+		}
     }
 
     public int GetElapsedMilliSeconds() {
