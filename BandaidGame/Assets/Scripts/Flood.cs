@@ -10,11 +10,18 @@ public class Flood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var minHeightPosition = minHeight.position;
-        var maxHeightPosition = maxHeight.position;
-        var percentage = GameManager.instance.GetFloodPercentage();
-        var newHeight = (maxHeightPosition.y - minHeightPosition.y) * percentage;
-        var up = new Vector3(0, newHeight, 0);
-        flood.transform.position = minHeightPosition + up;
+        if (GameManager.instance.currentBloodLevel < 10000)
+        {
+            var minHeightPosition = minHeight.position;
+            var maxHeightPosition = maxHeight.position;
+            var percentage = GameManager.instance.GetFloodPercentage();
+            var newHeight = (maxHeightPosition.y - minHeightPosition.y) * percentage;
+            var up = new Vector3(0, newHeight, 0);
+            flood.transform.position = minHeightPosition + up;
+        }
+        else
+        {
+            flood.transform.position += new Vector3(0, 0.0008f, 0);
+        }      
     }
 }
