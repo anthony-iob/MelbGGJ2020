@@ -15,13 +15,13 @@ public class PressYtoRegret : MonoBehaviour
     {
         if (MusicManager.instance.loop2.isPlaying)
         {
-            if (Input.GetButtonUp("AddSlime"))
+            if (Input.GetButtonUp("AddSlime") && GameManager.instance.currentBloodLevel < 10000)
             {
                 GameManager.instance.currentBloodLevel += 500;
                 Debug.Log(GameManager.instance.currentBloodLevel);
             }
         }
-        if (Input.GetButtonUp("RemoveSlime"))
+        if (Input.GetButtonUp("RemoveSlime") && GameManager.instance.currentBloodLevel < 10000) 
         {
             GameManager.instance.currentBloodLevel -= 500;
             Debug.Log(GameManager.instance.currentBloodLevel);
