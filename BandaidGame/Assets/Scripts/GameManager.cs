@@ -12,7 +12,7 @@ public class GameManager : Singleton<GameManager>
     public float timeElapsed;
     public UnityEvent gameOver;
     bool isGameOver = false;
-    public bool disablePewPew = false;
+	public bool disablePewPew = false;
     public Animator TimeAnimator;
     public Animator SlimeAnimator;
     public Animator ChargeAnimator;
@@ -20,6 +20,8 @@ public class GameManager : Singleton<GameManager>
 	public PostProcessProfile profile;
 	private Vignette vig;
 	private LensDistortion lensD;
+	public GameObject floodLevel;
+	public float effectFloodLevel = 0.27f;
 
 	public float vigChangeAmount = 2;
 	public float vigChangeSpeed = 2;
@@ -92,8 +94,9 @@ public class GameManager : Singleton<GameManager>
             }
         }
 
-		if (currentBloodLevel >= 10000)
+		if (floodLevel.transform.position.y >= effectFloodLevel)
 		{
+			//Debug.Log(floodLevel.transform.position.y);
 			vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
 			lensD.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 		}

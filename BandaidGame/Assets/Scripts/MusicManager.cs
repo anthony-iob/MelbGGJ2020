@@ -169,7 +169,7 @@ public class MusicManager : Singleton<MusicManager>
                 endLoop.volume = 100;
                 endLoop.Play();
                 endLoop.loop = false;
-                Debug.Log("...last trak");
+                //Debug.Log("...last trak");
                // trackNumber = 8;
                 ohNoEndTime = true;
                // currentTime = 0;
@@ -186,7 +186,7 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop1.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop2.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-            Debug.Log("Track 2 is now playing");
+            //Debug.Log("Track 2 is now playing");
             //trackNumber = 2;
             yield return null;
         }
@@ -205,7 +205,7 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop2.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop3.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-            Debug.Log("Track 3 is now playing");
+            //Debug.Log("Track 3 is now playing");
 
             loop1.volume = 0;
 
@@ -228,7 +228,7 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop3.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop4.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-            Debug.Log("Track 4 is now playing");
+            //Debug.Log("Track 4 is now playing");
 
             loop1.volume = 0;
 
@@ -249,7 +249,7 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop4.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop5.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-            Debug.Log("Track 5 is now playing");
+           // Debug.Log("Track 5 is now playing");
 
             loop3.volume = 0;
 
@@ -273,7 +273,7 @@ public class MusicManager : Singleton<MusicManager>
 
             loop4.volume = 0;
             
-            Debug.Log("Track 6 is now playing");
+            //Debug.Log("Track 6 is now playing");
            // trackNumber = 6;
             yield return null;
         }
@@ -290,7 +290,7 @@ public class MusicManager : Singleton<MusicManager>
             currentTime += Time.deltaTime;
             loop6.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
             loop7.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-            Debug.Log("Track 7 is now playing");
+            //Debug.Log("Track 7 is now playing");
 
             loop5.volume = 0;
 
@@ -304,7 +304,7 @@ public class MusicManager : Singleton<MusicManager>
         currentTime += Time.deltaTime;
         loop7.volume = Mathf.Lerp(1, 0, currentTime / musicFadeTime);
         endLoop.volume = Mathf.Lerp(0, 1, currentTime / musicFadeTime);
-        Debug.Log("The End Loop is now playing");
+        //Debug.Log("The End Loop is now playing");
 
         loop6.volume = 0;
         yield return null;

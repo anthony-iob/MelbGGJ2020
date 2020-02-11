@@ -864,6 +864,16 @@ PrefabInstance:
       propertyPath: lensDChangeSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: floodLevel
+      value: 
+      objectReference: {fileID: 138120801}
+    - target: {fileID: 7194501990801557228, guid: 2e154cfd72aa1454d9b31dd53e439446,
+        type: 3}
+      propertyPath: effectFloodLevel
+      value: 1.94
+      objectReference: {fileID: 0}
     - target: {fileID: 7194501990801557229, guid: 2e154cfd72aa1454d9b31dd53e439446,
         type: 3}
       propertyPath: npcs.Array.size
