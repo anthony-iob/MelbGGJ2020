@@ -4,14 +4,17 @@ using UnityEngine.Rendering.PostProcessing;
 public class HueShiftChangeOverTime : MonoBehaviour
 {
     public PostProcessProfile profile;
-    private ColorGrading colorGradingSettings;
+	public PostProcessProfile standard;
+
+	private ColorGrading colorGradingSettings;
 
     public float tempChangeAmount = 2;
     public float tempChangeSpeed = 2;
 
     private void Awake()
     {
-        profile.TryGetSettings(out colorGradingSettings);
+		standard.TryGetSettings(out colorGradingSettings);
+		profile.TryGetSettings(out colorGradingSettings);
         colorGradingSettings.hueShift.value = 0;
     }
 
