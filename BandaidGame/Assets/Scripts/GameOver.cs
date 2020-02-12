@@ -6,16 +6,15 @@ public class GameOver : MonoBehaviour
 {
 	public PostProcessProfile profile;
 	public PostProcessProfile standard;
-	private DepthOfField depthOfFieldSettings;
+	//private DepthOfField depthOfFieldSettings;
 	public FirstPersonController fpsScript;
 
 	private void Awake()
 	{
-		profile.TryGetSettings(out depthOfFieldSettings);
-		standard.TryGetSettings(out depthOfFieldSettings);
-		depthOfFieldSettings.focusDistance.value = 55;
-		depthOfFieldSettings.focalLength.value = 80;
-		depthOfFieldSettings.aperture.value = 50;
+		//profile.TryGetSettings(out depthOfFieldSettings);
+		//standard.TryGetSettings(out depthOfFieldSettings);
+	//	depthOfFieldSettings.focalLength.value = 80;
+		//depthOfFieldSettings.aperture.value = 50;
 	}
 
 	public void CursorShow()
@@ -27,8 +26,8 @@ public class GameOver : MonoBehaviour
 
 	public void FocusDistance()
 	{
-		depthOfFieldSettings.focusDistance.value = 1;
-		depthOfFieldSettings.focalLength.value = 300;
-		depthOfFieldSettings.aperture.value = 1;
+		//depthOfFieldSettings.focusDistance.value = 1;
+		//depthOfFieldSettings.focalLength.value = 300;
+		//depthOfFieldSettings.aperture.value = 1;
 	}
 }

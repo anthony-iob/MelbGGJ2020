@@ -18,7 +18,7 @@ public class PressYtoRegret : MonoBehaviour
             if (Input.GetButtonUp("AddSlime") && GameManager.instance.currentBloodLevel < 10000)
             {
                 GameManager.instance.currentBloodLevel += 500;
-                Debug.Log(GameManager.instance.currentBloodLevel);
+               // Debug.Log(GameManager.instance.currentBloodLevel);
             }
         }
         if (Input.GetButtonUp("RemoveSlime") && GameManager.instance.currentBloodLevel < 10000) 

@@ -18,11 +18,14 @@ public class GameManager : Singleton<GameManager>
     public Animator ChargeAnimator;
     public Animator UnderwaterAnimator;
     private bool invoked;
-	public PostProcessProfile profile;
 	public PostProcessProfile standard;
+	public PostProcessProfile profile;
 	private Vignette vig;
+	private Vignette vig2;
 	private LensDistortion lensD;
+	private LensDistortion lensD2;
 	private DepthOfField depth;
+	private DepthOfField depth2;
 	public GameObject floodLevel;
 	public float effectFloodLevel = 0.27f;
 
@@ -43,14 +46,21 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
         invoked = false;
+		standard.TryGetSettings(out vig2);
+		standard.TryGetSettings(out lensD2);
+		standard.TryGetSettings(out depth2);
 		profile.TryGetSettings(out vig);
 		profile.TryGetSettings(out lensD);
-		standard.TryGetSettings(out vig);
-		standard.TryGetSettings(out lensD);;
+		profile.TryGetSettings(out depth);
+
 		vig.intensity.value = 0;
+		vig2.intensity.value = 0;
 		lensD.intensity.value = 0;
 		lensD.scale.value = 1;
+		lensD2.intensity.value = 0;
+		lensD2.scale.value = 1;
 		depth.focusDistance.value = 55;
+		depth2.focusDistance.value = 55;
 	}
 
     // Update is called once per frame
@@ -106,7 +116,11 @@ public class GameManager : Singleton<GameManager>
 			//Debug.Log(floodLevel.transform.position.y);
 			UnderwaterAnimator.SetBool("Underwater", true);
 			vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
+			vig2.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
 			lensD.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
+			depth.focusDistance.value = 1;
+			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
+			depth2.focusDistance.value = 1;
 		}
     }
 

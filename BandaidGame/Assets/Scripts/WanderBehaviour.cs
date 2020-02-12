@@ -75,7 +75,7 @@ public class WanderBehaviour : MonoBehaviour
 
     void AvoidWall()
     {
-         Debug.Log("avoiding wall");
+        // Debug.Log("avoiding wall");
         targetRotation = new Vector3(0, transform.eulerAngles.y + wallAvoidanceTurnDegrees, 0);
     }
 }

@@ -21,10 +21,10 @@ MonoBehaviour:
     value: 55
   aperture:
     overrideState: 1
-    value: 1
+    value: 32
   focalLength:
     overrideState: 1
-    value: 300
+    value: 80
   kernelSize:
     overrideState: 1
     value: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: 106.4431
+    value: -88.2079
   saturation:
     overrideState: 1
     value: 100
