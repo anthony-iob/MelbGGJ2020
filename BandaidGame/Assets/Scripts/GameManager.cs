@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public Animator TimeAnimator;
     public Animator SlimeAnimator;
     public Animator ChargeAnimator;
+    public Animator UnderwaterAnimator;
     private bool invoked;
 	public PostProcessProfile profile;
 	private Vignette vig;
@@ -69,6 +70,7 @@ public class GameManager : Singleton<GameManager>
             TimeAnimator.SetBool("GameOver", true);
             SlimeAnimator.SetBool("GameOver", true);
             ChargeAnimator.SetBool("GameOver", true);
+            
             //Time.timeScale = 0;
             //HUD.SetActive(false);
             pauseMenu.SetActive(false);
@@ -96,8 +98,9 @@ public class GameManager : Singleton<GameManager>
 
 		if (floodLevel.transform.position.y >= effectFloodLevel)
 		{
-			//Debug.Log(floodLevel.transform.position.y);
-			vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
+            //Debug.Log(floodLevel.transform.position.y);
+            UnderwaterAnimator.SetBool("Underwater", true);
+            vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
 			lensD.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 		}
     }

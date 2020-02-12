@@ -7,6 +7,7 @@ public class Flood : MonoBehaviour
     public GameObject flood;
     public Transform minHeight;
     public Transform maxHeight;
+    public float endgameFloodRate = 0.0008f;
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +22,7 @@ public class Flood : MonoBehaviour
         }
         else
         {
-            flood.transform.position += new Vector3(0, 0.0008f, 0);
+            flood.transform.position += new Vector3(0, endgameFloodRate, 0);
         }      
     }
 }
