@@ -28,6 +28,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("Scenes/Level1"); 
     }
 
+    public void LoadSettings()
+    {
+        SceneManager.LoadScene("Scenes/Settings");
+    }
+
     /*public void selectBack()
     {
         backButton.Select();

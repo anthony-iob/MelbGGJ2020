@@ -12181,6 +12181,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6233147135907563650, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadSettings
+      objectReference: {fileID: 0}
     - target: {fileID: 5799559522008464609, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_IsActive
@@ -12859,6 +12864,11 @@ PrefabInstance:
       propertyPath: backButton
       value: 
       objectReference: {fileID: 1480488322}
+    - target: {fileID: 8268803926036368636, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.99994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81477675753824117b3023765e0d5d6e, type: 3}
 --- !u!1 &752315784403158013
