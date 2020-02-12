@@ -22,7 +22,7 @@ public class Gun : Singleton<Gun>
 	public AudioClip[] bulletSFX;
     public AudioClip maxChargeSFX;
 	public AudioSource chargeSFX;
-    public ParticleSystem explosion, maxChargeParticle;
+    public ParticleSystem explosion, maxChargeParticle, chargingParticles;
 
     public bool hasChargedBullet = false;
 
@@ -81,7 +81,10 @@ public class Gun : Singleton<Gun>
             hasChargedBullet = true;
         }
 
+		if (chargeTime > 0.3 && hasChargedBullet == false)
+		{
+			chargingParticles.Play();
+		}
 
-        
-    }
+	}
 }
