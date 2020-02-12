@@ -5544,6 +5544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: f4e1ca6b8b3bd9d4cad364b96149a4aa, type: 2}
+  standard: {fileID: 11400000, guid: 53e455dcc6f467f4880a97356cb5d19d, type: 2}
   tempChangeAmount: 180
   tempChangeSpeed: 0.1
 --- !u!114 &912689115
@@ -12184,7 +12185,7 @@ PrefabInstance:
     - target: {fileID: 6233147135907563650, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadSettings
+      value: LoadLevel1
       objectReference: {fileID: 0}
     - target: {fileID: 5799559522008464609, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
@@ -12867,7 +12868,7 @@ PrefabInstance:
     - target: {fileID: 8268803926036368636, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.99994
+      value: -99.99997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81477675753824117b3023765e0d5d6e, type: 3}
