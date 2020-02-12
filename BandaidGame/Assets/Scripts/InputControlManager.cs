@@ -7,15 +7,28 @@ using UnityEngine;
 public class InputControlManager : MonoBehaviour
 {
     public Button defaultButton;
+    public GameObject defaultCanvas;
     public Button alternateDefaultButton;
     public GameObject alternateCanvas;
+    public Button pauseDefaultButton;
+    public GameObject pauseCanvas;
+    public Button gameOverDefaultButton;
+    public GameObject gameOverCanvas;
     public GameObject myEventSystem;
     private bool reconnected;
+    private bool defaultSelect;
+    private bool alternateSelect;
+    private bool pauseSelect;
+    private bool gameOverSelect;
 
     // Start is called before the first frame update
     void Start()
     {
         reconnected = false;
+        defaultSelect = false;
+        alternateSelect = false;
+        pauseSelect = false;
+        gameOverSelect = false;
     }
 
     void Update()
@@ -32,44 +45,68 @@ public class InputControlManager : MonoBehaviour
 				GameObject myEventSystem = GameObject.Find("EventSystem");
 				myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
 				reconnected = false;
+                defaultSelect = false;
+                alternateSelect = false;
+                pauseSelect = false;
+                gameOverSelect = false;
 			}
 			else
 			{
-				if (alternateCanvas)
-				{
-					if (alternateCanvas.activeInHierarchy)
-					{
-						if (!reconnected)
-						{
-							alternateDefaultButton.Select();
-							reconnected = true;
-						}
-					}
-					else
-					{
-						if (!reconnected)
-						{
-							defaultButton.Select();
-							reconnected = true;
-						}
-					}
-				}
-				else
-				{
-					if (!reconnected)
-					{
-						defaultButton.Select();
-						reconnected = true;
-					}
-				}
-
-			}
+                if (defaultCanvas && defaultCanvas.activeInHierarchy)
+                {
+                    if (!defaultSelect)
+                    {
+                        defaultButton.Select();
+                        defaultSelect = true;
+                        alternateSelect = false;
+                        pauseSelect = false;
+                        gameOverSelect = false;
+                    }
+                }
+                else if (alternateCanvas && alternateCanvas.activeInHierarchy)
+                {
+                    if (!alternateSelect)
+                    {
+                        alternateDefaultButton.Select();
+                        defaultSelect = false;
+                        alternateSelect = true;
+                        pauseSelect = false;
+                        gameOverSelect = false;
+                    }
+                }
+                else if (pauseCanvas && pauseCanvas.activeInHierarchy)
+                {
+                    if (!pauseSelect)
+                    {
+                        pauseDefaultButton.Select();
+                        defaultSelect = false;
+                        alternateSelect = false;
+                        pauseSelect = true;
+                        gameOverSelect = false;
+                    }
+                }
+                else if (gameOverCanvas && gameOverCanvas.activeInHierarchy)
+                {
+                    if (!gameOverSelect)
+                    {
+                        gameOverDefaultButton.Select();
+                        defaultSelect = false;
+                        alternateSelect = false;
+                        pauseSelect = false;
+                        gameOverSelect = true;
+                    }
+                }
+            }
 		}
         else
         {
             GameObject myEventSystem = GameObject.Find("EventSystem");
             myEventSystem.GetComponent<UnityEngine.EventSystems.EventSystem>().SetSelectedGameObject(null);
             reconnected = false;
+            defaultSelect = false;
+            alternateSelect = false;
+            pauseSelect = false;
+            gameOverSelect = false;
         }
     }
 }

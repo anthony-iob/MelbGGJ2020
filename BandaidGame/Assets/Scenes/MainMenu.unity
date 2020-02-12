@@ -5136,6 +5136,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1815378638}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &528125758 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8433794841436055893, guid: 81477675753824117b3023765e0d5d6e,
+    type: 3}
+  m_PrefabInstance: {fileID: 676611294155735152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &554861860 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9140640509754900020, guid: 9169f4d8261edef44b3c6acf1c09631b,
@@ -11426,8 +11432,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultButton: {fileID: 1174811344}
+  defaultCanvas: {fileID: 528125758}
   alternateDefaultButton: {fileID: 1480488322}
   alternateCanvas: {fileID: 1181938992}
+  pauseDefaultButton: {fileID: 0}
+  pauseCanvas: {fileID: 0}
   myEventSystem: {fileID: 2034130279}
 --- !u!1001 &2119617789
 PrefabInstance:
