@@ -1128,12 +1128,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1150,6 +1150,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429556995707878}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -1316,12 +1322,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1343,6 +1349,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429558002629784}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -1509,12 +1521,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1536,6 +1548,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429557727363507}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -1702,12 +1720,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1729,6 +1747,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 6639429557723843894}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -1880,12 +1904,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -1902,6 +1926,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 8869182811906105133}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -2043,12 +2073,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2065,6 +2095,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 7832997572918463197}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -2226,12 +2262,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2258,6 +2294,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 1190367734003393588}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -2399,12 +2441,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2421,6 +2463,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 930714278536980891}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -2693,12 +2741,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2720,6 +2768,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 99330153127486030}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
@@ -2871,12 +2925,12 @@ PrefabInstance:
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6639429556320993332, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
@@ -2893,6 +2947,12 @@ PrefabInstance:
       propertyPath: emitter
       value: 
       objectReference: {fileID: 4217996673181151100}
+    - target: {fileID: 6639429556774005662, guid: 20e273dce281a854fbcdaca6b6d9634b,
+        type: 3}
+      propertyPath: bandaidDesign.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: d56a22824abca7e47ae03de53ea456e5,
+        type: 3}
     - target: {fileID: 6639429556774005663, guid: 20e273dce281a854fbcdaca6b6d9634b,
         type: 3}
       propertyPath: m_Radius
