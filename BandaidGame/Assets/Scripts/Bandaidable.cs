@@ -8,6 +8,7 @@ public class Bandaidable : MonoBehaviour
     public GameObject emitter, bandaid;
     public bool isBleeding;
     public UnityEvent repair, bleed;
+    public Sprite[] bandaidDesign;
 
     public void Awake() {
 
@@ -25,5 +26,11 @@ public class Bandaidable : MonoBehaviour
     {
         isBleeding = false;
     }  
+
+    public void SetNewDesign()
+    {
+        int designNo = Random.Range(0, bandaidDesign.Length);
+        bandaid.GetComponent<SpriteRenderer>().sprite = bandaidDesign[designNo];
+    }
     
 }

@@ -14413,6 +14413,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6639429556774005662}
+        m_MethodName: SetNewDesign
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   bleed:
     m_PersistentCalls:
       m_Calls:
@@ -14449,6 +14460,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  bandaidDesign:
+  - {fileID: 21300000, guid: 6791e19fa423ad241a7c23607c7d5eba, type: 3}
+  - {fileID: 21300000, guid: b2f46111e81eb804daa36ae49dbb52c7, type: 3}
+  - {fileID: 21300000, guid: 675a0c221c3c5c64e8a1e7aa1dce931e, type: 3}
+  - {fileID: 21300000, guid: 60af13124bf176b448e621251a71fe31, type: 3}
+  - {fileID: 21300000, guid: c121b40c07554e84baa0a9956a4d9141, type: 3}
+  - {fileID: 21300000, guid: 695dc6958a2e43845a958b0e84bc376d, type: 3}
+  - {fileID: 21300000, guid: b98f982eb3d460c479e9a132bb169d73, type: 3}
+  - {fileID: 21300000, guid: bdcb649b220a3ec46af103f6672bc5c2, type: 3}
+  - {fileID: 21300000, guid: 982afb05539eb10489f6baed035a28df, type: 3}
+  - {fileID: 21300000, guid: 60ba9485ba62e7c4098894b60b5d1015, type: 3}
+  - {fileID: 21300000, guid: 599fc7fe9cf75bc4785072eba07d74b1, type: 3}
+  - {fileID: 21300000, guid: 181f1729b9142e3478c98529c9c3668c, type: 3}
 --- !u!54 &6639429556774005650
 Rigidbody:
   m_ObjectHideFlags: 0
