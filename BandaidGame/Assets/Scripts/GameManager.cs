@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : Singleton<GameManager>
@@ -28,6 +29,7 @@ public class GameManager : Singleton<GameManager>
 	private DepthOfField depth2;
 	public GameObject floodLevel;
 	public float effectFloodLevel = 0.27f;
+	public UnityEvent end;
 
 	public float vigChangeAmount = 2;
 	public float vigChangeSpeed = 2;
@@ -121,6 +123,7 @@ public class GameManager : Singleton<GameManager>
 			depth.focusDistance.value = 1;
 			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 			depth2.focusDistance.value = 1;
+			end.Invoke();
 		}
     }
 

@@ -16,15 +16,15 @@ public class updateScore : MonoBehaviour
     {
         int mins = GameManager.instance.GetElapsedMinutes();
         int secs = GameManager.instance.GetElapsedSeconds();
-        string text = "";
+		string text = "";
 
         if (mins > 0)
         {
             text += mins + "m";
         }
 
-        text += GameManager.instance.GetElapsedSeconds() + "s";
+		text += GameManager.instance.GetElapsedSeconds() + "s";
 
-        timerLabel.text = text;
+		timerLabel.text = text;
     }
 }
