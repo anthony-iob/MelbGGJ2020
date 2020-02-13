@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>
 	public bool disablePewPew = false;
     public Animator TimeAnimator;
     public Animator SlimeAnimator;
-    public Animator ChargeAnimator;
+    //public Animator ChargeAnimator;
     public Animator UnderwaterAnimator;
     private bool invoked;
 	public PostProcessProfile standard;
@@ -84,7 +84,7 @@ public class GameManager : Singleton<GameManager>
             isGameOver = true;
             TimeAnimator.SetBool("GameOver", true);
             SlimeAnimator.SetBool("GameOver", true);
-            ChargeAnimator.SetBool("GameOver", true);
+            //ChargeAnimator.SetBool("GameOver", true);
             
             //Time.timeScale = 0;
             //HUD.SetActive(false);
