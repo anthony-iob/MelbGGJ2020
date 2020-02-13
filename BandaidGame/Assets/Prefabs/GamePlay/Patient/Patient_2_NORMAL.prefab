@@ -896,7 +896,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!95 &380237465
+--- !u!95 &7222930618738155259
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ Animator:
   m_GameObject: {fileID: 7766484804368398147}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e35f4da20a3838c43824981d4f7dca15, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7de0a814e9ec71048a3060bc19bc35a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
