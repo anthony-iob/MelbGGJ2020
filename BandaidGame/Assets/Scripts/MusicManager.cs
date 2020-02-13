@@ -93,8 +93,7 @@ public class MusicManager : Singleton<MusicManager>
             loop1.clip = loop1Track;
             loop1.Play();
             loop1.loop = isActiveAndEnabled;
-            
-
+		
             loop2.clip = loop2Track;
             loop2.Play();
             loop2.loop = isActiveAndEnabled;
@@ -151,7 +150,7 @@ public class MusicManager : Singleton<MusicManager>
             }
 
             //if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.85 && ohNoEndTime == false)
-            if (GameManager.instance.GetFloodPercentage() >= 0.75 && ohNoEndTime == false)
+            if (GameManager.instance.GetFloodPercentage() >= 0.80 && ohNoEndTime == false)
             {
                 loop1.volume = 0;
                 loop2.volume = 0;

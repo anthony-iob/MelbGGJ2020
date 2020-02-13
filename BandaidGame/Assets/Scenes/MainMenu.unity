@@ -13780,9 +13780,29 @@ PrefabInstance:
 
         Hayley Ritchie - 3D Environment Artist
 
-        Lewis Spalato - 3D Environment/SFX Artist
+        Lewis Spalato - Design/Artist/Programmer
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457337667322301702, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 282
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457337667322301702, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457337667322301702, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457337667322301702, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 3796544740054761361, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}

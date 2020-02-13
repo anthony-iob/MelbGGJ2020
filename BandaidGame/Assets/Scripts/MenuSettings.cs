@@ -6,7 +6,9 @@ public class MenuSettings : MonoBehaviour
 {
     public FirstPersonController playerCharacterController;
     public Slider sliderSensitivity;
-    public Slider sliderVolume;
+    public Slider sliderMusic;
+	public Slider sliderSounds;
+	public Slider sliderVoices;
 	public GameObject pauseMenu;
 
 
@@ -28,7 +30,7 @@ public class MenuSettings : MonoBehaviour
         }
        
         AudioListener.volume = 1.0f;
-        sliderVolume.value = AudioListener.volume;
+        sliderMusic.value = AudioListener.volume;
     }
 
     void Update()
@@ -45,6 +47,6 @@ public class MenuSettings : MonoBehaviour
             }
         }
         
-        AudioListener.volume = sliderVolume.value;
+        AudioListener.volume = sliderMusic.value;
     }
 }
