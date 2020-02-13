@@ -7,8 +7,10 @@ public class MenuSettings : MonoBehaviour
     public FirstPersonController playerCharacterController;
     public Slider sliderSensitivity;
     public Slider sliderVolume;
+	public GameObject pauseMenu;
 
-    void Start()
+
+	void Start()
     {
 		Time.timeScale = 0;
 		Cursor.visible = true;
