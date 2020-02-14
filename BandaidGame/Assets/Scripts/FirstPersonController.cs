@@ -24,14 +24,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         //[SerializeField] private float m_WalkSpeed;
         //[SerializeField] private float m_RunSpeed;
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
-     //   [SerializeField] private float m_JumpSpeed;
-     //   [SerializeField] private float m_StickToGroundForce;
-     //   [SerializeField] private float m_GravityMultiplier;
+        [SerializeField] private float m_JumpSpeed;
+        [SerializeField] private float m_StickToGroundForce;
+        [SerializeField] private float m_GravityMultiplier;
         //[SerializeField] private MouseLook m_MouseLook;
         public MouseLook m_MouseLook;
         [SerializeField] private bool m_UseFovKick;
         [SerializeField] private FOVKick m_FovKick = new FOVKick();
-     //   [SerializeField] private bool m_UseHeadBob;
+        [SerializeField] private bool m_UseHeadBob;
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
@@ -76,8 +76,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
             m_OriginalCameraPosition = m_Camera.transform.localPosition;
-         //   m_FovKick.Setup(m_Camera);
-        //    m_HeadBob.Setup(m_Camera, m_StepInterval);
+            m_FovKick.Setup(m_Camera);
+            m_HeadBob.Setup(m_Camera, m_StepInterval);
             m_StepCycle = 0f;
             m_NextStep = m_StepCycle / 2f;
             m_Jumping = false;
@@ -156,7 +156,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			if (m_CharacterController.isGrounded)
             {
-              //  m_MoveDir.y = -m_StickToGroundForce;
+                m_MoveDir.y = -m_StickToGroundForce;
 
                 if (m_JumpEarly > 0 && m_JumpAllowed)
                 {
@@ -168,7 +168,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             else
             {
-             //   m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
+                m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
             }
 
             if (GameManager.instance.disablePewPew == false)
@@ -218,10 +218,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 if (SceneManager.GetActiveScene().name != "Level1") return;
 
-                float BreathingVolume = -0.01f * SprintTimeRemaining + 0.2f;
-                BreathingSound.volume = BreathingVolume;
+               // float BreathingVolume = -0.01f * SprintTimeRemaining + 0.2f;
+               // BreathingSound.volume = BreathingVolume;
 
-                HeartBeatSound.volume = Mathf.Lerp(HeartBeatSound.volume, BreathingVolume, Time.deltaTime);
+              //  HeartBeatSound.volume = Mathf.Lerp(HeartBeatSound.volume, BreathingVolume, Time.deltaTime);
 
                 if (SprintTimeRemaining == 0)
                 {
@@ -239,8 +239,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		public float SprintTimeRemaining;
 		public bool sprintCooldown;
 		public float cooldownThreshold = 5f;
-		public AudioSource BreathingSound;
-		public AudioSource HeartBeatSound;
+		//public AudioSource BreathingSound;
+		//public AudioSource HeartBeatSound;
 
 		private void FixedUpdate()
         {
@@ -303,10 +303,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void UpdateCameraPosition(float speed)
         {
             Vector3 newCameraPosition;
-           // if (!m_UseHeadBob)
-         //   {
-          //      return;
-         //   }
+            if (!m_UseHeadBob)
+            {
+               return;
+            }
             if (m_CharacterController.velocity.magnitude > 0 && m_CharacterController.isGrounded)
             {
                 m_Camera.transform.localPosition =
