@@ -8,18 +8,35 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class GameManager : Singleton<GameManager>
 {
+    [Header ("Gameplay Settings")]
     public float currentBloodLevel;
     public float MAX_BLOOD_LEVEL;
     public float timeElapsed;
-    public UnityEvent gameOver;
     bool isGameOver = false;
-	public bool disablePewPew = false;
+
+    //[Header("In Game Settings")]
+    //public float musicVolumeVal;
+    //public float SFXVolumeVal;
+    //public float dialogueVolumeVal;
+
+    public float sensitivityVal;
+    
+
+    public UnityEvent gameOver;
+
+
+	public bool disablePewPew;
+
+    [Header ("Animators")]
     public Animator TimeAnimator;
     public Animator SlimeAnimator;
     //public Animator ChargeAnimator;
     public Animator UnderwaterAnimator;
+
     private bool invoked;
-	public PostProcessProfile standard;
+
+    [Header ("PostProcessing")]
+    public PostProcessProfile standard;
 	public PostProcessProfile profile;
 	private Vignette vig;
 	private Vignette vig2;
@@ -27,9 +44,11 @@ public class GameManager : Singleton<GameManager>
 	private LensDistortion lensD2;
 	private DepthOfField depth;
 	private DepthOfField depth2;
-	public GameObject floodLevel;
-	public float effectFloodLevel = 0.27f;
-	public UnityEvent end;
+
+    [Header ("End Game Flood Rise Stuff")]
+    public GameObject floodLevel;
+    public float effectFloodLevel = 0.27f;
+    public UnityEvent floodRiseEnd;
 
 	public float vigChangeAmount = 2;
 	public float vigChangeSpeed = 2;
@@ -63,6 +82,8 @@ public class GameManager : Singleton<GameManager>
 		lensD2.scale.value = 1;
 		depth.focusDistance.value = 55;
 		depth2.focusDistance.value = 55;
+
+        disablePewPew = true;
 	}
 
     // Update is called once per frame
@@ -77,12 +98,10 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
+
+
         if (currentBloodLevel >= MAX_BLOOD_LEVEL)
         {
-            // gameOver.Invoke(); 
-            // removed this to put in delayed game end below.
-
-
             isGameOver = true;
             TimeAnimator.SetBool("GameOver", true);
             SlimeAnimator.SetBool("GameOver", true);
@@ -123,7 +142,7 @@ public class GameManager : Singleton<GameManager>
 			depth.focusDistance.value = 1;
 			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 			depth2.focusDistance.value = 1;
-			end.Invoke();
+			floodRiseEnd.Invoke();
 		}
     }
 

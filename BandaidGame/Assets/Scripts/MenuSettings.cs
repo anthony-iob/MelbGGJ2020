@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.Audio;
+#if Unity_Editor
+using UnityEditor;
+#endif
 
-public class MenuSettings : MonoBehaviour
+public class MenuSettings : Singleton<MenuSettings>
 {
     public FirstPersonController playerCharacterController;
     public Slider sliderSensitivity;
@@ -17,6 +21,7 @@ public class MenuSettings : MonoBehaviour
 		Time.timeScale = 0;
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
+
 		if (playerCharacterController != null)
         {
             if (playerCharacterController.m_MouseLook != null)
@@ -30,7 +35,11 @@ public class MenuSettings : MonoBehaviour
         }
        
         AudioListener.volume = 1.0f;
-        sliderMusic.value = AudioListener.volume;
+        sliderMusic.value = PlayerPrefs.GetFloat("MusicVolLevel");
+        sliderSounds.value = PlayerPrefs.GetFloat("SFXVolLevel");
+        sliderVoices.value = PlayerPrefs.GetFloat("VoiceVolLevel");
+
+
     }
 
     void Update()
@@ -46,7 +55,8 @@ public class MenuSettings : MonoBehaviour
                 playerCharacterController.m_MouseLook.YSensitivity = sliderSensitivity.value;
             }
         }
-        
-        AudioListener.volume = sliderMusic.value;
+
     }
+
+
 }

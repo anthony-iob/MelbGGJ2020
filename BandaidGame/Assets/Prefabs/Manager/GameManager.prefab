@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7194501990801557231}
   - component: {fileID: 7194501990801557228}
   - component: {fileID: 1263847030}
+  - component: {fileID: 469755175}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -83,8 +84,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: EnableCursor
+      - m_Target: {fileID: 469755175}
+        m_MethodName: CursorShow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -94,10 +95,48 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 469755175}
+        m_MethodName: FocusDistance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  disablePewPew: 0
+  TimeAnimator: {fileID: 0}
+  SlimeAnimator: {fileID: 0}
+  UnderwaterAnimator: {fileID: 0}
+  standard: {fileID: 11400000, guid: 53e455dcc6f467f4880a97356cb5d19d, type: 2}
+  profile: {fileID: 11400000, guid: 4da16835115058942ba415a36ad10115, type: 2}
+  floodLevel: {fileID: 0}
+  effectFloodLevel: 1.9
+  floodRiseEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  vigChangeAmount: 1
+  vigChangeSpeed: 0.01
+  lensDChangeAmount: 5
+  lensDChangeSpeed: 2
   unpausedAudio: {fileID: 24500006, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
   gameOverHUD: {fileID: 0}
   HUD: {fileID: 0}
   pauseMenu: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &1263847030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +149,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a27711cf97dacb48914edf456b1d16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &469755175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194501990801557226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93849ef67d69459282a8db110c074fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 4da16835115058942ba415a36ad10115, type: 2}
+  standard: {fileID: 11400000, guid: 53e455dcc6f467f4880a97356cb5d19d, type: 2}
+  fpsScript: {fileID: 0}

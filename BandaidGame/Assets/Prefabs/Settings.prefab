@@ -396,16 +396,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 3228912002763863726}
   m_HandleRect: {fileID: 2893500278498987413}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayDelayed
-        m_Mode: 4
+      - m_Target: {fileID: 496891123}
+        m_MethodName: SetVoicesLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -769,21 +769,21 @@ MonoBehaviour:
   m_FillRect: {fileID: 3390715823320352644}
   m_HandleRect: {fileID: 3390715823433152905}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayDelayed
-        m_Mode: 4
+      - m_Target: {fileID: 496891123}
+        m_MethodName: SetMusicLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.1
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -1242,7 +1242,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.7997998
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1452,13 +1452,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3390715823403425090}
-    characterCount: 14
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1825,9 +1825,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 3390715823025888706}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2148,7 +2148,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 0
-      - m_Target: {fileID: 7181591183106451801}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2157,7 +2157,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_MethodName: ForceLockCursor
@@ -2247,6 +2247,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7181591183106451801}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3390715823798058428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2271,7 +2304,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: a286e2d9635e29b4195596603b6dd3e6, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -2960,7 +2993,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.7997998
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -3122,16 +3155,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 3390715824260634027}
   m_HandleRect: {fileID: 3390715824382254740}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayDelayed
-        m_Mode: 4
+      - m_Target: {fileID: 496891123}
+        m_MethodName: SetSFXLevel
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3818,7 +3851,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.6666667
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -4112,13 +4145,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2512174729581479435}
-    characterCount: 5
+    characterCount: 0
     spriteCount: 0
     spaceCount: 0
-    wordCount: 1
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -4304,6 +4337,7 @@ GameObject:
   - component: {fileID: 7181591183106451814}
   - component: {fileID: 7181591183106451815}
   - component: {fileID: 3213860477497197958}
+  - component: {fileID: 496891123}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -4410,7 +4444,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 0}
   sliderSensitivity: {fileID: 3390715823682243064}
-  sliderVolume: {fileID: 3390715822957621697}
+  sliderMusic: {fileID: 3390715822957621697}
+  sliderSounds: {fileID: 3390715824294352173}
+  sliderVoices: {fileID: 3152917745331106768}
+  pauseMenu: {fileID: 0}
+  masterMixer: {fileID: 24100000, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
+--- !u!114 &496891123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181591183106451801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68e7b58a4c5873489c32c04070928c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
 --- !u!1 &7299722345259554039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,7 +4530,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.7997998
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
