@@ -13739,26 +13739,43 @@ PrefabInstance:
         and stop the flooding!
 
 
-        controls:
+        controls (Mouse & Keyboard / joypad):
 
 
-        Left Click         - Fire Band-aid
+        Left Click / RT         - Fire Band-aid
 
-        Hold Left Click - Mega Band-aid
+        Hold Left Click / RT  - Mega Band-aid
 
-        wasd                 - move
+        wasd / Left Stick      - move
 
-        esc                   - pause'
+        Mouse / Right Stick  - aim
+
+        esc / START               - pause'
       objectReference: {fileID: 0}
     - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 315
+      value: 387
       objectReference: {fileID: 0}
     - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_margin.x
       value: -13.587605
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279435, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2457337667322301702, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
@@ -13817,7 +13834,17 @@ PrefabInstance:
     - target: {fileID: 8268803926036368636, guid: 81477675753824117b3023765e0d5d6e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.99997
+      value: -99.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279434, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 676611293724279434, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 166
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81477675753824117b3023765e0d5d6e, type: 3}
