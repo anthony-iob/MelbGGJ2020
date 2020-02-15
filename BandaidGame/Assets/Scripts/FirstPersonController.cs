@@ -107,14 +107,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void ToggleJump()
         {
-            if (m_JumpAllowed)
-            {
-                m_JumpAllowed = false;
-            }
-            else
-            {
-                m_JumpAllowed = true;
-            }   
+            m_JumpAllowed = false;
+            Debug.Log("Triggered!");
         }
 
         // Update is called once per frame
@@ -223,6 +217,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
                         m_chargeSoundPlayed = true;
                     }
                     weaponScript.Charge();
+                }
+
+                if (GameManager.instance.floodLevel.transform.position.y >= GameManager.instance.effectFloodLevel)
+                {
+                    m_JumpAllowed = false;
+                    m_WalkSpeed = 5.0f;
+
                 }
             }
 

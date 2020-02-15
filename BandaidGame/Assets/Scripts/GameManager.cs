@@ -130,10 +130,10 @@ public class GameManager : Singleton<GameManager>
 
             }
         }
-
-		if (floodLevel.transform.position.y >= effectFloodLevel)
+        //Debug.Log(floodLevel.transform.position.y);
+        if (floodLevel.transform.position.y >= effectFloodLevel)
 		{
-			//Debug.Log(floodLevel.transform.position.y);
+			
 			UnderwaterAnimator.SetBool("Underwater", true);
 			vig.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
 			vig2.intensity.value = vigChangeAmount * Mathf.Sin(vigChangeSpeed * Time.unscaledTime);
