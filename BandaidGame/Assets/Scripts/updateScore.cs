@@ -16,15 +16,45 @@ public class updateScore : MonoBehaviour
     {
         int mins = GameManager.instance.GetElapsedMinutes();
         int secs = GameManager.instance.GetElapsedSeconds();
+        int millisecs = GameManager.instance.GetElapsedMilliSeconds() % 1000;
 		string text = "";
 
-        if (mins > 0)
+        if (mins >= 1)
         {
-            text += mins + "m";
+            text += mins + ":";
+        }
+        else
+        {
+            text += "0:";
         }
 
-		text += GameManager.instance.GetElapsedSeconds() + "s";
+        if (secs >= 10)
+        {
+            text += secs + ":";
+        }
+        else
+        {
+            text += "0" + secs + ":";
+        }
 
-		timerLabel.text = text;
+        if (millisecs >= 100)
+        {
+            text += millisecs;
+        }
+        else if (millisecs >= 10)
+        {
+            text += "0" + millisecs;
+        }
+        else if (millisecs == 1)
+        {
+            text += "00" + millisecs;
+        }
+        else
+        {
+            text += millisecs;
+        }
+
+
+        timerLabel.text = text;
     }
 }

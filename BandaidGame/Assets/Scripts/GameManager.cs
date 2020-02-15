@@ -99,7 +99,6 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
 
-
         if (currentBloodLevel >= MAX_BLOOD_LEVEL)
         {
             isGameOver = true;
@@ -147,7 +146,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     public int GetElapsedMilliSeconds() {
-        return (int)(timeElapsed * 100);
+        return (int)(timeElapsed * 1000);
     }
 
     public int GetElapsedSeconds() {
