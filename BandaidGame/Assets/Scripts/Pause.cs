@@ -12,6 +12,8 @@ public class Pause : Singleton<MonoBehaviour>
     public AudioMixerSnapshot pausedAudio;
     public AudioMixerSnapshot unpausedAudio;
 
+    public GameObject settingsMenu;
+
     // Start is called before the first frame update
     public void PauseGame()
     {
@@ -42,18 +44,35 @@ public class Pause : Singleton<MonoBehaviour>
         resumeGame.Invoke();
     }
 
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown("joystick button 7")) {
-            if(paused) {
-                Debug.Log("resuming");
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown("joystick button 7"))
+        {
+
+            if (!settingsMenu.activeSelf)
+            {
+                Debug.Log("Settings Menu is OFF");
+                if (paused)
+                {
+                    Debug.Log("resuming");
+                    resumeGame.Invoke();
+
+
+                }
+                else
+                {
+                    Debug.Log("pausing");
+                    pauseGame.Invoke();
+
+                }
+            }
+            else
+            {
+                settingsMenu.SetActive(false);
                 resumeGame.Invoke();
-
-                
-            } else {
-                Debug.Log("pausing");
-                pauseGame.Invoke();
-
+                Debug.Log("no more settings rip");
             }
         }
+
     }
 }
