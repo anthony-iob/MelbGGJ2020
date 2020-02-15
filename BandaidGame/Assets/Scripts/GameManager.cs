@@ -63,7 +63,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         timeElapsed = 0;
-        currentBloodLevel = 0;
+        currentBloodLevel = 55;
         Time.timeScale = 1;
         unpausedAudio.TransitionTo(0f);
         invoked = false;
