@@ -35,10 +35,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private CurveControlledBob m_HeadBob = new CurveControlledBob();
         [SerializeField] private LerpControlledBob m_JumpBob = new LerpControlledBob();
         [SerializeField] private float m_StepInterval;
-        [SerializeField] private AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from.
-        //[SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
-        //[SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+
+        [Header("Audio")]
+        [SerializeField] private AudioClip[] footstepSFX;    // an array of footstep sounds that will be randomly selected from.
+        [SerializeField] private AudioClip[] jumpSFX;           // the sound played when character leaves the ground.
+        [SerializeField] private AudioClip[] landSFX;           // the sound played when character touches back on ground.
+        
+        public AudioSource jumpAudioSource;
+        public AudioSource landAudioSource;
+        public AudioSource footstepAudioSource;
+        private AudioSource m_AudioSource;
+        private AudioSource source;
+ 
+        [Header ("Movement")]
+        
         //Crouch sprint toggle
         public bool toggleCrouchSprint;
 
@@ -55,15 +66,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_StepCycle;
         private float m_NextStep;
         private bool m_Jumping;
-        private AudioSource m_AudioSource;
-        public AudioSource footstepAudioSource;
+
         private bool m_fired;
         private bool m_chargeSoundPlayed;
 
         //Crouch function
         private float characterControllerHeightOnStart;
 
-        private AudioSource source;
+
 
         private float runSpeedOnStart;
         private float walkSpeedOnStart;
@@ -87,7 +97,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             characterControllerHeightOnStart = m_CharacterController.height; //Crouching
             source = GetComponent<AudioSource>();
-            //m_AudioSource.clip = m_LandSound;
+            //m_AudioSource.clip = landSFX;
 
             //cameraPivot.speed = 0;
 
@@ -133,7 +143,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
-                //PlayLandingSound();
+                PlayLandingSound();
                 m_MoveDir.y = 0f;
                 m_Jumping = false;
             }
@@ -167,7 +177,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (m_JumpEarly > 0 && m_JumpAllowed)
                 {
                     m_MoveDir.y = m_JumpSpeed;
-                    // PlayJumpSound();
+                    PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
                 }
@@ -305,12 +315,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
             // pick & play a random footstep sound from the array,
             // excluding sound at index 0
-            int n = Random.Range(1, m_FootstepSounds.Length);
-            footstepAudioSource.clip = m_FootstepSounds[n];
+            int n = Random.Range(1, footstepSFX.Length);
+            footstepAudioSource.clip = footstepSFX[n];
             footstepAudioSource.PlayOneShot(footstepAudioSource.clip);
             // move picked sound to index 0 so it's not picked next time
-            m_FootstepSounds[n] = m_FootstepSounds[0];
-            m_FootstepSounds[0] = footstepAudioSource.clip;
+            footstepSFX[n] = footstepSFX[0];
+            footstepSFX[0] = footstepAudioSource.clip;
         }
 
         private void UpdateCameraPosition(float speed)
@@ -428,6 +438,30 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        void PlayLandingSound()
+        {
+
+            // pick & play a random footstep sound from the array,
+            // excluding sound at index 0
+            int n = Random.Range(1, landSFX.Length);
+            landAudioSource.clip = landSFX[n];
+            landAudioSource.PlayOneShot(landAudioSource.clip);
+            // move picked sound to index 0 so it's not picked next time
+            landSFX[n] = landSFX[0];
+            landSFX[0] = landAudioSource.clip;
+        }
+
+        void PlayJumpSound()
+        {
+            // pick & play a random footstep sound from the array,
+            // excluding sound at index 0
+            int n = Random.Range(1, jumpSFX.Length);
+            jumpAudioSource.clip = jumpSFX[n];
+            jumpAudioSource.PlayOneShot(jumpAudioSource.clip);
+            // move picked sound to index 0 so it's not picked next time
+            jumpSFX[n] = jumpSFX[0];
+            jumpSFX[0] = jumpAudioSource.clip;
+        }
 
         private void RotateView()
         {
