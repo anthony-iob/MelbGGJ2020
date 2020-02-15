@@ -187,7 +187,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_MoveDir += Physics.gravity * m_GravityMultiplier * Time.deltaTime;
             }
 
-            if (GameManager.instance.disablePewPew == false)
+            if (GameManager.instance.disablePewPew == false && Time.timeScale != 0)
             {                           
                 /* Mouse Inputs */
                 if (Input.GetButtonUp("Fire1"))
@@ -440,27 +440,33 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         void PlayLandingSound()
         {
-
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, landSFX.Length);
-            landAudioSource.clip = landSFX[n];
-            landAudioSource.PlayOneShot(landAudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            landSFX[n] = landSFX[0];
-            landSFX[0] = landAudioSource.clip;
+            if (Time.timeScale != 0)
+            {
+                // pick & play a random footstep sound from the array,
+                // excluding sound at index 0
+                int n = Random.Range(1, landSFX.Length);
+                landAudioSource.clip = landSFX[n];
+                landAudioSource.PlayOneShot(landAudioSource.clip);
+                // move picked sound to index 0 so it's not picked next time
+                landSFX[n] = landSFX[0];
+                landSFX[0] = landAudioSource.clip;
+            }
         }
 
         void PlayJumpSound()
         {
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            int n = Random.Range(1, jumpSFX.Length);
-            jumpAudioSource.clip = jumpSFX[n];
-            jumpAudioSource.PlayOneShot(jumpAudioSource.clip);
-            // move picked sound to index 0 so it's not picked next time
-            jumpSFX[n] = jumpSFX[0];
-            jumpSFX[0] = jumpAudioSource.clip;
+            if (Time.timeScale != 0)
+            {
+
+                // pick & play a random footstep sound from the array,
+                // excluding sound at index 0
+                int n = Random.Range(1, jumpSFX.Length);
+                jumpAudioSource.clip = jumpSFX[n];
+                jumpAudioSource.PlayOneShot(jumpAudioSource.clip);
+                // move picked sound to index 0 so it's not picked next time
+                jumpSFX[n] = jumpSFX[0];
+                jumpSFX[0] = jumpAudioSource.clip;
+            }
         }
 
         private void RotateView()
