@@ -36,7 +36,8 @@ public class Bullet : MonoBehaviour
         this.GetComponent<Rigidbody>().AddForce(transform.forward * travelSpeed);
         // ShrinkOverLifetime();    
     }
-    void OnCollisionEnter(Collision collision)
+
+    void OnTriggerEnter(Collider collision)
     {
         if (charged)
         {
