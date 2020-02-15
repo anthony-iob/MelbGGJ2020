@@ -51,7 +51,7 @@ public class Pause : Singleton<MonoBehaviour>
 
             if (!settingsMenu.activeSelf)
             {
-                Debug.Log("Settings Menu is OFF");
+              //  Debug.Log("Settings Menu is OFF");
                 if (paused)
                 {
                     Debug.Log("resuming");
@@ -70,7 +70,7 @@ public class Pause : Singleton<MonoBehaviour>
             {
                 settingsMenu.SetActive(false);
                 resumeGame.Invoke();
-                Debug.Log("no more settings rip");
+               // Debug.Log("no more settings rip");
             }
         }
 
