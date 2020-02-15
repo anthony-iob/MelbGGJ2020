@@ -54,21 +54,32 @@ public class NPCManager : Singleton<NPCManager>
                     Transform spawnPoint = GetRandomSpawnPoint();
                     currentNPCs[pos] = Instantiate(npcBlueprints[spawnedNPCs], spawnPoint.position, spawnPoint.rotation);
                     if (audioSource != null) { audioSource.PlayOneShot(patientSpawnSFX[Random.Range(0, patientSpawnSFX.Length)]); }
-                    else Debug.Log("You're missing an audio source on the NPC Manager");
-
-  
+                    else Debug.Log("You're missing an audio source on the NPC Manager");                 
                     spawnedNPCs += 1;
                     sinceSpawn = 0;
+
                     break;
                 }
             } 
+        }
+        else
+        {
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                spawnPoints[i].GetComponent<Animator>().SetBool("Spawning", false);
+            }
         }
     }
 
     Transform GetRandomSpawnPoint() 
     {
+        for (int i = 0; i < spawnPoints.Length ; i++)
+        {
+            spawnPoints[i].GetComponent<Animator>().SetBool("Spawning", false);
+        }
         int pos = Random.Range(0, spawnPoints.Length); //Removed the (spawnPoints.Length - 1) line as it was never generating the max value for some odd reason
         Transform spawnPoint = spawnPoints[pos];
+        spawnPoints[pos].GetComponent<Animator>().SetBool("Spawning", true);
         return spawnPoint;
     }
 }
