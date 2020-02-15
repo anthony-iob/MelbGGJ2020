@@ -121,7 +121,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3483967524938864252}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9f93f63d068b08c459038c40fce897d8, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -159,7 +159,7 @@ MonoBehaviour:
   hit:
     m_PersistentCalls:
       m_Calls: []
-  lifetime: 3
+  lifetime: 2
   charged: 0
   bulletImpact:
   - {fileID: 8300000, guid: b083f49d81c3be34fb2ba711c6657f63, type: 3}
@@ -302,7 +302,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6302376985433536967}
   serializedVersion: 6
-  lengthInSec: 0.5
+  lengthInSec: 0.52
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 1
@@ -377,7 +377,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.56
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -484,7 +484,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.4392157}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.20392157}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1639,7 +1639,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 19853
+        atime0: 0
         atime1: 65535
         atime2: 0
         atime3: 0
