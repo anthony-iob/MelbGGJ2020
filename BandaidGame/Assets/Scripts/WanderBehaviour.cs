@@ -15,6 +15,7 @@ public class WanderBehaviour : MonoBehaviour
     public float whiskerRange;
     public float whiskerForwardSpawnModifier;
     public float wallAvoidanceTurnDegrees;
+    public float wallAvoidanceInterval;
 
     Vector3 whiskerSpawnPoint;
 
@@ -31,6 +32,27 @@ public class WanderBehaviour : MonoBehaviour
         transform.eulerAngles = new Vector3(0, heading, 0);
 
         StartCoroutine(NewHeading());
+        StartCoroutine(AvoidWalls());
+    }
+
+    IEnumerator AvoidWalls() {
+        while(true) {
+            RaycastHit hit;
+
+            Debug.DrawRay(controller.transform.position, controller.transform.forward.normalized * whiskerRange, Color.green);
+
+            whiskerSpawnPoint = controller.transform.position + new Vector3(0, whiskerForwardSpawnModifier, 0);
+
+            if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, controller.transform.forward, out hit, whiskerRange))
+            {
+                Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+
+                AvoidWall();
+                yield return new WaitForSeconds(wallAvoidanceInterval);
+            }
+
+            yield return null;
+        }
     }
 
     void Update()
@@ -40,42 +62,26 @@ public class WanderBehaviour : MonoBehaviour
         controller.SimpleMove(forward * speed);
     }
 
-    private void FixedUpdate()
-    {
-        RaycastHit hit;
-
-        Debug.DrawRay(controller.transform.position, controller.transform.forward.normalized * whiskerRange, Color.green);
-
-        whiskerSpawnPoint = controller.transform.position + new Vector3(0, whiskerForwardSpawnModifier, 0);
-
-        if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, controller.transform.forward, out hit, whiskerRange))
-        {
-            // Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
-
-            AvoidWall();
-        }
-    }
-
     IEnumerator NewHeading()
     {
         while (true)
         {
-            NewHeadingRoutine();
+            NewHeadingRoutine(maxHeadingChange);
             yield return new WaitForSeconds(directionChangeInterval);
         }
     }
 
-    void NewHeadingRoutine()
+    void NewHeadingRoutine(float headingChange)
     {
-        var floor = transform.eulerAngles.y - maxHeadingChange;
-        var ceil = transform.eulerAngles.y + maxHeadingChange;
+        var floor = Mathf.Clamp(transform.eulerAngles.y - headingChange, 0, 360);
+        var ceil = Mathf.Clamp(transform.eulerAngles.y + headingChange, 0, 360);
         heading = Random.Range(floor, ceil);
         targetRotation = new Vector3(0, heading, 0);
+        Debug.Log("Target Rotation changed to: " + targetRotation);
     }
 
     void AvoidWall()
     {
-        // Debug.Log("avoiding wall");
-        targetRotation = new Vector3(0, transform.eulerAngles.y + wallAvoidanceTurnDegrees, 0);
+        NewHeadingRoutine(wallAvoidanceTurnDegrees);
     }
 }
