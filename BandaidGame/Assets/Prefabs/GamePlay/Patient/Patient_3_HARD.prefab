@@ -751,7 +751,7 @@ MonoBehaviour:
   - {fileID: 6639429556439778644}
   BLOOD_FREQUENCY_SECONDS: 1
   maxWounds: 2
-  bleedMultiplier: 20
+  bleedMultiplier: 15
   totalBleedValue: 0
   minWoundInterval: 6
   maxWoundInterval: 9
