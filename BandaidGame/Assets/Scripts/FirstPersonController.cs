@@ -105,11 +105,23 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_MouseLook.SetCursorLock(false);
         }
 
+        public void ToggleJump()
+        {
+            if (m_JumpAllowed)
+            {
+                m_JumpAllowed = false;
+            }
+            else
+            {
+                m_JumpAllowed = true;
+            }   
+        }
+
         // Update is called once per frame
         private void Update()
         {
             RotateView();
-            CheckHeartBeatAndBreathing();
+            //CheckHeartBeatAndBreathing();
 
             // the jump state needs to read here to make sure it is not missed
             m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
@@ -160,7 +172,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_JumpEarly > 0 && m_JumpAllowed)
                 {
-            //        m_MoveDir.y = m_JumpSpeed;
+                    m_MoveDir.y = m_JumpSpeed;
                     // PlayJumpSound();
                     m_Jump = false;
                     m_Jumping = true;
