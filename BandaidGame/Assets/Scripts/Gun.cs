@@ -47,7 +47,7 @@ public class Gun : Singleton<Gun>
             explosion.Play();
 			chargedBulletFire.Play();
 			chargedShot.Invoke();
-            chargeSFX.volume = 0.15f;
+            chargeSFX.volume = 0.3f;
 		}
 		CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
 		bulletFire.PlayOneShot(bulletSFX[Random.Range(0, bulletSFX.Length)]);
@@ -75,7 +75,7 @@ public class Gun : Singleton<Gun>
     {
         if(chargeTime >= chargeShotDelay && hasChargedBullet == false)
         {
-            chargeSFX.volume = 0.1f;
+            chargeSFX.volume = 0.20f;
             if (bulletFire != null) { bulletFire.PlayOneShot(maxChargeSFX); }
             if (maxChargeParticle != null) { maxChargeParticle.Play(); } else Debug.Log("You're missing a particle for the max charge just fyi");
             hasChargedBullet = true;
