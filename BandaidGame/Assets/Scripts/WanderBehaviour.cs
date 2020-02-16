@@ -17,19 +17,18 @@ public class WanderBehaviour : MonoBehaviour
     public float wallAvoidanceTurnDegrees;
     public float wallAvoidanceInterval;
 
-    Vector3 whiskerSpawnPoint;
-
     CharacterController controller;
-    float heading;
     Vector3 targetRotation;
+    Vector3 currentAngle;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
 
         // Set random initial rotation
-        heading = Random.Range(0, 360);
-        transform.eulerAngles = new Vector3(0, heading, 0);
+        var heading = Random.Range(0, 360);
+        currentAngle = new Vector3(0, heading, 0);
+        transform.eulerAngles = currentAngle;
 
         StartCoroutine(NewHeading());
         StartCoroutine(AvoidWalls());
@@ -40,12 +39,12 @@ public class WanderBehaviour : MonoBehaviour
             RaycastHit hit;
 
             Debug.DrawRay(controller.transform.position, controller.transform.forward.normalized * whiskerRange, Color.green);
+            var direction = (controller.velocity.normalized * whiskerForwardSpawnModifier);
+            var whiskerSpawnPoint = controller.transform.position + direction;
 
-            whiskerSpawnPoint = controller.transform.position + new Vector3(0, whiskerForwardSpawnModifier, 0);
-
-            if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, controller.transform.forward, out hit, whiskerRange))
+            if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, direction, out hit, whiskerRange))
             {
-                //Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+                Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
 
                 AvoidWall();
                 yield return new WaitForSeconds(wallAvoidanceInterval);
@@ -57,7 +56,8 @@ public class WanderBehaviour : MonoBehaviour
 
     void Update()
     {
-        transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, targetRotation, Time.deltaTime * directionChangeInterval);
+        currentAngle = Vector3.Slerp(currentAngle, targetRotation, Time.deltaTime * directionChangeInterval);
+        transform.eulerAngles = currentAngle;
         var forward = transform.TransformDirection(Vector3.forward);
         controller.SimpleMove(forward * speed);
     }
@@ -66,18 +66,25 @@ public class WanderBehaviour : MonoBehaviour
     {
         while (true)
         {
-            NewHeadingRoutine(maxHeadingChange);
+            NewRandomHeadingRoutine(maxHeadingChange);
             yield return new WaitForSeconds(directionChangeInterval);
         }
     }
 
+    void NewRandomHeadingRoutine(float headingChange)
+    {
+        var floor = currentAngle.y - headingChange;
+        var ceil = currentAngle.y + headingChange;
+        var heading = Random.Range(floor, ceil);
+        targetRotation = new Vector3(0, heading, 0);
+        // Debug.Log("Target Rotation changed to: " + targetRotation);
+    }
+
     void NewHeadingRoutine(float headingChange)
     {
-        var floor = Mathf.Clamp(transform.eulerAngles.y - headingChange, 0, 360);
-        var ceil = Mathf.Clamp(transform.eulerAngles.y + headingChange, 0, 360);
-        heading = Random.Range(floor, ceil);
+        var heading = currentAngle.y + headingChange;
         targetRotation = new Vector3(0, heading, 0);
-        //Debug.Log("Target Rotation changed to: " + targetRotation);
+        Debug.Log("Avoiding, Target Rotation changed to: " + targetRotation);
     }
 
     void AvoidWall()

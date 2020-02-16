@@ -67,11 +67,11 @@ MonoBehaviour:
   speed: 8
   directionChangeInterval: 5
   maxHeadingChange: 40
-  whiskerRadius: 0.15
-  whiskerRange: 2.05
-  whiskerForwardSpawnModifier: 4.8
-  wallAvoidanceTurnDegrees: 60
-  wallAvoidanceInterval: 1
+  whiskerRadius: 0.7
+  whiskerRange: 3
+  whiskerForwardSpawnModifier: 1.4
+  wallAvoidanceTurnDegrees: 80
+  wallAvoidanceInterval: 0.7
 --- !u!136 &6001190923300251363
 CapsuleCollider:
   m_ObjectHideFlags: 0
