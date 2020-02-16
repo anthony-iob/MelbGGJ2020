@@ -26,6 +26,7 @@ public class GameManager : Singleton<GameManager>
 
 
 	public bool disablePewPew;
+    private bool playedSubmergeSFX;
 
     [Header ("Animators")]
     public Animator TimeAnimator;
@@ -55,7 +56,8 @@ public class GameManager : Singleton<GameManager>
 	public float lensDChangeAmount = 2;
 	public float lensDChangeSpeed = 2;
 
-	public AudioMixerSnapshot unpausedAudio, underwater;
+	public AudioMixerSnapshot unpausedAudio, underwater, gameOverFilter;
+    private AudioSource submergeAudioSource;
 
     public GameObject gameOverHUD, HUD, pauseMenu, player;
   
@@ -84,6 +86,9 @@ public class GameManager : Singleton<GameManager>
 		depth2.focusDistance.value = 55;
 
         disablePewPew = true;
+        playedSubmergeSFX = false;
+
+        submergeAudioSource = GetComponent<AudioSource>();
 	}
 
     // Update is called once per frame
@@ -112,7 +117,7 @@ public class GameManager : Singleton<GameManager>
 
 			if (!MusicManager.instance.endLoop.isPlaying)
             {
-                unpausedAudio.TransitionTo(0f);
+                if (gameOverFilter != null) { gameOverFilter.TransitionTo(0f); } else Debug.Log("Please attach audio snapshots in the GameManager object");
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
                 disablePewPew = true;
@@ -144,7 +149,15 @@ public class GameManager : Singleton<GameManager>
 			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 			depth2.focusDistance.value = 1;
 			floodRiseEnd.Invoke();
-            if (underwater != null && disablePewPew == false) { underwater.TransitionTo(1f); } //else Debug.Log("You need to attach the underwater audio snapshot on GameManager");
+            if (underwater != null && disablePewPew == false)
+            {
+                underwater.TransitionTo(1f);
+                if (playedSubmergeSFX == false)
+                {
+                    submergeAudioSource.Play();
+                    playedSubmergeSFX = true;
+                }
+            } 
 		}
     }
 

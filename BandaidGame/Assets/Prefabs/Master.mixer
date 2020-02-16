@@ -136,6 +136,7 @@ AudioMixerController:
   - {fileID: 24500006}
   - {fileID: 2904876962516514038}
   - {fileID: 5885879589415846256}
+  - {fileID: 4453732501901281214}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 0
@@ -157,7 +158,7 @@ AudioMixerController:
     - e8a082c1d026d1a41a609977e3d0be29
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: 4453732501901281214}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -205,7 +206,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: f8a97b61572806f4cae037a19795ba8f
   m_FloatValues:
-    b7433af29d8aab34d8a870ae84b918f1: 0.44032478
+    b7433af29d8aab34d8a870ae84b918f1: 1.7477665
     cf670143a0db7b34c85f0dfa0e8366cc: 0.041713238
     fe8c81838e51cd54bb165ba30d388710: 22000
     4d451114f4ef614448f33e6ab1398f3d: 22000
@@ -250,6 +251,27 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!245 &4453732501901281214
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GameOver1Filter
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: f77f556ffc9a58b4e984cdd311465281
+  m_FloatValues:
+    b7433af29d8aab34d8a870ae84b918f1: 0.44032478
+    cf670143a0db7b34c85f0dfa0e8366cc: 0.041713238
+    fe8c81838e51cd54bb165ba30d388710: 22000
+    4d451114f4ef614448f33e6ab1398f3d: 22000
+    d5ed9ed5de4543143bcf61860f6e773e: 0.5960877
+    a903fa17099252e469870407d5a0939d: -14.816608
+    535a6d270ebea2a4c903ae18d1362b4e: 22000
+    2c215b89b3818574eb29a40a52f0798d: -0.08374829
+    5915411e2a910a14db318e2ccabb0a00: 1485
+    3dd45ebe394c53b4c9ff5c1a3d873916: 22000
+  m_TransitionOverrides: {}
 --- !u!244 &5455595876621151554
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -277,7 +299,7 @@ AudioMixerSnapshotController:
   m_SnapshotID: 0c03331655906794f9527435a6447d18
   m_FloatValues:
     07c0dd403f86b704b9b86d8795e060e8: 1
-    b7433af29d8aab34d8a870ae84b918f1: 0.44032478
+    b7433af29d8aab34d8a870ae84b918f1: 5.1526933
     cf670143a0db7b34c85f0dfa0e8366cc: 0.041713238
     fe8c81838e51cd54bb165ba30d388710: 1662
     4d451114f4ef614448f33e6ab1398f3d: 1236
