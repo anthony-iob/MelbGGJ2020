@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7194501990801557228}
   - component: {fileID: 1263847030}
   - component: {fileID: 469755175}
+  - component: {fileID: 469755172}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -48,6 +49,7 @@ MonoBehaviour:
   currentBloodLevel: 0
   MAX_BLOOD_LEVEL: 10000
   timeElapsed: 0
+  sensitivityVal: 0
   gameOver:
     m_PersistentCalls:
       m_Calls:
@@ -124,15 +126,30 @@ MonoBehaviour:
   standard: {fileID: 11400000, guid: 53e455dcc6f467f4880a97356cb5d19d, type: 2}
   profile: {fileID: 11400000, guid: 4da16835115058942ba415a36ad10115, type: 2}
   floodLevel: {fileID: 0}
-  effectFloodLevel: 1.9
+  effectFloodLevel: 1.55
   floodRiseEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   vigChangeAmount: 1
   vigChangeSpeed: 0.01
   lensDChangeAmount: 5
   lensDChangeSpeed: 2
   unpausedAudio: {fileID: 24500006, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
+  underwater: {fileID: 5885879589415846256, guid: e35590625597cd44bbf8ea3dfb9492a2,
+    type: 2}
+  gameOverFilter: {fileID: 4453732501901281214, guid: e35590625597cd44bbf8ea3dfb9492a2,
+    type: 2}
   gameOverHUD: {fileID: 0}
   HUD: {fileID: 0}
   pauseMenu: {fileID: 0}
@@ -164,3 +181,16 @@ MonoBehaviour:
   profile: {fileID: 11400000, guid: 4da16835115058942ba415a36ad10115, type: 2}
   standard: {fileID: 11400000, guid: 53e455dcc6f467f4880a97356cb5d19d, type: 2}
   fpsScript: {fileID: 0}
+--- !u!114 &469755172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194501990801557226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68e7b58a4c5873489c32c04070928c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: e35590625597cd44bbf8ea3dfb9492a2, type: 2}
