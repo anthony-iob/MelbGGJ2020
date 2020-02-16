@@ -112,9 +112,11 @@ public class GameManager : Singleton<GameManager>
 
 			if (!MusicManager.instance.endLoop.isPlaying)
             {
+                unpausedAudio.TransitionTo(0f);
                 gameOverHUD.SetActive(true);
                 Time.timeScale = 0;
                 disablePewPew = true;
+
 
                 if (!invoked)
                 {
@@ -142,7 +144,7 @@ public class GameManager : Singleton<GameManager>
 			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 			depth2.focusDistance.value = 1;
 			floodRiseEnd.Invoke();
-            if (underwater != null) { underwater.TransitionTo(0.1f); } else Debug.Log("You need to attach the underwater audio snapshot on GameManager");
+            if (underwater != null && disablePewPew == false) { underwater.TransitionTo(1f); } //else Debug.Log("You need to attach the underwater audio snapshot on GameManager");
 		}
     }
 
