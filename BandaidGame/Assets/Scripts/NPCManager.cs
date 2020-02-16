@@ -80,6 +80,7 @@ public class NPCManager : Singleton<NPCManager>
         int pos = Random.Range(0, spawnPoints.Length); //Removed the (spawnPoints.Length - 1) line as it was never generating the max value for some odd reason
         Transform spawnPoint = spawnPoints[pos];
         spawnPoints[pos].GetComponent<Animator>().SetBool("Spawning", true);
+        spawnPoints[pos].GetComponentInChildren<ParticleSystem>().Play();
         return spawnPoint;
     }
 }
