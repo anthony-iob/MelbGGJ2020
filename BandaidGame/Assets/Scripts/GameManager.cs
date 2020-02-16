@@ -55,7 +55,7 @@ public class GameManager : Singleton<GameManager>
 	public float lensDChangeAmount = 2;
 	public float lensDChangeSpeed = 2;
 
-	public AudioMixerSnapshot unpausedAudio;
+	public AudioMixerSnapshot unpausedAudio, underwater;
 
     public GameObject gameOverHUD, HUD, pauseMenu, player;
   
@@ -142,6 +142,7 @@ public class GameManager : Singleton<GameManager>
 			lensD2.intensity.value = lensDChangeAmount * Mathf.Sin(lensDChangeSpeed * Time.unscaledTime) + 60;
 			depth2.focusDistance.value = 1;
 			floodRiseEnd.Invoke();
+            if (underwater != null) { underwater.TransitionTo(0.1f); } else Debug.Log("You need to attach the underwater audio snapshot on GameManager");
 		}
     }
 
