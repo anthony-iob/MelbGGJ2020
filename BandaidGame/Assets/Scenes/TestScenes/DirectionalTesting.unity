@@ -407,11 +407,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patient_1_EASY
       objectReference: {fileID: 0}
-    - target: {fileID: 76968784102452721, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2734722281454670906, guid: e8d0231ca46e3614a8bd4d86d520497e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -467,21 +462,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: whiskerRadius
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: whiskerRange
-      value: 2.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: e8d0231ca46e3614a8bd4d86d520497e,
-        type: 3}
-      propertyPath: wallAvoidanceTurnDegrees
-      value: 155
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8d0231ca46e3614a8bd4d86d520497e, type: 3}
 --- !u!1001 &670631700
@@ -495,11 +475,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Patient_4_INSANE
-      objectReference: {fileID: 0}
-    - target: {fileID: 76968784102452721, guid: b51efcbeae1c0e447aa5bfe6f452520f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2734722281454670906, guid: b51efcbeae1c0e447aa5bfe6f452520f,
         type: 3}
@@ -556,21 +531,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: b51efcbeae1c0e447aa5bfe6f452520f,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: b51efcbeae1c0e447aa5bfe6f452520f,
-        type: 3}
-      propertyPath: whiskerRadius
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: b51efcbeae1c0e447aa5bfe6f452520f,
-        type: 3}
-      propertyPath: wallAvoidanceTurnDegrees
-      value: 120
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51efcbeae1c0e447aa5bfe6f452520f, type: 3}
 --- !u!1001 &1072503724
@@ -588,7 +548,7 @@ PrefabInstance:
     - target: {fileID: 76968784102452721, guid: 8f340febc7faf2747a11afeb6c7388a3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2734722281454670906, guid: 8f340febc7faf2747a11afeb6c7388a3,
         type: 3}
@@ -954,7 +914,7 @@ PrefabInstance:
     - target: {fileID: 76968784102452721, guid: 3030e796cd20ef04bb90b6d86d810544,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2734722281454670906, guid: 3030e796cd20ef04bb90b6d86d810544,
         type: 3}
@@ -1010,21 +970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-      propertyPath: wallAvoidanceTurnDegrees
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-      propertyPath: speed
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8461748972821476996, guid: 3030e796cd20ef04bb90b6d86d810544,
-        type: 3}
-      propertyPath: whiskerRadius
-      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3030e796cd20ef04bb90b6d86d810544, type: 3}
