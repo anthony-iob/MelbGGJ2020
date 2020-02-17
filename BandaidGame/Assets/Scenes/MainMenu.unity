@@ -13873,6 +13873,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: TMP SubMeshUI [EraserRegular SDF Material + LiberationSans SDF Atlas]
       objectReference: {fileID: 0}
+    - target: {fileID: 1056322540358221570, guid: 81477675753824117b3023765e0d5d6e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fecfefd81c6c693469283f0e0fd12122,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81477675753824117b3023765e0d5d6e, type: 3}
 --- !u!224 &676611294155735153 stripped
