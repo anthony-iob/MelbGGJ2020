@@ -46,7 +46,7 @@ public class Pause : Singleton<MonoBehaviour>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown("joystick button 7"))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown("joystick button 9"))
         {
 
             if (!settingsMenu.activeSelf)
