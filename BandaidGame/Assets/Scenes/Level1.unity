@@ -38047,7 +38047,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: End Date = 16/04/2020
+  m_text: End Date = 17/04/2020
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fca16392808a64fb21a35995049742, type: 2}
   m_sharedMaterial: {fileID: -4278092039532284176, guid: 77fca16392808a64fb21a35995049742,
@@ -39529,6 +39529,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_text
+      value: https://spalato-bros.itch.io/patchy-patients
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905987537302, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3e6e9c8ca574e4787fddbb02570832, type: 3}
