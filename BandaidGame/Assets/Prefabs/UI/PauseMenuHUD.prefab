@@ -745,9 +745,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire Band-aid
+  m_text: 'Fire Bandage
 
-    Mega Band-aid
+    Mega Bandage
 
     move
 
@@ -825,7 +825,7 @@ MonoBehaviour:
   m_margin: {x: 1.7748394, y: 0.5665693, z: 3.1603396, w: 0.35245514}
   m_textInfo:
     textComponent: {fileID: 1524481048}
-    characterCount: 47
+    characterCount: 45
     spriteCount: 0
     spaceCount: 7
     wordCount: 8
