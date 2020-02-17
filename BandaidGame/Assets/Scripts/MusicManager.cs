@@ -55,6 +55,7 @@ public class MusicManager : Singleton<MusicManager>
    [Header("Time to fade between tracks (ms)")]
     public float musicFadeTime;
     private float currentTime;
+    public float endLoopPercentage = 0.85f;
 
     private bool ohNoEndTime = false;
 
@@ -150,7 +151,7 @@ public class MusicManager : Singleton<MusicManager>
             }
 
             //if (!endLoop.isPlaying && GameManager.instance.GetFloodPercentage() >= 0.85 && ohNoEndTime == false)
-            if (GameManager.instance.GetFloodPercentage() >= 0.80 && ohNoEndTime == false)
+            if (GameManager.instance.GetFloodPercentage() >= endLoopPercentage && ohNoEndTime == false)
             {
                 loop1.volume = 0;
                 loop2.volume = 0;
