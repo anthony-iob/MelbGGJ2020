@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: fpsScript
       value: 
       objectReference: {fileID: 295342702}
+    - target: {fileID: 1263847030, guid: 2e154cfd72aa1454d9b31dd53e439446, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e154cfd72aa1454d9b31dd53e439446, type: 3}
 --- !u!4 &66744154 stripped
