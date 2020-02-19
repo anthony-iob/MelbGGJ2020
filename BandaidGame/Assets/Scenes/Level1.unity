@@ -2000,8 +2000,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90.30601, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315.59, y: -172.48}
-  m_SizeDelta: {x: 2, y: 3}
+  m_AnchoredPosition: {x: -315.59, y: -171.21}
+  m_SizeDelta: {x: 2, y: 0.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413927263
 MonoBehaviour:
@@ -26949,8 +26949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90.30601, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -315.57, y: -172.47}
-  m_SizeDelta: {x: 4, y: 3}
+  m_AnchoredPosition: {x: -315.57, y: -171.2}
+  m_SizeDelta: {x: 4, y: 0.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589590562
 MonoBehaviour:
@@ -39794,7 +39794,12 @@ PrefabInstance:
     - target: {fileID: 3942083906236554166, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -172.48
+      value: -172.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906236554166, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450458, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39819,7 +39824,7 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39829,28 +39834,26 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '
+      value: '2:26.314
 
         2:02.471
-
-        ...
 
         ...'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 17
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906181961742, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39915,11 +39918,9 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '
+      value: '2) Szamer
 
-        2) QueenFaith2020
-
-        3) ...
+        3) QueenFaith2020
 
         4) ...
 
@@ -39928,12 +39929,12 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 33
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39943,7 +39944,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39954,6 +39955,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905429283791, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905429283791, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -172.11989
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa3e6e9c8ca574e4787fddbb02570832, type: 3}
