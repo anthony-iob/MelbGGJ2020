@@ -39,7 +39,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire1
-    descriptiveName: 
+    descriptiveName: Left Click
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -55,7 +55,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire2
-    descriptiveName: 
+    descriptiveName: Right Click (exploit)
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
@@ -199,10 +199,10 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire2
-    descriptiveName: 
+    descriptiveName: Right Trigger
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: q
+    positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -212,22 +212,6 @@ InputManager:
     invert: 0
     type: 2
     axis: 5
-    joyNum: 0
-  - serializedVersion: 3
-    m_Name: Fire3
-    descriptiveName: 
-    descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: joystick button 2
-    altNegativeButton: 
-    altPositiveButton: r
-    gravity: 1000
-    dead: 0.001
-    sensitivity: 1000
-    snap: 0
-    invert: 0
-    type: 0
-    axis: 0
     joyNum: 0
   - serializedVersion: 3
     m_Name: RemoveSlime

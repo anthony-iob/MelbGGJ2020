@@ -68,6 +68,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
 
         private bool m_fired;
+        private bool m_fired2;
         private bool m_chargeSoundPlayed;
 
         //Crouch function
@@ -206,7 +207,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                     weaponScript.chargeSFX.Play();
                 }
 
-                /* Controller Inputs */
+                /* Controller Inputs/Right Click Exploit */
                 if (Input.GetAxisRaw("Fire2") <= 0)
                 {
                     if (!m_fired)
@@ -221,6 +222,31 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (Input.GetAxisRaw("Fire2") > 0)
                 {
                     m_fired = false;
+                    if (!m_chargeSoundPlayed)
+                    {
+                        weaponScript.chargeSFX.Play();
+                        m_chargeSoundPlayed = true;
+                    }
+                    weaponScript.Charge();
+                }
+
+
+                /*Controller exploit code*/
+
+                if (Input.GetAxisRaw("Fire3") <= 0)
+                {
+                    if (!m_fired2)
+                    {
+                        weaponScript.Shoot();
+                        weaponScript.CancelCharge();
+                        m_fired2 = true;
+                        m_chargeSoundPlayed = false;
+                    }
+                }
+
+                if (Input.GetAxisRaw("Fire3") > 0)
+                {
+                    m_fired2 = false;
                     if (!m_chargeSoundPlayed)
                     {
                         weaponScript.chargeSFX.Play();
