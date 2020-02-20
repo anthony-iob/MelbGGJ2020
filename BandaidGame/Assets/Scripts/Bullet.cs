@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     // public new Rigidbody rigidbody;
     public int travelSpeed;
-    public UnityEvent hit;
+   // public UnityEvent hit;
     public float lifetime;
     public bool charged = false;
 
