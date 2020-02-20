@@ -11,9 +11,13 @@ public class Bullet : MonoBehaviour
 
     public AudioClip[] bulletImpact;
     private AudioSource audioSource;
+    public AudioSource comboAudio;
 
     private Vector3 newSize;
     private float currentTime = 0;
+
+    public int combo;
+    public AudioClip[] comboNoises;
 
     Vector3 originalScale;
     Vector3 destinationScale;
@@ -29,6 +33,7 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject, lifetime);
 
         audioSource = GetComponent<AudioSource>();
+        combo = 0;
     }
 
     private void Shoot()
@@ -43,15 +48,24 @@ public class Bullet : MonoBehaviour
         {
             if (collision.gameObject.tag == "npc" || collision.gameObject.tag == "bandaidable")
             {
-                
+
                 if (collision.gameObject.GetComponentInChildren<WoundManager>() != null)
                 {
-                    collision.gameObject.GetComponentInChildren<WoundManager>().RepairAllWounds();
+                    WoundManager woundManagerChild = collision.gameObject.GetComponentInChildren<WoundManager>();
+                    if (woundManagerChild.openWounds > 0)
+                    {
+                        woundManagerChild.RepairAllWounds();
+                        ComboTrigger();
+                    }
                 }
                 else if (collision.gameObject.GetComponentInParent<WoundManager>() != null)
                 {
-                    collision.gameObject.GetComponentInParent<WoundManager>().RepairAllWounds();
-                    // Debug.Log("you hit a wound but it's okay because I fixed it");
+                    WoundManager woundManagerParent = collision.gameObject.GetComponentInParent<WoundManager>();
+                    if (woundManagerParent.openWounds > 0)
+                    {
+                        woundManagerParent.RepairAllWounds();
+                        ComboTrigger();
+                    }
                 }
             }
         }
@@ -64,8 +78,7 @@ public class Bullet : MonoBehaviour
             {
                 bandaidable.repair.Invoke();
                 woundManager.CuredNoisePlay();
-                
-                
+                ComboTrigger();
             }
         }
 
@@ -83,6 +96,39 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    void ComboTrigger()
+    {
+
+
+        if (combo <= comboNoises.Length && combo >=1)            //check to make sure there's clips left to combo up and its actually a combo and not first hit. 
+        {
+            comboAudio.clip = comboNoises[combo -1];      //set clip to combo noise of the current combo -1 to compensate for checks. 
+            comboAudio.PlayOneShot(comboAudio.clip);  //play it
+            combo++;                                //put the combo up one
+            comboNoises[combo] = comboAudio.clip;  //next clip!  
+        }
+
+        else
+        {
+            comboAudio.PlayOneShot(comboAudio.clip);
+            combo++;                                //there's no clips to combo up so we gon' keep playing the last one whilst adding combo score
+        }
+
+        if (combo >= 3)
+        {
+           // GameManager.instance.currentBloodLevel -= (combo * 100);
+
+            //take some flood away if combo is 3 or more.
+            //this might be OP because it stacks with each consecutive combo, so like 5, 6+ is gonna take away a whole lotta flood. 
+            //May need to implement at fixed values per hit, test. 
+
+            Debug.Log("Your combo WOULD HAVE removed " + (combo * 100) + " flood level!!");
+        }
+
+        if (combo > 1) { Debug.Log(combo + " hit combo!"); }
+    }
+
+
 
     void Update()
     {
@@ -97,20 +143,6 @@ public class Bullet : MonoBehaviour
        //  this.gameObject.transform.localScale = Vector3.Lerp(newSize, destinationScale, currentTime / lifetime);
        // }
 
-    }
-
-    void ShrinkOverLifetime()
-    {
-
-
-
-
-    }
-
-
-    public void Hit()
-    {
-        //placeholder for generic bullet collission audio/behaviour/animations
     }
 }
 

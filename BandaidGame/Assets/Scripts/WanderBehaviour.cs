@@ -44,7 +44,7 @@ public class WanderBehaviour : MonoBehaviour
 
             if (Physics.SphereCast(whiskerSpawnPoint, whiskerRadius, direction, out hit, whiskerRange))
             {
-                Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
+               // Debug.Log("Spherecast hit " + hit.transform.gameObject.name);
 
                 AvoidWall();
                 yield return new WaitForSeconds(wallAvoidanceInterval);
@@ -84,7 +84,7 @@ public class WanderBehaviour : MonoBehaviour
     {
         var heading = currentAngle.y + headingChange;
         targetRotation = new Vector3(0, heading, 0);
-        Debug.Log("Avoiding, Target Rotation changed to: " + targetRotation);
+       // Debug.Log("Avoiding, Target Rotation changed to: " + targetRotation);
     }
 
     void AvoidWall()
