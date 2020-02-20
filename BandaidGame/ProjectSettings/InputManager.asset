@@ -263,7 +263,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Cancel
-    descriptiveName: 
+    descriptiveName: Pausing
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: escape
@@ -311,7 +311,7 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Select
-    descriptiveName: 
+    descriptiveName: Controller/Keyboard menu confirmation
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: joystick button 0
