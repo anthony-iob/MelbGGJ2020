@@ -115,11 +115,10 @@ public class Bullet : MonoBehaviour
                 combo++;                                //there's no clips to combo up so we gon' keep playing the last one whilst adding combo score
             }
 
-
-            
+                      
             if (combo >= 3)
             {
-                // GameManager.instance.currentBloodLevel -= (combo * 100);
+                 GameManager.instance.currentBloodLevel -= (combo * 150);
 
                 //take some flood away if combo is 3 or more.
                 //this might be OP because it stacks with each consecutive combo, so like 5, 6+ is gonna take away a whole lotta flood. 
