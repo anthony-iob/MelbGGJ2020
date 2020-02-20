@@ -99,33 +99,39 @@ public class Bullet : MonoBehaviour
     void ComboTrigger()
     {
 
-
-        if (combo <= comboNoises.Length && combo >=1)            //check to make sure there's clips left to combo up and its actually a combo and not first hit. 
+        if (combo >= 1)
         {
-            comboAudio.clip = comboNoises[combo -1];      //set clip to combo noise of the current combo -1 to compensate for checks. 
-            comboAudio.PlayOneShot(comboAudio.clip);  //play it
-            combo++;                                //put the combo up one
-            comboNoises[combo] = comboAudio.clip;  //next clip!  
+
+            if ((combo -1) <= comboNoises.Length)            //check to make sure there's clips left to combo up and its actually a combo and not first hit. 
+            {
+                comboAudio.clip = comboNoises[combo - 1];      //set clip to combo noise of the current combo -1 to compensate for checks. 
+                comboAudio.PlayOneShot(comboAudio.clip);  //play it
+                combo++;                                //put the combo up one
+            }
+
+            else if (combo > comboNoises.Length)
+            {
+                comboAudio.PlayOneShot(comboAudio.clip);
+                combo++;                                //there's no clips to combo up so we gon' keep playing the last one whilst adding combo score
+            }
+
+
+            
+            if (combo >= 3)
+            {
+                // GameManager.instance.currentBloodLevel -= (combo * 100);
+
+                //take some flood away if combo is 3 or more.
+                //this might be OP because it stacks with each consecutive combo, so like 5, 6+ is gonna take away a whole lotta flood. 
+                //May need to implement at fixed values per hit, test. 
+
+                Debug.Log("Your combo WOULD HAVE removed " + (combo * 100) + " flood level!!");
+            }
         }
-
-        else
-        {
-            comboAudio.PlayOneShot(comboAudio.clip);
-            combo++;                                //there's no clips to combo up so we gon' keep playing the last one whilst adding combo score
-        }
-
-        if (combo >= 3)
-        {
-           // GameManager.instance.currentBloodLevel -= (combo * 100);
-
-            //take some flood away if combo is 3 or more.
-            //this might be OP because it stacks with each consecutive combo, so like 5, 6+ is gonna take away a whole lotta flood. 
-            //May need to implement at fixed values per hit, test. 
-
-            Debug.Log("Your combo WOULD HAVE removed " + (combo * 100) + " flood level!!");
-        }
-
+        else combo++;
         if (combo > 1) { Debug.Log(combo + " hit combo!"); }
+
+
     }
 
 

@@ -11,7 +11,7 @@ public class Flood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.currentBloodLevel < 10000)
+        if (GameManager.instance.currentBloodLevel <= GameManager.instance.MAX_BLOOD_LEVEL)
         {
             var minHeightPosition = minHeight.position;
             var maxHeightPosition = maxHeight.position;
