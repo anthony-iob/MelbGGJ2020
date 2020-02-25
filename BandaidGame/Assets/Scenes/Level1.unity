@@ -39834,21 +39834,21 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2:26.314
+      value: '2:31.235
 
-        2:02.471
+        2:26.314
 
-        ...'
+        2:02.471'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 21
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39918,33 +39918,34 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2) Szamer
+      value: '2) Xerionix
 
-        3) QueenFaith2020
+        3) Szamer
 
-        4) ...
+        4) QueenFaith2020
+
 
 '
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 35
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39955,6 +39956,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283791, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
