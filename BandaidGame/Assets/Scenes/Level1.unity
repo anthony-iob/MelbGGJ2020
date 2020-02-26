@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2:40.297
+  m_text: '2:42.437
 
 '
   m_isRightToLeft: 0
@@ -9917,7 +9917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $51 USD
+  m_text: $70 USD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fca16392808a64fb21a35995049742, type: 2}
   m_sharedMaterial: {fileID: -4278092039532284176, guid: 77fca16392808a64fb21a35995049742,
@@ -26980,7 +26980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1) Fearjagd
+  m_text: '1) ItZoTom
 
 '
   m_isRightToLeft: 0
@@ -27052,7 +27052,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1589590562}
-    characterCount: 12
+    characterCount: 11
     spriteCount: 0
     spaceCount: 2
     wordCount: 2
@@ -39829,7 +39829,7 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39844,11 +39844,11 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2:31.235
+      value: '2:40.297
 
-        2:26.314
+        2:31.235
 
-        2:02.471'
+        2:26.314'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39928,11 +39928,11 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2) Xerionix
+      value: '2) Fearjagd
 
-        3) Szamer
+        3) Xerionix
 
-        4) QueenFaith2020
+        4) Szamer
 
 
 '
@@ -39940,7 +39940,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 41
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39970,7 +39970,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 40
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283791, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}

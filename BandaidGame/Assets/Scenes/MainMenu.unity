@@ -477,7 +477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Fearjagd
+  m_text: ItZoTom
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffa207f3efa70fc4f8cf685e5577291f, type: 2}
   m_sharedMaterial: {fileID: 78009055664463863, guid: ffa207f3efa70fc4f8cf685e5577291f,
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -0.9086667, w: -26.836794}
   m_textInfo:
     textComponent: {fileID: 50653495}
-    characterCount: 8
+    characterCount: 7
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -6769,7 +6769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $51
+  m_text: $70
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffa207f3efa70fc4f8cf685e5577291f, type: 2}
   m_sharedMaterial: {fileID: 78009055664463863, guid: ffa207f3efa70fc4f8cf685e5577291f,
@@ -13069,7 +13069,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0.2
+  m_text: v1.0.4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffa207f3efa70fc4f8cf685e5577291f, type: 2}
   m_sharedMaterial: {fileID: 78009055664463863, guid: ffa207f3efa70fc4f8cf685e5577291f,
