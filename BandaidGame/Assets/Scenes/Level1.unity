@@ -39829,7 +39829,7 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 19
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39846,9 +39846,9 @@ PrefabInstance:
       propertyPath: m_text
       value: '2:40.297
 
-        2:31.235
+        2:31.575
 
-        2:26.314'
+        2:31.235'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39930,9 +39930,10 @@ PrefabInstance:
       propertyPath: m_text
       value: '2) Fearjagd
 
-        3) Xerionix
+        3) Spudcats
 
-        4) Szamer
+        4) Xerionix
+
 
 
 '
@@ -39940,12 +39941,12 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 35
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39955,7 +39956,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39970,7 +39971,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 34
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283791, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
