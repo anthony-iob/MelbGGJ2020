@@ -253,6 +253,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: YOU!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e1ee98ed0a4d8a4b801dd1d0176ca2d, type: 2}
@@ -961,6 +963,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_spriteAsset: {fileID: 0}
   m_material: {fileID: 0}
@@ -1945,6 +1949,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 2800000, guid: a588b2cc981ab604097358557631e8e4, type: 3}
   m_UVRect:
     serializedVersion: 2
@@ -2021,7 +2027,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2:42.437
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: '2:53.640
 
 '
   m_isRightToLeft: 0
@@ -7200,6 +7208,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: YOU!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e1ee98ed0a4d8a4b801dd1d0176ca2d, type: 2}
@@ -9917,7 +9927,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: $70 USD
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: $70
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fca16392808a64fb21a35995049742, type: 2}
   m_sharedMaterial: {fileID: -4278092039532284176, guid: 77fca16392808a64fb21a35995049742,
@@ -9946,8 +9958,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 0.37
-  m_fontSizeBase: 0.37
+  m_fontSize: 0.6
+  m_fontSizeBase: 0.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9987,10 +9999,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: -0.026774883, z: 0, w: 0.05449915}
   m_textInfo:
     textComponent: {fileID: 889158210}
-    characterCount: 7
+    characterCount: 3
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -10367,6 +10379,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: WE WANT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e1ee98ed0a4d8a4b801dd1d0176ca2d, type: 2}
@@ -20526,7 +20540,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Current prize =
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: Winning Prize =
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fca16392808a64fb21a35995049742, type: 2}
   m_sharedMaterial: {fileID: -4278092039532284176, guid: 77fca16392808a64fb21a35995049742,
@@ -26980,7 +26996,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1) ItZoTom
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: '1) Pholex
 
 '
   m_isRightToLeft: 0
@@ -27052,7 +27070,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1589590562}
-    characterCount: 11
+    characterCount: 10
     spriteCount: 0
     spaceCount: 2
     wordCount: 2
@@ -32521,6 +32539,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: WE WANT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3e1ee98ed0a4d8a4b801dd1d0176ca2d, type: 2}
@@ -38218,6 +38238,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: BECOME A FRANKY TODAY!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -38373,6 +38395,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: End Date = 17/04/2020
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fca16392808a64fb21a35995049742, type: 2}
@@ -39757,49 +39781,53 @@ PrefabInstance:
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_margin.y
-      value: -0.9141543
+      value: -0.43182588
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: 'To get your name on the leaderboard, you must finish the game with a
-        higher time than what is listed to the left. Then link video proof to the
-        itch.io page listed below.
+      value: 'The Competition has ended...
+
+        CONGRATULATIONS TO:
+
+
+        PHOLEX!
 
 
 
-        There will be a $$$ prize pool for 1st place. Any donations received will
-        continue funding tbe prize pool.'
+
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 278
+      value: 62
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
+        type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 52
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 61
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906663450459, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_margin.w
-      value: -0.54079294
+      value: 0.1348052
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554166, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39814,7 +39842,7 @@ PrefabInstance:
     - target: {fileID: 3942083906663450458, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -172.85
+      value: -172.76
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39829,12 +39857,12 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39844,16 +39872,19 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2:40.297
+      value: '2:42.437
 
-        2:31.575
+        2:41.537
 
-        2:31.235'
+        2:40.297
+
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39863,7 +39894,7 @@ PrefabInstance:
     - target: {fileID: 3942083906236554167, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3942083906181961742, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39928,11 +39959,13 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_text
-      value: '2) Fearjagd
+      value: '2) ItZoTom
 
-        3) Spudcats
+        3) ReapeeRon
 
-        4) Xerionix
+        4) Fearjagd
+
+
 
 
 
@@ -39941,12 +39974,12 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 38
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
@@ -39956,7 +39989,7 @@ PrefabInstance:
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3942083905429283788, guid: aa3e6e9c8ca574e4787fddbb02570832,
         type: 3}
