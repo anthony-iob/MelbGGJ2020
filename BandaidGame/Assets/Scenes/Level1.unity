@@ -32698,6 +32698,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNewer
       objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_WalkSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_RunSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5597169188983416273, guid: a7534aeb3e0e30f49acfc12a068427eb,
+        type: 3}
+      propertyPath: m_StepInterval
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5597169188983416267, guid: a7534aeb3e0e30f49acfc12a068427eb,
         type: 3}
       propertyPath: m_LocalPosition.x

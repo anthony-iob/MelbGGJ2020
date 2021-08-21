@@ -293,6 +293,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		private void FixedUpdate()
         {
+            ProgressStepCycle(speed);
+        }
+
+		private void LateUpdate()
+		{
             GetInput(out speed);
 
             // always move along the camera forward as it is the direction that it being aimed at
@@ -309,13 +314,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_CollisionFlags = m_CharacterController.Move(m_MoveDir * Time.fixedDeltaTime);
 
-            ProgressStepCycle(speed);
+
             UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
         }
 
-        private void ProgressStepCycle(float speed)
+		private void ProgressStepCycle(float speed)
         {
             if (m_CharacterController.velocity.sqrMagnitude > 0 && (m_Input.x != 0 || m_Input.y != 0))
             {

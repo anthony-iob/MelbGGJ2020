@@ -8134,10 +8134,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 1508890781}
   - {fileID: 892679344}
-  - {fileID: 559616935}
   - {fileID: 773828342}
   - {fileID: 364740250}
   - {fileID: 236373874}
+  - {fileID: 1785304936}
   - {fileID: 1785304936}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
@@ -13101,7 +13101,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: v1.0.6
+  m_text: v1.0.7
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffa207f3efa70fc4f8cf685e5577291f, type: 2}
   m_sharedMaterial: {fileID: 78009055664463863, guid: ffa207f3efa70fc4f8cf685e5577291f,
